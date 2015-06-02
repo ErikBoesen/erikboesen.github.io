@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Erik Boesen | :&#40;</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#222832">
+        <meta name="google-site-verification" content="esL1yRi6xqeu_NB5YqZIFlYGAQE0ZOC7rfH-Fg28DlI" />
+        <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+        <link type="text/css" rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" media="only screen and (max-width: 800px)" href="css/mobile.css">
+        <style>
+
+.menuBar, .menuBar:after, .menuBar:before {
+    background: #333;
+}
+article {
+    padding-top: 70px;
+}
+article ul {
+    line-height: 40px;
+}
+img {
+    width: auto;
+    display: block;
+}
+
+        </style>
+        <script src="js/jquery-2.1.3.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/global.js"></script>
+        <!--  Tynt Script -->
+        <script>
+            if(document.location.protocol=='http:'){
+                var Tynt=Tynt||[];Tynt.push('d-BauUFxyr5is3acwqm_6r');
+                (function(){var s=document.createElement('script');s.async="async";s.type="text/javascript";s.src='http://tcr.tynt.com/ti.js';var                               h=document.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})();
+            }
+        </script>
+        <!-- Tynt Script -->
+    </head>
+    <body>
+        <div class="menuButton">
+            <div class="menuBar"></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="http://erikboesen.com">HOME</a></li>
+                <li><a href="http://erikboesen.com/web">WEB</a></li>
+                <li><a href="http://erikboesen.com/photography">PHOTOGRAPHY</a></li>
+                <li><a href="http://erikboesen.com/tech-support">TECH SUPPORT</a></li>
+                <li><a href="http://erikboesen.com/electronics-store">ELECTRONICS STORE</a></li>
+                <li><a href="http://erikboesen.com/blog">BLOG</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Error 404: Couldn't find nuthin'.</h1>
+            <p><strong>Things you can try:</strong></p>
+            <ul>
+               <li>Go <a href="http://erikboesen.com">Home</a></li>
+               <li>Looking for a blog post? Start the URL with erikboesen.com/blog/... instead of erikboesen.com/... (I recently migrated my blog.)</li>
+               <li>Remove the / from the end of the URL.</li>
+            </ul>
+            <p>If you find a broken link or other error:</p>
+            <button class="button" onclick="emailMe();">Email Me</button>
+            <img src="images/404.png" alt="404">
+        </article>
+    </body>
+</html>

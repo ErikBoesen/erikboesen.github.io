@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Erik Boesen | FILTHIES</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="google-site-verification" content="esL1yRi6xqeu_NB5YqZIFlYGAQE0ZOC7rfH-Fg28DlI" />
+        <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+        <link rel="stylesheet" media="only screen and (max-width: 800px)" href="css/mobile.css">
+        <style>
+
+body {
+    padding-top: 50px;
+    animation: .2s colorFlash infinite linear;
+}
+article {
+    text-align: center;
+    color: red;
+}
+@keyframes colorFlash {
+    0% {
+        -webkit-filter: hue-rotate(0) saturate(2);
+        filter: hue-rotate(0) saturate(2);
+    }
+    100% {
+        -webkit-filter: hue-rotate(360deg) saturate(2);
+        filter: hue-rotate(360deg) saturate(2);
+    }
+}
+@-webkit-keyframes colorFlash {
+    0% {
+        -webkit-filter: hue-rotate(0) saturate(2);
+        filter: hue-rotate(0) saturate(2);
+    }
+    100% {
+        -webkit-filter: hue-rotate(360deg) saturate(2);
+        filter: hue-rotate(360deg) saturate(2);
+    }
+}
+
+        </style>
+    </head>
+   <body>
+       <article>
+           <img src="images/403.png" alt>
+           <h1>Error 403: Filthy Stinking Hobbitses.</h1>
+           <p><strong>You's isn't supposed to be here. Wicked. Tricksy.</strong></p>
+           <a href="http://erikboesen.com">Back to Home</a> (where you's should be!)
+           <audio autoplay>
+               <source src="wobniaRelbuoD.wav" type="audio/wav">
+           </audio>
+       </article>
+    </body>
+</html>

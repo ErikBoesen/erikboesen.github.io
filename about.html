@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Erik Boesen | About Me</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="erik boesen, web, web design, design, photography, washington dc, tech support, support, refurbished electronics, used electronics, techie, teenager">
+    <meta name="theme-color" content="#222832">
+    <meta name="google-site-verification" content="esL1yRi6xqeu_NB5YqZIFlYGAQE0ZOC7rfH-Fg28DlI" />
+    <meta name="Description" content="Hi! I'm Erik Boesen, a teenage tech geek, web developer, photographer, et cetera.">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" media="only screen and (max-width: 800px)" href="css/mobile.css">
+    <style>
+
+.menuBar, .menuBar:before, .menuBar:after {
+    background: #666;
+}
+h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 5em;
+    white-space: nowrap;
+}
+h3 {
+    margin: 0;
+}
+section {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+section:after, h1:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 200px;
+    background: #bbb;
+    margin: auto;
+}
+h1:after {
+    height: 50px;
+}
+.parallaxWindow {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    width: 400px;
+    height: 400px;
+    -webkit-shape-outside: circle();
+    shape-outside: circle();
+}
+.left .parallaxWindow {
+    float: left;
+    margin-right: 32px;
+    margin-right: 2rem;
+}
+.right .parallaxWindow {
+    float: right;
+    margin-left: 32px;
+    margin-left: 2rem;
+}
+.right {
+    text-align: right;
+}
+p {
+    width: 100%;
+}
+.one .parallaxWindow {
+    width: 450px;
+    height: 450px;
+    background-image: url(images/Jobs.png);
+    background-position: 80%;
+}
+.two .parallaxWindow {
+    background-image: url(images/bgs/Camera.jpg);
+    background-position: auto;
+}
+.three .parallaxWindow {
+    background-image: url(images/Official.png);
+    background-size: 75%;
+    background-position: 70%;
+}
+.four .parallaxWindow {
+    background-image: url(images/bgs/Rain.jpg);
+    background-size: 90%;
+    background-position: -80%;
+}
+
+article > h3 {
+    text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        margin-top: 60px;
+    }
+    .para {
+        display: block;
+        width: 90%;
+        text-align: left;
+    }
+    .parallaxWindow {
+        display: none;
+    }
+    .parallaxWindow.one {
+        float: none;
+        position: relative;
+        display: block;
+        border-radius: 0;
+        left: -8%;
+        margin: 0;
+        background-size: cover;
+    }
+}
+
+    </style>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/global.js"></script>
+    <script>
+
+$(window).scroll(function() {
+    var wScroll = $(this).scrollTop();
+    $("h1").css({
+        "letter-spacing" : wScroll / 2 + "px"
+    });
+    $("article > h3").css({
+        "letter-spacing" : wScroll / 100 + "px"
+    });
+});
+
+    </script>
+</head>
+<body>
+    <div class="menuButton">
+        <div class="menuBar"></div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="http://erikboesen.com">HOME</a></li>
+            <li><a href="about" class="active">ABOUT</a></li>
+            <li><a href="web">WEB</a></li>
+            <li><a href="photography">PHOTOGRAPHY</a></li>
+            <li><a href="tech-support">TECH SUPPORT</a></li>
+            <li><a href="electronics-store">ELECTRONICS STORE</a></li>
+            <li><a href="blog">BLOG</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1>About Me</h1>
+        <section class="one right">
+            <div class="parallaxWindow"></div>
+            <h3>Who I am</h3>
+            <p>I'm a 14-year old geek living in Falls Church, Virginia . I love photography, hiking, writing, cycling, listening to music, making <a href="http://redbubble.com/people/robotplunger/works/8181718?p=sticker">obscure geeky references</a>, and anything with technology. In Chinese I'm called 包天佑. It means Blessed/Protected by Heaven, although Google Translate may <a href="https://translate.google.com/#zh-CN/en/%E5%8C%85%E5%A4%A9%E4%BD%91">tell you otherwise</a>.</p>
+            <p>Other than my interest in technology, I'm a somewhat normal teenager (except without the rebellion and tattoos). I go to Mary Ellen Henderson Middle School. You can read about my religious thoughts <a href="blog/religion">here</a>.</p>
+        </section>
+
+        <section class="two left">
+            <div class="parallaxWindow" title="Yes, I know this photo is cliché."></div>
+            <h3>What I've done</h3>
+            <p>Throughout my life I've been interested in technology, and I've gained experience in many areas of it, including CAD, sound, video, TV broadcast directing, game design, app development, robotics, back-end, <a href="photography">photography</a> &amp; design, writing/<a href="blog">blogging</a> &amp; social networking, graphic design, <a href="electronics-store">electronics and hardware</a>, <a href="web">web</a>, and more.
+            <p>I've volunteered twice at <a href="http://newdaycreations.com/foster">New Day</a>, a Chinese foster home for orphans with special needs. I've also been to Malaysia and lived in Chicago for four years. In 8th grade I achieved the Gold award in <a href="http://tsaweb.org">Technology Student Association</a>, and also directed my school's Morning Announcements. I competed in the <a href="http://firstlegoleague.org">FIRST Lego Robotics</a> challenge four times during Middle School.</p>
+        </section>
+
+        <section class="three right">
+            <div class="parallaxWindow" title="Volunteering at Jill's House (jillshouse.org). I since got my braces off."></div>
+            <h3>What I do</h3>
+            <p>I'm mainly interested in <a href="web">photography</a>, <a href="web">web design</a>, and tech/hardware <a href="tech-support">repair &amp; support</a>.</p>
+            <p>In my free time I do <a href="photography">photography</a> or write about social issues, tech, and my brain's random musings on my <a href="blog">blog</a>. I also enjoy biking, backpacking, and climbing (rock or otherwise), and playing the trumpet. I do occasional drawing. I love listening to nearly all genres of music, including rock, alternative, electronic, and occasionally pop. If you like, you can listen to a playlist of all my favorite music <a href="https://open.spotify.com/user/erikboesen/starred">here</a>.</p>
+        </section>
+
+        <section class="four left">
+            <div class="parallaxWindow" title="Taken in NYC."></div>
+            <h3>What I'm going to do</h3>
+            <p>Next year, I'll start High School at <a href="http://fccps.org/gm">George Mason</a>, where I'll become proficient in numerous subjects whilst focusing in on Computer Science-related subjects. I'll also participate in the school's FIRST Robotics club, where I plan to learn a lot about robots and applying technology in the real world. After High School, I plan to go to Stanford, MIT, or the University of Michigan. Then I want to work at Google, or a web agency such as <a href="http://viget.com">Viget</a> or <a href="http://interactivestrategies.com">Interactive Strategies</a>. Later in life I plan to be a tech teacher and bring new teaching methods to elementary/Middle School Computer Science education. That is, assuming human teachers are not yet obsolete.</p>
+        </section>
+        <h3>TO BE CONTINUED.</h3>
+    </article>
+</body>
+</html>

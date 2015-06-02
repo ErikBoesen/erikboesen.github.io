@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Erik Boesen's Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="erik boesen, web, web design, design, photography, washington dc, tech support, support, refurbished electronics, used electronics, techie, teenager">
+    <meta name="theme-color" content="#222832">
+    <meta name="google-site-verification" content="esL1yRi6xqeu_NB5YqZIFlYGAQE0ZOC7rfH-Fg28DlI">
+    <meta name="Description" content="Website of Erik Boesen, teenage photographer, writer, web designer, IT guy, tech reseller, & geek.">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" media="only screen and (max-width: 800px)" href="css/mobile.css">
+    <style>
+
+body {
+    overflow-y: hidden;
+}
+header:after {
+    display: none;
+}
+.bg {
+    background-image: url(images/bgs/Camera.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50%;
+}
+
+.socialButtons {
+    padding: 25px;
+    z-index: 600;
+    -webkit-animation: 1s subtitle;
+            animation: 1s subtitle;
+}
+.socialButtons img {
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 100%;
+    border: solid 1px hsla(0, 0%, 100%, .5);
+    padding: 2px;
+    cursor: pointer;
+    -webkit-transition: .3s all;
+            transition: .3s all;
+}
+.socialButtons img:hover {
+    border-color: #fff;
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transition: .5s all;
+            transition: .5s all;
+}
+.emailButton, .googlePlusButton, .twitterButton, .flickrButton, .instagramButton {display: inline}
+.gitRibbon {
+    position: absolute;
+    text-decoration: none;
+    top: 40px;
+    cursor: url(images/fork.ico), pointer;
+    right: -100px;
+    padding: 5px 100px;
+    background: #1e3e4a;
+    color: #fff;
+    box-shadow: inset 0 0 3px #333;
+    transform: rotate(40deg);
+    border: dashed 2px #fff;
+}
+
+    </style>
+    <script>
+var emailMe = function() {
+    window.open("mailto:erikboesen@erikboesen.com");
+};
+    </script>
+</head>
+<body>
+    <div class="bg"></div>
+
+    <a class="gitRibbon" href="http://github.com/ErikBoesen">Fork me on GitHub</a>
+    <header>
+        <h1>Hi.</h1>
+        <h3>I'm Erik, teenage <a href="photography">photographer</a>, <a href="blog">writer</a>, <a href="web">web designer</a>, <a href="tech-support">IT guy</a>, <a href="electronics-store">tech reseller</a> &amp; <a href="about">geek</a>.</h3>
+        <div class="socialButtons">
+            <div class="emailButton"><a href="" onclick="emailMe();"><img src="images/social/Email.png" alt="Email me"></a></div>
+            <div class="googlePlusButton"><a href="http://plus.google.com/+ErikBoesen"><img src="images/social/Google+.png" alt="Google+"></a></div>
+            <div class="twitterButton"><a href="http://twitter.com/ErikBoesen"><img src="images/social/Twitter.png" alt="Twitter"></a></div>
+            <div class="flickrButton"><a href="http://flickr.com/photos/108614122@N04"><img src="images/social/Flickr.png" alt="Flickr"></a></div>
+            <div class="instagramButton"><a href="http://instagram.com/erikboesen"><img src="images/social/Instagram.png" alt="Instagram"></a></div>
+        </div>
+    </header>
+</body>
+</html>
