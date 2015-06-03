@@ -62,12 +62,18 @@ header:after {
     padding: 5px 100px;
     background: #1e3e4a;
     color: #fff;
-    border: dashed 2px #fff;
+    border: dashed 1px #fff;
     box-shadow:
         0 5px #1e3e4a,
         0 -5px #1e3e4a,
         0 5px 5px #000;
     transform: rotate(40deg);
+}
+
+@media only screen and (max-width: 800px) {
+    .gitRibbon {
+        display: none;
+    }
 }
 
     </style>
