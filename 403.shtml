@@ -40,12 +40,12 @@ article {
     </head>
    <body>
        <article>
-           <img src="images/403.png" alt>
+           <img src="http://erikboesen.com/images/403.png" alt>
            <h1>Error 403: Filthy Stinking Hobbitses.</h1>
            <p><strong>You's isn't supposed to be here. Wicked. Tricksy.</strong></p>
            <a href="http://erikboesen.com">Back to Home</a> (where you's should be!)
            <audio autoplay>
-               <source src="wobniaRelbuoD.wav" type="audio/wav">
+               <source src="http://erikboesen.com/wobniaRelbuoD.wav" type="audio/wav">
            </audio>
        </article>
     </body>

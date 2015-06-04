@@ -5,8 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#222832">
-        <link type="text/css" rel="stylesheet" href="css/global.css">
-        <link rel="stylesheet" media="only screen and (max-width: 800px)" href="css/mobile.css">
+        <link rel="stylesheet" href="http://erikboesen.com/css/global.css">
+        <link rel="stylesheet" media="only screen and (max-width: 800px)" href="http://erikboesen.com/css/mobile.css">
         <style>
 
 .menuBar, .menuBar:after, .menuBar:before {
@@ -24,9 +24,9 @@ img {
 }
 
         </style>
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery-ui.js"></script>
-        <script src="js/global.js"></script>
+    <script src="http://erikboesen.com/js/jquery.js"></script>
+    <script src="http://erikboesen.com/js/jquery-ui.js"></script>
+        <script src="http://erikboesen.com/js/global.js"></script>
         <!--  Tynt Script -->
         <script>
             if(document.location.protocol=='http:'){
@@ -61,7 +61,7 @@ img {
             </ul>
             <p>If you find a broken link or other error:</p>
             <button class="button" onclick="emailMe();">Email Me</button>
-            <img src="images/404.png" alt="404">
+            <img src="http://erikboesen.com/images/404.png" alt="404">
         </article>
     </body>
 </html>
