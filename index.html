@@ -26,8 +26,12 @@ header:after {
     background-position: 50%;
 }
 
+.button {
+    margin: 25px;
+    border: solid 5px red;
+    font-family: "Raleway", "Ubuntu", sans-serif;
+}
 .socialButtons {
-    padding: 25px;
     z-index: 600;
     -webkit-animation: 1s subtitle;
             animation: 1s subtitle;
@@ -58,7 +62,7 @@ header:after {
     text-decoration: none;
     top: 45px;
     cursor: url(images/fork.ico), pointer;
-    right: -90px;
+    left: -90px;
     padding: 5px 100px;
     background: #1e3e4a;
     color: #fff;
@@ -67,7 +71,7 @@ header:after {
         0 5px #1e3e4a,
         0 -5px #1e3e4a,
         0 5px 5px #000;
-    transform: rotate(40deg);
+    transform: rotate(-40deg);
 }
 
 @media only screen and (max-width: 800px) {
@@ -90,6 +94,7 @@ var emailMe = function() {
     <header>
         <h1>Hi.</h1>
         <h3>I'm Erik, teenage <a href="photography">photographer</a>, <a href="blog">writer</a>, <a href="web">web designer</a>, <a href="tech-support">IT guy</a>, <a href="electronics-store">tech reseller</a> &amp; <a href="about">geek</a>.</h3>
+        <a class="button">About Me</a>
         <div class="socialButtons">
             <div class="emailButton"><a href="" onclick="emailMe();"><img src="images/social/Email.png" alt="Email me"></a></div>
             <div class="googlePlusButton"><a href="http://plus.google.com/+ErikBoesen"><img src="images/social/Google+.png" alt="Google+"></a></div>

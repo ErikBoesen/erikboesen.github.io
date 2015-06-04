@@ -32,12 +32,9 @@ html, body {
     z-index: -100;
 }
 
-
 /* Special */
 ::-moz-selection {background-color: #2098d1}
 ::selection {background-color: #2098d1}
-
-::-webkit-scrollbar {display: none}
 
 /* Global elements */
 p {
