@@ -24,8 +24,7 @@ img {
 }
 
         </style>
-    <script src="http://erikboesen.com/js/jquery.js"></script>
-    <script src="http://erikboesen.com/js/jquery-ui.js"></script>
+        <script src="http://erikboesen.com/js/jquery.js"></script>
         <script src="http://erikboesen.com/js/global.js"></script>
         <!--  Tynt Script -->
         <script>
