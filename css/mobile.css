@@ -7,8 +7,9 @@ header {
     background-position: right;
     overflow: visible;
 }
-header h1, header h3 {
+header h1 {
     animation: none;
+    font-size: 4em;
 }
 article {
     padding: 0;

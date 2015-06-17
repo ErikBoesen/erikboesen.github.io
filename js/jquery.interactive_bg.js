@@ -11,12 +11,16 @@
  *
  * License: GPL v3
  *
- * ========================================================== */
+ * Modified by Erik Boesen
+ * erikboesen.com
+ *
+ * ==========================================================
+ */
 
 !function($){
 
   var defaults = {
-    strength: 25,
+    strength: 30,
     scale: 1.05,
     animationSpeed: "100ms",
     contain: true,
@@ -64,18 +68,19 @@
 
       if(has_touch || screen.width <= 699) {
         // For Mobile
-        // Add support for accelerometeron mobile
-        window.addEventListener('devicemotion', deviceMotionHandler, false);
+        // Add support for rotation on mobile
+        window.addEventListener('deviceorientation', deviceRotationHandler, true);
 
-          function deviceMotionHandler(eventData) {
-             var accX = Math.round(event.accelerationIncludingGravity.x*10) / 10,
-                 accY = Math.round(event.accelerationIncludingGravity.y*10) / 10,
-                 xA = -(accX / 10) * settings.strength,
-                 yA = -(accY / 10) * settings.strength,
-                 newX = -(xA/2), // Change strenth for mobile
-                 newY = -(yA/2);
+          function deviceRotationHandler(eventData) {
 
-                 el.find("> .ibg-bg").css({
+              var tX = Math.round(event.gamma*10) / 10,
+                  tY = Math.round(event.beta*10) / 10,
+                  xA = -(tX / 10) * settings.strength,
+                  yA = -(tY / 10) * settings.strength,
+                  newX = -(xA/10), // Change strenth for mobile
+                  newY = -(yA/10);
+
+              el.find("> .ibg-bg").css({
                    "-webkit-transform": "matrix(" + settings.scale + ",0,0," + settings.scale + "," + newX + "," + newY + ")",
                    "-moz-transform": "matrix(" + settings.scale + ",0,0," + settings.scale + "," + newX + "," + newY + ")",
                    "-o-transform": "matrix(" + settings.scale + ",0,0," + settings.scale + "," + newX + "," + newY + ")",
