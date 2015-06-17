@@ -72,8 +72,8 @@
                  accY = Math.round(event.accelerationIncludingGravity.y*10) / 10,
                  xA = -(accX / 10) * settings.strength,
                  yA = -(accY / 10) * settings.strength,
-                 newX = -(xA*2),
-                 newY = -(yA*2);
+                 newX = -(xA/2), // Change strenth for mobile
+                 newY = -(yA/2);
 
                  el.find("> .ibg-bg").css({
                    "-webkit-transform": "matrix(" + settings.scale + ",0,0," + settings.scale + "," + newX + "," + newY + ")",
