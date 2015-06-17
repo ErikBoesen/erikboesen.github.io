@@ -87,7 +87,7 @@
       } else {
         // For Desktop
         // Animate only scaling when mouse enter
-        el.mouseenter(function(e) {
+        $("body").mouseenter(function(e) {
           if (settings.scale != 1) el.addClass("ibg-entering")
           el.find("> .ibg-bg").css({
             "-webkit-transform": "matrix(" + settings.scale + ",0,0," + settings.scale + ",0,0)",
