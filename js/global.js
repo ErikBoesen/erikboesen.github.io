@@ -13,7 +13,6 @@ $(window).scroll(function() {
 var isMenuOpen = false;
 
 var menuOpen = function() {
-    $("nav").finish();
     $("nav").animate({
         left: "0px"
     }, 300);
@@ -24,9 +23,8 @@ var menuOpen = function() {
     isMenuOpen = true;
 };
 var menuClose = function() {
-    $("nav").finish();
     $("nav").animate({
-        left: "-1000px"
+        left: "-400px"
     }, 300);
     $(".menuButton").animate({
         left: "0px"

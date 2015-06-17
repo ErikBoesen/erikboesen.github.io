@@ -164,19 +164,18 @@ noindex:-o-prefocus, .button:hover {background-color: #333}
 }
 
 nav {
-    left: -340px;
     height: 100%;
     position: fixed;
     color: #333;
     margin: 0;
     z-index: 900;
     padding-top: 50px;
-    padding-right: 20px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    left: -400px;
 }
 
 nav ul {
@@ -231,6 +230,8 @@ nav li:nth-child(4) a:before {background: #D54431}
 nav li:nth-child(5) a:before {background: #e2913d}
 nav li:nth-child(6) a:before {background: #DCC251}
 nav li:nth-child(7) a:before {background: #bcbbb3}
+
+
 
 /* Photo Backgrounds */
 header {

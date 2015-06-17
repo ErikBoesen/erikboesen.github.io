@@ -32,3 +32,21 @@ article img {
 article p {
     width: 85%;
 }
+
+nav {
+    height: 100vh;
+    width: 100vw;
+    background: #eee;
+    padding: 0;
+    padding-top: 10vh;
+}
+nav a {
+    text-align: center;
+    margin: 0;
+    width: 100vw;
+    height: 12vh;
+    box-sizing: border-box;
+}
+nav a.active:before {
+    right: 98%;
+}
