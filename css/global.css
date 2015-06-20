@@ -2,14 +2,14 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 100;
-  src: local('Raleway Thin'), local('Raleway-Thin'), url(http://fonts.gstatic.com/s/raleway/v9/RJMlAoFXXQEzZoMSUteGWJBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  src: local('Raleway Thin'), local('Raleway-Thin'), url(../font/Raleway-100.woff2) format('woff2'), url('../font/Raleway-100.ttf')  format('truetype');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 300;
-  src: local('Ubuntu Light'), local('Ubuntu-Light'), url(http://fonts.gstatic.com/s/ubuntu/v7/_aijTyevf54tkVDLy-dlnFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  src: local('Ubuntu Light'), local('Ubuntu-Light'), url(../font/Ubuntu-300.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
 }
 
@@ -50,7 +50,7 @@ a:hover {
     text-decoration: none;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway", "Ubuntu", sans-serif;
+    font-family: "Raleway", "Josefin Sans", "Ubuntu", sans-serif;
     font-weight: 100;
     margin-bottom: 40px;
 }
@@ -130,8 +130,6 @@ noindex:-o-prefocus, .button:hover {background-color: #333}
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    -webkit-animation: 1s menuButton;
-    animation: 1s menuButton;
 }
 .menuBar {
     width: 100%;
@@ -154,15 +152,6 @@ noindex:-o-prefocus, .button:hover {background-color: #333}
     top: 10px;
     background-color: #eee;
 }
-@-webkit-keyframes menuButton {
-    0% {left: -500px}
-    100% {left: 0}
-}
-@keyframes menuButton {
-    0% {left: -500px}
-    100% {left: 0}
-}
-
 nav {
     height: 100%;
     position: fixed;
@@ -274,48 +263,10 @@ header h1, header h3 {
 header h1 {
     font-size: 9em;
     letter-spacing: -1px;
-    -webkit-animation: 1s title ease;
-            animation: 1s title ease;
 }
 header h3 {
     font-size: 25px;
     letter-spacing: 1px;
-    -webkit-animation: 1s subtitle ease;
-            animation: 1s subtitle ease;
-}
-@-webkit-keyframes title {
-    0% {
-        opacity: 0;
-        filter: alpha(opacity=0);
-        letter-spacing: .5vw;
-    }
-    100% {
-    }
-}
-@keyframes title {
-    0% {
-        opacity: 0;
-        filter: alpha(opacity=0);
-        letter-spacing: .5vw;
-    }
-    100% {
-    }
-}
-@-webkit-keyframes subtitle {
-    0% {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-    100% {
-    }
-}
-@keyframes subtitle {
-    0% {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-    100% {
-    }
 }
 header h3 a {
     text-decoration: none;

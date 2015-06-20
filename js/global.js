@@ -7,12 +7,12 @@ $(window).scroll(function() {
     $("header").css({
         "transform" : "translate(0," + wScroll * .65 + "px)"
     });
-    menuClose(); //Close menu
 });
 
 var isMenuOpen = false;
 
 var menuOpen = function() {
+    $("nav").stop();
     $("nav").animate({
         left: "0px"
     }, 300);
@@ -23,6 +23,7 @@ var menuOpen = function() {
     isMenuOpen = true;
 };
 var menuClose = function() {
+    $("nav").stop();
     $("nav").animate({
         left: "-400px"
     }, 300);
