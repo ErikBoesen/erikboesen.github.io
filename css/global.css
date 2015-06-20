@@ -1,6 +1,13 @@
 @font-face {
   font-family: 'Raleway';
   font-style: normal;
+  font-weight: 200;
+  src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url(http://fonts.gstatic.com/s/raleway/v9/8KhZd3VQBtXTAznvKjw-k_k_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
   font-weight: 100;
   src: local('Raleway Thin'), local('Raleway-Thin'), url(../font/Raleway-100.woff2) format('woff2'), url('../font/Raleway-100.ttf')  format('truetype');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
@@ -16,14 +23,12 @@
 body {
     font-family: "Ubuntu", sans-serif;
     font-weight: 100;
+    color: #333;
     overflow-x: hidden;
     position: absolute;
-}
-html, body {
+    margin: 0;
     height: 100%;
     width: 100%;
-    margin: 0;
-    padding-top: 0
 }
 .bg {
     position: fixed;
@@ -38,13 +43,12 @@ html, body {
 
 /* Global elements */
 p {
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1.75em;
     width: 75%;
 }
 a {
     color: inherit;
-    text-decoration: underline;
 }
 a:hover {
     text-decoration: none;
@@ -54,6 +58,14 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 100;
     margin-bottom: 40px;
 }
+header h3 {
+    white-space: normal;
+    font-family: "Raleway";
+    font-weight: 200;
+}
+header h1 {
+    font-weight: 100 !important;
+}
 h3 {
     font-size: 50px;
 }
@@ -61,7 +73,7 @@ h3 {
 .button {
     margin: .5em;
     padding: 10px 20px;
-    background: none;
+    background: 0;
     font-size: 20px;
     border: 2px solid #333;
     border-radius: 3px;
@@ -71,20 +83,8 @@ h3 {
     margin-right: auto;
     cursor: pointer;
     display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
     transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    position: relative;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+    transition: color 0.3s;
 }
 .button:before {
     content: "";
@@ -95,32 +95,21 @@ h3 {
     right: 0;
     bottom: 0;
     background: #333;
-    -webkit-transform: scaleY(0);
-    -ms-transform: scaleY(0);
     transform: scaleY(0);
-    -webkit-transform-origin: 50% 0;
-    -ms-transform-origin: 50% 0;
     transform-origin: 50% 0;
-    -webkit-transition-property: -webkit-transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
+    transition: transform 0.3s ease-out;
 }
-.button:hover, .button:focus, .button:active {color: white}
-noindex:-o-prefocus, .button:hover {background-color: #333}
+.button:hover, .button:focus, .button:active {
+    color: white;
+}
 .button:hover:before, .button:focus:before, .button:active:before {
-    -webkit-transform: scaleY(1);
-    -ms-transform: scaleY(1);
     transform: scaleY(1);
 }
 
 /* Menu */
 .menuButton {
     position: fixed;
-    margin-top: 27.5px;
-    margin-left: 15px;
+    top: 25px;
     z-index: 1000;
     cursor: pointer;
     width: 50px;
@@ -134,7 +123,7 @@ noindex:-o-prefocus, .button:hover {background-color: #333}
 .menuBar {
     width: 100%;
     height: 1px;
-    background-color: #eee;
+    background-color: #fff;
     border-radius: 8px;
 }
 .menuBar:after, .menuBar:before {
@@ -142,33 +131,24 @@ noindex:-o-prefocus, .button:hover {background-color: #333}
     width: 100%;
     height: 1px;
     position: absolute;
-    border-radius: 8px;
+    background-color: #fff;
 }
 .menuBar:after {
     top: 20px;
-    background-color: #eee;
 }
 .menuBar:before {
     top: 10px;
-    background-color: #eee;
 }
+
 nav {
     height: 100%;
     position: fixed;
-    color: #333;
-    margin: 0;
-    z-index: 900;
     padding-top: 50px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     left: -400px;
+    z-index: 900;
 }
-
 nav ul {
-    list-style-type: none;
+    list-style: none;
     display: inline;
 }
 nav a {
@@ -178,17 +158,10 @@ nav a {
     padding: 15px;
     padding: 2vm;
     background: #eee;
-    display: inline-block;
 	position: relative;
     display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: translateZ(0);
     transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
     position: relative;
-    overflow: hidden;
 }
 nav a:before {
     content: "";
@@ -198,19 +171,16 @@ nav a:before {
     right: 100%;
     height: 100%;
     bottom: 0;
-    -webkit-transition-property: right;
-    transition-property: right;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
+    transition: right .3s ease-out;
 }
 nav a:hover:before, nav a:focus:before, nav a:active:before {
     right: 0;
 }
+nav .active {
+    left: 4px;
+}
 nav .active:before {
-    right: 95%;
-    height: 100%;
+    right: 0;
 }
 nav li:first-child a:before {background: #2098d1}
 nav li:nth-child(2) a:before {background: #38A16F}
@@ -234,14 +204,12 @@ header {
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
     -ms-flex-direction: column;
-    -o-flex-direction: column;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
             flex-direction: column;
     -webkit-justify-content: center;
     -moz-justify-content: center;
     -ms-justify-content: center;
-    -o-justify-content: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -250,19 +218,14 @@ header {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
-    padding-left: 2em;
-    padding-right: 2em;
-    background-size: cover;
-    padding-top: 1px;
+    padding: 1px 2vm 0 2vm;
 }
 header h1, header h3 {
-    font-weight: 300;
     margin: 0;
-    padding: 0;
 }
 header h1 {
     font-size: 9em;
-    letter-spacing: -1px;
+    letter-spacing: -3px;
 }
 header h3 {
     font-size: 25px;
@@ -271,81 +234,43 @@ header h3 {
 header h3 a {
     text-decoration: none;
     border-bottom: solid 1px rgba(255,255,255,.5);
-    -webkit-transition: .5s all;
-            transition: .5s all;
+    transition: .5s all;
 }
 header h3 a:hover {
     border-color: #fff;
-    -webkit-transition: 1s all;
-            transition: 1s all;
-}
-header .button {
-    border: 2px solid #fff;
-    color: #fff;
-}
-header .button:hover {
-    color: #333;
-}
-noindex:-o-prefocus, header .button:hover {
-    background-color: #fff;
-}
-header .button:before {
-    background: #fff;
+    transition: 1s all;
 }
 
-/* Section */
 article {
     background: #fff;
     padding: 2em 5em 1.75em 5em;
-    color: #333;
     z-index: 100;
-}
-article img {
-    margin-left: 1em;
-    float: right;
-}
-article ul {
-    line-height: 1.75em;
 }
 header:after {
     content: "";
 	width: 0;
 	height: 0;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-right: 10px solid transparent;
+	border: 10px solid transparent;
 	border-top: 10px solid #fff;
-    float: none;
-    bottom: 20px;
+    bottom: 10px;
     left: 48%;
     z-index: -100;
     position: absolute;
-    -webkit-animation: .5s arrowPulse;
-            animation: .5s arrowPulse;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate-reverse;
-            animation-direction: alternate-reverse;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation: .5s arrowPulse infinite alternate-reverse ease-out;
 }
 @-webkit-keyframes arrowPulse {
     0% {
         opacity: .1;
-        filter: alpha(opacity=10);
     }
     100% {
         opacity: .9;
-        filter: alpha(opacity=90);
     }
 }
 @keyframes arrowPulse {
     0% {
         opacity: .1;
-        filter: alpha(opacity=10);
     }
     100% {
         opacity: .9;
-        filter: alpha(opacity=90);
     }
 }

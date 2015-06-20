@@ -13,6 +13,9 @@
     <link rel="stylesheet" media="only screen and (max-width: 800px)" href="css/mobile.css">
     <style>
 
+body {
+    max-width: 100vw;
+}
 .bg {
     background-image: url(images/bgs/Pine.png);
     background-size: cover;
@@ -27,6 +30,7 @@ header ul {
     -webkit-animation: 1s fadeIn linear;
             animation: 1s fadeIn linear;
     white-space: nowrap;
+    min-width: 100%;
 }
 header li {
     padding: 10px;
@@ -97,8 +101,8 @@ $(window).scroll(function() {
     <nav>
         <ul>
             <li><a href="http://erikboesen.com">HOME</a></li>
-            <li><a href="about" class="active">ABOUT</a></li>
-            <li><a href="web">WEB</a></li>
+            <li><a href="about">ABOUT</a></li>
+            <li><a href="web" class="active">WEB</a></li>
             <li><a href="photography">PHOTOGRAPHY</a></li>
             <li><a href="tech-support">TECH SUPPORT</a></li>
             <li><a href="electronics-store">ELECTRONICS STORE</a></li>
