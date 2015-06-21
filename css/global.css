@@ -176,9 +176,6 @@ nav a:before {
 nav a:hover:before, nav a:focus:before, nav a:active:before {
     right: 0;
 }
-nav .active {
-    left: 4px;
-}
 nav .active:before {
     right: 0;
 }
