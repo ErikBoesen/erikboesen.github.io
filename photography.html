@@ -15,7 +15,7 @@ body {
     overflow-y: hidden;
 }
 .bg {
-    background-image: url(images/bgs/Bee.jpg);
+    background-image: url(images/bgs/Maple.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
@@ -27,7 +27,7 @@ header:after {
     display: none;
 }
 header .button {
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     color: #fff;
 }
 header .button:hover {
@@ -36,7 +36,34 @@ header .button:hover {
 header .button:before {
     background: #fff;
 }
-
+.extensions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+}
+.extensions img {
+    margin-left: 5px;
+}
+.chromeLink {
+    transition: .5s;
+}
+.chromeLink:hover {
+    transform: rotate(360deg);
+    transition: .5s;
+}
+.firefoxLink, .operaLink, .safariLink, .IELink {
+    -webkit-filter: brightness(.7);
+            filter: brightness(.7);
+}
+@media only screen and (max-width: 800px) {
+    .extensions {
+        display: none;
+    }
+}
 
     </style>
     <script src="js/jquery.js"></script>
@@ -65,5 +92,12 @@ header .button:before {
         <br>
         <a href="http://flickr.com/photos/108614122@N04" class="button">Go to my Flickr</a>
     </header>
+    <div class="extensions">Get my photos on your New Tab Page!
+        <a href="https://chrome.google.com/webstore/detail/minimntp/amnoofboejgbodbhpnoemeppldkllofp"><img class="chromeLink" src="images/Chrome.png" alt="Chrome Logo"></a>
+        <img class="firefoxLink" src="images/Firefox.png" alt="Firefox Logo">
+        <img class="operaLink" src="images/Opera.png" alt="Opera Logo">
+        <img class="safariLink" src="images/Safari.png" alt="Safari Logo">
+        <img class="IELink" src="images/IE.png" alt="Internet Explorer Logo">
+    </div>
 </body>
 </html>
