@@ -1,0 +1,23 @@
+.menu {
+    color: #333;
+}
+.menu li a {
+    background: #eee;
+}
+.bg {
+    background-image: url(../images/bgs/Typewriter.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+}
+h1 {
+    white-space: normal;
+}
+article {
+    text-align: center;
+}
+article p {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}

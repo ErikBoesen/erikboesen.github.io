@@ -73,8 +73,8 @@
 
           function deviceRotationHandler(eventData) {
 
-              var tX = Math.round(event.gamma*10) / 10,
-                  tY = Math.round(event.beta*10) / 10,
+              var tX = Math.round(event.beta*10) / 10,
+                  tY = Math.round(event.gamma*10) / 10,
                   xA = -(tX / 10) * settings.strength,
                   yA = -(tY / 10) * settings.strength,
                   newX = -(xA/10), // Change strenth for mobile

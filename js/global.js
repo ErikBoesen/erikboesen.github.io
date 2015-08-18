@@ -25,7 +25,7 @@ var menuOpen = function() {
 var menuClose = function() {
     $("nav").stop();
     $("nav").animate({
-        left: "-400px"
+        left: "-1000px"
     }, 300);
     $(".menuButton").animate({
         left: "0px"

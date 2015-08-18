@@ -1,0 +1,13 @@
+.menuBar, .menuBar:after, .menuBar:before {
+    background: #333;
+}
+article {
+    padding-top: 70px;
+}
+article ul {
+    line-height: 40px;
+}
+img {
+    width: auto;
+    display: block;
+}

@@ -144,7 +144,7 @@ nav {
     height: 100%;
     position: fixed;
     padding-top: 50px;
-    left: -400px;
+    left: -1000px;
     z-index: 900;
 }
 nav ul {
