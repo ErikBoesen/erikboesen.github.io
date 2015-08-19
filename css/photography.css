@@ -5,7 +5,7 @@ body {
     background-image: url(../images/bgs/Photography.jpg);
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: top;
 }
 h1, h3 {
     z-index: 100;

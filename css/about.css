@@ -53,22 +53,22 @@ h1:after {
 p {
     width: 100%;
 }
-.one .parallaxWindow {
+section:first-of-type .parallaxWindow {
     width: 450px;
     height: 450px;
     background-image: url(../images/Jobs.png);
     background-position: 80%;
 }
-.two .parallaxWindow {
+section:nth-of-type(2) .parallaxWindow {
     background-image: url(../images/bgs/Camera.jpg);
     background-position: auto;
 }
-.three .parallaxWindow {
+section:nth-of-type(3) .parallaxWindow {
     background-image: url(../images/Official.png);
     background-size: 80%;
     background-position: 70%;
 }
-.four .parallaxWindow {
+section:last-of-type .parallaxWindow {
     background-image: url(../images/bgs/Road.jpg);
     background-size: 35%;
     background-position: 25% 80%;
@@ -81,16 +81,12 @@ article > h3 {
 @media only screen and (max-width: 800px) {
     h1 {
         margin-top: 60px;
-    }
-    .para {
-        display: block;
-        width: 90%;
-        text-align: left;
+        white-space: normal;
     }
     .parallaxWindow {
         display: none;
     }
-    .parallaxWindow.one {
+    section:nth-of-type(1) {
         float: none;
         position: relative;
         display: block;
@@ -98,5 +94,17 @@ article > h3 {
         left: -8%;
         margin: 0;
         background-size: cover;
+    }
+    section {
+        width: 100%;
+    }
+    section h3 {
+        text-align: center;
+    }
+    p {
+        text-align: justify;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
     }
 }

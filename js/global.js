@@ -28,7 +28,7 @@ var menuClose = function() {
         left: "-1000px"
     }, 300);
     $(".menuButton").animate({
-        left: "0px"
+        left: "10px"
     }, 200);
 
     isMenuOpen = false;

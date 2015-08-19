@@ -45,9 +45,9 @@
       // Insert new container so that the background can be contained when scaled.
 
       if (settings.wrapContent == false) {
-        el.prepend("<div class='ibg-bg'></div>")
+        el.prepend("<div class='ibg-bg'></div>");
       } else {
-        el.wrapInner("<div class='ibg-bg'></div>")
+        el.wrapInner("<div class='ibg-bg'></div>");
       }
 
 
@@ -62,7 +62,7 @@
       el.find("> .ibg-bg").css({
         width: w,
         height: h
-      })
+      });
 
 
 
@@ -72,9 +72,8 @@
         window.addEventListener('deviceorientation', deviceRotationHandler, true);
 
           function deviceRotationHandler(eventData) {
-
-              var tX = Math.round(event.beta*10) / 10,
-                  tY = Math.round(event.gamma*10) / 10,
+              var tX = Math.round(event.gamma*10) / 10,
+                  tY = Math.round(event.beta*10) / 10,
                   xA = -(tX / 10) * settings.strength,
                   yA = -(tY / 10) * settings.strength,
                   newX = -(xA/10), // Change strenth for mobile
@@ -86,13 +85,14 @@
                    "-o-transform": "matrix(" + settings.scale + ",0,0," + settings.scale + "," + newX + "," + newY + ")",
                    "transform": "matrix(" + settings.scale + ",0,0," + settings.scale + "," + newX + "," + newY + ")"
                  });
+
           }
 
       } else {
         // For Desktop
         // Animate only scaling when mouse enter
         $("body").mouseenter(function(e) {
-          if (settings.scale != 1) el.addClass("ibg-entering")
+          if (settings.scale != 1) el.addClass("ibg-entering");
           el.find("> .ibg-bg").css({
             "-webkit-transform": "matrix(" + settings.scale + ",0,0," + settings.scale + ",0,0)",
             "-moz-transform": "matrix(" + settings.scale + ",0,0," + settings.scale + ",0,0)",
@@ -105,7 +105,7 @@
           }).on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
 
             // This will signal the mousemove below to execute when the scaling animation stops
-            el.removeClass("ibg-entering")
+            el.removeClass("ibg-entering");
           });
         }).mousemove(function(e){
           // This condition prevents transition from causing the movement of the background to lag
@@ -130,7 +130,7 @@
             });
           }
         }).mouseleave(function(e) {
-          if (settings.scale != 1) el.addClass("ibg-exiting")
+          if (settings.scale != 1) el.addClass("ibg-exiting");
           // Same condition applies as mouseenter. Rescale the background back to its original scale
           el.addClass("ibg-exiting").find("> .ibg-bg").css({
             "-webkit-transform": "matrix(1,0,0,1,0,0)",
@@ -142,10 +142,10 @@
             "-o-transition": "-o-transform " + settings.animationSpeed + " linear",
             "transition": "transform " + settings.animationSpeed + " linear"
           }).on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
-            el.removeClass("ibg-exiting")
+            el.removeClass("ibg-exiting");
           });
         });
       }
     });
-  }
+};
 }(window.jQuery);
