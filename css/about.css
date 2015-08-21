@@ -86,15 +86,6 @@ article > h3 {
     .parallaxWindow {
         display: none;
     }
-    section:nth-of-type(1) {
-        float: none;
-        position: relative;
-        display: block;
-        border-radius: 0;
-        left: -8%;
-        margin: 0;
-        background-size: cover;
-    }
     section {
         width: 100%;
     }
