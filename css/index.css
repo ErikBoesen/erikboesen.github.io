@@ -1,47 +1,126 @@
+@font-face {
+    font-family: "Bebas Neue";
+    font-weight: bold;
+    src: url(../font/BebasNeue-Bold.otf) format("opentype");
+    unicode-range: U+0000-00FF;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    font-weight: normal;
+    src: url(../font/BebasNeue-Regular.otf) format("opentype");
+    unicode-range: U+0000-00FF;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    font-weight: 400;
+    src: url(../font/BebasNeue-Book.otf) format("opentype");
+    unicode-range: U+0000-00FF;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    font-weight: 300;
+    src: url(../font/BebasNeue-Light.otf) format("opentype");
+    unicode-range: U+0000-00FF;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    font-weight: 100;
+    src: url(../font/BebasNeue-Thin.otf) format("opentype");
+    unicode-range: U+0000-00FF;
+}
+
 body {
     overflow-y: hidden;
+    font-family: "Bebas Neue";
+    background: #efefef;
 }
 .bg {
-    position: absolute;
+    position: fixed;
     height: 100vh;
-    width: 100vw;
+    width: 50vw;
+    right: 0;
+    top: 0;
     z-index: 0;
+    background: url(../images/bgs/Camera.png);
+    background-size: cover;
 }
 header:after {
     display: none;
 }
 
-h3 {
-    line-height: 1.5;
+header {
+    height: 100vh;
+    width: 50%;
 }
-h1, h3, .socialButtons {
-    position: relative;
+h1 {
+    font-size: 95vh;
+    line-height: 1;
+    margin: 0;
+    color: #ddd;
+}
+h2 {
+    margin-top: -21vh;
+    margin-left: 3.7vh;
+    font-size: 9.5vh;
+    font-weight: normal;
+    color: #888;
+    letter-spacing: .2em;
+}
+h2 span {
+    font-weight: 100;
+}
+h3 {
+    line-height: 1;
+    color: #888;
+    margin-top: -8vh;
+    margin-left: 23px;
+    font-weight: 300;
+    font-size: 4.9vh;
+}
+h3:nth-of-type(2) {
+    margin-top: -3vh;
+    margin-left: 25px;
+    letter-spacing: 2px;
+}
+h3 a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: solid 1px #888;
+    transition: .2s;
+}
+h3 a:hover {
+    border-bottom-color: transparent;
+    transition: .2s;
 }
 .socialButtons {
-    margin-top: 20px;
+    position: absolute;
+    margin-top: -90vh;
+    margin-left: 63vh;
     -webkit-animation: 1s subtitle;
-            animation: 1s subtitle;
+    animation: 1s subtitle;
 }
 .socialButtons img {
-    height: 30px;
-    width: 30px;
-    border: none;
+    display: block;
+    margin: 10px;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
-    border: solid 1px hsla(0,0%,100%,.5);
+    border: solid 1px rgba(102, 102, 102, 0.5);
     padding: 2px;
     cursor: pointer;
     -webkit-transition: .3s;
-            transition: .3s;
+    transition: .3s;
 }
 .socialButtons img:hover {
-    border-color: #fff;
+    border-color: transparent;
     -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
     -webkit-transition: .5s;
-            transition: .5s;
+    transition: .5s;
 }
-.gitHubButton {
+
+.gitHubButton img {
     cursor: url(../images/fork.ico), pointer;
 }
 @media only screen and (max-width: 800px) {
@@ -50,7 +129,7 @@ h1, h3, .socialButtons {
     }
     .bg {
         -webkit-transform: scale(1.3);
-            -ms-transform: scale(1.3);
-                transform: scale(1.3)
+        -ms-transform: scale(1.3);
+        transform: scale(1.3)
     }
 }
