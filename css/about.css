@@ -1,30 +1,29 @@
 .menuBar, .menuBar:before, .menuBar:after {
-    background: #666;
+    background: black;
 }
 h1 {
-    margin: 0;
-    text-align: center;
+    position: fixed;
+    right: -5%;
+    top: 30%;
+    transform: rotate(90deg);
     font-size: 5em;
-    white-space: nowrap;
-}
-h3 {
-    margin: 0;
+    text-align: center;
 }
 section {
     width: 70%;
     margin-right: auto;
     margin-left: auto;
 }
-section:after, h1:after {
+section h3 {
+    margin: 0;
+}
+section:after {
     content: "";
     display: block;
     width: 1px;
     height: 200px;
     background: #bbb;
-    margin: auto;
-}
-h1:after {
-    height: 50px;
+    margin: 20px auto;
 }
 .parallaxWindow {
     background-attachment: fixed;
@@ -32,70 +31,68 @@ h1:after {
     background-position: right;
     background-repeat: no-repeat;
     border-radius: 100%;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     -webkit-shape-outside: circle();
     shape-outside: circle();
 }
-.left .parallaxWindow {
+section:nth-child(odd) .parallaxWindow {
     float: left;
-    margin-right: 32px;
-    margin-right: 2rem;
+    margin-right: 2em;
 }
-.right .parallaxWindow {
+section:nth-child(even) .parallaxWindow {
     float: right;
-    margin-left: 32px;
-    margin-left: 2rem;
+    margin-left: 2em;
 }
-.right {
+section:nth-child(even) {
     text-align: right;
 }
 p {
     width: 100%;
 }
 section:first-of-type .parallaxWindow {
-    width: 450px;
-    height: 450px;
-    background-image: url(../images/Jobs.png);
-    background-position: 80%;
+    background-image: url(../images/bgs/suit.png);
+    background-attachment: scroll;
 }
 section:nth-of-type(2) .parallaxWindow {
     background-image: url(../images/bgs/Camera.jpg);
-    background-position: auto;
 }
 section:nth-of-type(3) .parallaxWindow {
-    background-image: url(../images/Official.png);
-    background-size: 80%;
-    background-position: 70%;
+    background-image: url(../images/JobsCrop.png);
+    background-size: 40%;
+    background-position: 26%;
 }
-section:last-of-type .parallaxWindow {
-    background-image: url(../images/bgs/Road.jpg);
-    background-size: 35%;
-    background-position: 25% 80%;
+article {
+    padding-top: 5%;
 }
-
 article > h3 {
     text-align: center;
 }
 
-@media only screen and (max-width: 800px) {
+@media (max-width: 1000px) {
     h1 {
-        margin-top: 60px;
+        position: static;
+        transform: none;
+        margin-top: 50px;
         white-space: normal;
     }
     .parallaxWindow {
         display: none;
+    }
+    section:after {
+        height: 100px;
+        margin: 10px auto;
     }
     section {
         width: 100%;
     }
     section h3 {
         text-align: center;
+        margin-bottom: .3em;
     }
     p {
         text-align: justify;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
         width: 90%;
     }
 }

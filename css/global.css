@@ -2,28 +2,27 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 200;
-  src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url(http://fonts.gstatic.com/s/raleway/v9/8KhZd3VQBtXTAznvKjw-k_k_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+  src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url(font/Raleway-200.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 100;
-  src: local('Raleway Thin'), local('Raleway-Thin'), url(../font/Raleway-100.woff2) format('woff2'), url('../font/Raleway-100.ttf')  format('truetype');
+  src: local('Raleway Thin'), local('Raleway-Thin'), url(font/Raleway-100.woff2) format('woff2'), url('../font/Raleway-100.ttf')  format('truetype');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 300;
-  src: local('Ubuntu Light'), local('Ubuntu-Light'), url(../font/Ubuntu-300.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(OpenSans-400.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
 body {
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 100;
-    color: #333;
     overflow-x: hidden;
     position: absolute;
     margin: 0;
@@ -34,14 +33,9 @@ body {
     position: fixed;
     height: 100%;
     width: 100%;
-    z-index: -100;
+    z-index: -150;
 }
 
-/* Special */
-::-moz-selection {background-color: #2098d1}
-::selection {background-color: #2098d1}
-
-/* Global elements */
 p {
     font-size: 1em;
     line-height: 1.75em;
@@ -53,8 +47,8 @@ a {
 a:hover {
     text-decoration: none;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway", "Josefin Sans", "Ubuntu", sans-serif;
+h1, h2, h3 {
+    font-family: "Raleway", "Open Sans", sans-serif;
     font-weight: 100;
     margin-bottom: 40px;
 }
@@ -83,8 +77,10 @@ h3 {
     margin-right: auto;
     cursor: pointer;
     display: inline-block;
-    transform: translateZ(0);
-    transition: color 0.3s;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    -webkit-transition: color 0.3s;
+            transition: color 0.3s;
 }
 .button:before {
     content: "";
@@ -95,15 +91,22 @@ h3 {
     right: 0;
     bottom: 0;
     background: #333;
-    transform: scaleY(0);
-    transform-origin: 50% 0;
-    transition: transform 0.3s ease-out;
+    -webkit-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+        -ms-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+            transition: transform 0.3s ease-out;
 }
 .button:hover, .button:focus, .button:active {
     color: white;
 }
 .button:hover:before, .button:focus:before, .button:active:before {
-    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+            transform: scaleY(1);
 }
 
 /* Menu */
@@ -161,7 +164,8 @@ nav a {
     background: #eee;
 	position: relative;
     display: inline-block;
-    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
     position: relative;
 }
 nav a:before {
@@ -172,7 +176,8 @@ nav a:before {
     right: 100%;
     height: 100%;
     bottom: 0;
-    transition: right .2s ease-out;
+    -webkit-transition: right .2s ease-out;
+            transition: right .2s ease-out;
 }
 nav a:hover:before, nav a:focus:before, nav a:active:before {
     right: 0;
@@ -184,9 +189,7 @@ nav li:first-child a:before {background: #2098d1}
 nav li:nth-child(2) a:before {background: #38A16F}
 nav li:nth-child(3) a:before {background: #47e5aa}
 nav li:nth-child(4) a:before {background: #D54431}
-nav li:nth-child(5) a:before {background: #e2913d}
-nav li:nth-child(6) a:before {background: #DCC251}
-nav li:nth-child(7) a:before {background: #bcbbb3}
+nav li:nth-child(5) a:before {background: #bcbbb3}
 
 
 
@@ -217,6 +220,7 @@ header {
             align-items: center;
     text-align: center;
     padding: 1px 2vm 0 2vm;
+    z-index: -100;
 }
 header h1, header h3 {
     margin: 0;
@@ -232,17 +236,19 @@ header h3 {
 header h3 a {
     text-decoration: none;
     border-bottom: solid 1px rgba(255,255,255,.5);
-    transition: .5s all;
+    -webkit-transition: .5s all;
+            transition: .5s all;
 }
 header h3 a:hover {
     border-color: #fff;
-    transition: 1s all;
+    -webkit-transition: 1s all;
+            transition: 1s all;
 }
 
 article {
     background: #fff;
     padding: 2em 5em 1.75em 5em;
-    z-index: 100;
+    z-index: 0;
 }
 header:after {
     content: "";
@@ -252,23 +258,27 @@ header:after {
 	border-top: 10px solid #fff;
     bottom: 10px;
     left: 48%;
-    z-index: -100;
     position: absolute;
-    animation: .5s arrowPulse infinite alternate-reverse ease-out;
+    -webkit-animation: .5s arrowPulse infinite alternate-reverse ease-out;
+            animation: .5s arrowPulse infinite alternate-reverse ease-out;
 }
 @-webkit-keyframes arrowPulse {
     0% {
         opacity: .1;
+        filter: alpha(opacity=10);
     }
     100% {
         opacity: .9;
+        filter: alpha(opacity=90);
     }
 }
 @keyframes arrowPulse {
     0% {
         opacity: .1;
+        filter: alpha(opacity=10);
     }
     100% {
         opacity: .9;
+        filter: alpha(opacity=90);
     }
 }
