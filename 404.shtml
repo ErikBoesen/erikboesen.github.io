@@ -10,14 +10,6 @@
         <link rel="stylesheet" href="http://erikboesen.com/css/404.css">
         <script src="http://erikboesen.com/js/jquery.js"></script>
         <script src="http://erikboesen.com/js/global.js"></script>
-        <!--  Tynt Script -->
-        <script>
-            if(document.location.protocol=='http:'){
-                var Tynt=Tynt||[];Tynt.push('d-BauUFxyr5is3acwqm_6r');
-                (function(){var s=document.createElement('script');s.async="async";s.type="text/javascript";s.src='http://tcr.tynt.com/ti.js';var                               h=document.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})();
-            }
-        </script>
-        <!-- Tynt Script -->
     </head>
     <body>
         <div class="menuButton">
@@ -42,7 +34,7 @@
                <li>Looking for a blog post? Start the URL with erikboesen.com/blog/... instead of erikboesen.com/... (I recently migrated my blog.)</li>
                <li>Remove the / from the end of the URL.</li>
             </ul>
-            <p>If you find a broken link or other error:</p>
+            <p>Found a broken link or other error?</p>
             <button class="button" onclick="emailMe();">Email Me</button>
             <img src="http://erikboesen.com/images/404.png" alt="404">
         </article>
