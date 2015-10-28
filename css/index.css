@@ -21,6 +21,7 @@ h1, h3, .socialButtons {
     margin-top: 20px;
     -webkit-animation: 1s subtitle;
             animation: 1s subtitle;
+    cursor: default;
 }
 .socialButtons img {
     height: 30px;
