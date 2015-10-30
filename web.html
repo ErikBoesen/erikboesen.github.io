@@ -1,36 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Web | Erik Boesen</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#222832">
-    <meta name="google-site-verification" content="esL1yRi6xqeu_NB5YqZIFlYGAQE0ZOC7rfH-Fg28DlI" />
-    <meta name="description" content="I help businesses and people make creative impacts on the web. Click here to learn more!">
+    <meta name="description" content="I help businesses and people make creative impacts on the web.">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="only screen and (max-width: 800px)" href="css/mobile.css">
     <link rel="stylesheet" href="css/web.css">
-    <script src="js/jquery.js"></script>
-    <script src="js/global.js"></script>
-    <script>
-
-$(window).scroll(function() {
-    var wScroll = $(this).scrollTop();
-    $("header li").css({
-        "margin-left" : wScroll * 10 + "px"
-    });
-});
-
-    </script>
 </head>
+
 <body>
     <div class="menuButton">
         <div class="menuBar"></div>
     </div>
     <nav>
         <ul>
-            <li><a href="http://erikboesen.com">HOME</a></li>
+            <li><a href="../">HOME</a></li>
             <li><a href="about">ABOUT</a></li>
             <li><a href="web" class="active">WEB</a></li>
             <li><a href="photography">PHOTOGRAPHY</a></li>
@@ -43,11 +32,26 @@ $(window).scroll(function() {
         <h1>Web Design</h1>
         <h3>I help businesses and people build new and creative web presences.</h3>
         <ul>
-            <li><div><img src="images/Code.png" alt="Pure-Code Websites"></div>Pure-Code</li>
-            <li><div><img src="images/WP.png" alt="WordPress"></div>WordPress</li>
-            <li><div><img src="images/Bootstrap.png" alt="Frameworks"></div>Framework</li>
-            <li><div><img src="images/HTML5.png" alt="Modern"></div>Modern</li>
-            <li><div><img src="images/Check.png" alt="Responsive"></div>Responsive</li>
+            <li>
+                <div>
+                    <img src="images/Code.png" alt="Pure-Code Websites">
+                </div>Pure-Code</li>
+            <li>
+                <div>
+                    <img src="images/WP.png" alt="WordPress">
+                </div>WordPress</li>
+            <li>
+                <div>
+                    <img src="images/Bootstrap.png" alt="Frameworks">
+                </div>Framework</li>
+            <li>
+                <div>
+                    <img src="images/HTML5.png" alt="Modern">
+                </div>Modern</li>
+            <li>
+                <div>
+                    <img src="images/Check.png" alt="Responsive">
+                </div>Responsive</li>
         </ul>
     </header>
 
@@ -59,5 +63,16 @@ $(window).scroll(function() {
         <p><i>For inquiries or a quote, email me by clicking the button below. Thank you, and I hope to be in contact soon!</i></p>
         <button onclick="emailMe();" class="button">Contact Me</button>
     </article>
+    <script src="js/jquery.js"></script>
+    <script src="js/global.js"></script>
+    <script>
+        $(window).scroll(function() {
+            var wScroll = $(this).scrollTop();
+            $('header li').css({
+                'margin-left': wScroll * 10 + 'px'
+            });
+        });
+    </script>
 </body>
+
 </html>

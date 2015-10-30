@@ -10,7 +10,6 @@ body {
 header:after {
     display: none;
 }
-
 h3 {
     line-height: 1.5;
 }
@@ -20,27 +19,30 @@ h1, h3, .socialButtons {
 .socialButtons {
     margin-top: 20px;
     -webkit-animation: 1s subtitle;
-            animation: 1s subtitle;
+    animation: 1s subtitle;
     cursor: default;
+}
+.socialButtons a {
+    text-decoration: none;
 }
 .socialButtons img {
     height: 30px;
     width: 30px;
     border: none;
     border-radius: 100%;
-    border: solid 1px hsla(0,0%,100%,.5);
+    border: solid 1px hsla(0, 0%, 100%, .5);
     padding: 2px;
     cursor: pointer;
     -webkit-transition: .3s;
-            transition: .3s;
+    transition: .3s;
 }
 .socialButtons img:hover {
     border-color: #fff;
     -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
     -webkit-transition: .5s;
-            transition: .5s;
+    transition: .5s;
 }
 @media only screen and (max-width: 800px) {
     h1 {
@@ -48,7 +50,7 @@ h1, h3, .socialButtons {
     }
     .bg {
         -webkit-transform: scale(1.3);
-            -ms-transform: scale(1.3);
-                transform: scale(1.3)
+        -ms-transform: scale(1.3);
+        transform: scale(1.3)
     }
 }

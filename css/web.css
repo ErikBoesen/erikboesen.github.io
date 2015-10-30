@@ -13,7 +13,7 @@ header ul {
     margin-top: 50px;
     margin-right: 50px;
     -webkit-animation: 1s fadeIn linear;
-            animation: 1s fadeIn linear;
+    animation: 1s fadeIn linear;
     white-space: nowrap;
     min-width: 100%;
 }

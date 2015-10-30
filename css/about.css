@@ -18,7 +18,7 @@ section h3 {
     margin: 0;
 }
 section:after {
-    content: "";
+    content: '';
     display: block;
     width: 1px;
     height: 200px;
@@ -68,7 +68,6 @@ article {
 article > h3 {
     text-align: center;
 }
-
 @media (max-width: 1000px) {
     h1 {
         position: static;

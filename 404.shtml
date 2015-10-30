@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html>
-	<head>
-        <title>Erik Boesen | :&#40;</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#222832">
-        <link rel="stylesheet" href="http://erikboesen.com/css/global.css">
-        <link rel="stylesheet" media="only screen and (max-width: 800px)" href="http://erikboesen.com/css/mobile.css">
-        <link rel="stylesheet" href="http://erikboesen.com/css/404.css">
-        <script src="http://erikboesen.com/js/jquery.js"></script>
-        <script src="http://erikboesen.com/js/global.js"></script>
-    </head>
-    <body>
-        <div class="menuButton">
-            <div class="menuBar"></div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="http://erikboesen.com">HOME</a></li>
-                <li><a href="http://erikboesen.com/web">WEB</a></li>
-                <li><a href="http://erikboesen.com/photography">PHOTOGRAPHY</a></li>
-                <li><a href="http://erikboesen.com/tech-support">TECH SUPPORT</a></li>
-                <li><a href="http://erikboesen.com/electronics-store">ELECTRONICS STORE</a></li>
-                <li><a href="http://erikboesen.com/blog">BLOG</a></li>
-            </ul>
-        </nav>
 
-        <article>
-            <h1>Error 404: Couldn't find nuthin'.</h1>
-            <p><strong>Things you can try:</strong></p>
-            <ul>
-               <li>Go <a href="http://erikboesen.com">Home</a></li>
-               <li>Looking for a blog post? Start the URL with erikboesen.com/blog/... instead of erikboesen.com/... (I recently migrated my blog.)</li>
-               <li>Remove the / from the end of the URL.</li>
-            </ul>
-            <p>Found a broken link or other error?</p>
-            <button class="button" onclick="emailMe();">Email Me</button>
-            <img src="http://erikboesen.com/images/404.png" alt="404">
-        </article>
-    </body>
+<head>
+	<title>Erik Boesen | :&#40;</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#222832">
+	<link rel="stylesheet" href="http://erikboesen.com/css/global.css">
+	<link rel="stylesheet" media="only screen and (max-width: 800px)" href="http://erikboesen.com/css/mobile.css">
+	<link rel="stylesheet" href="http://erikboesen.com/css/404.css">
+</head>
+
+<body>
+	<div class="menuButton">
+		<div class="menuBar"></div>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="http://erikboesen.com">HOME</a></li>
+			<li><a href="http://erikboesen.com/web">WEB</a></li>
+			<li><a href="http://erikboesen.com/photography">PHOTOGRAPHY</a></li>
+			<li><a href="http://erikboesen.com/tech-support">TECH SUPPORT</a></li>
+			<li><a href="http://erikboesen.com/electronics-store">ELECTRONICS STORE</a></li>
+			<li><a href="http://erikboesen.com/blog">BLOG</a></li>
+		</ul>
+	</nav>
+
+	<article>
+		<h1>Error 404: Couldn't find nuthin'.</h1>
+		<p>
+			<strong>Things you can try:</strong>
+		</p>
+		<ul>
+			<li>Go <a href="http://erikboesen.com">Home</a></li>
+			<li>Looking for a blog post? Start the URL with erikboesen.com/blog/... instead of erikboesen.com/... (I recently migrated my blog.)</li>
+			<li>Remove the / from the end of the URL.</li>
+		</ul>
+		<p>Found a broken link or other error?</p>
+		<button class="button" onclick="emailMe();">Email Me</button>
+		<img src="http://erikboesen.com/images/404.png" alt="404">
+	</article>
+	<script src="http://erikboesen.com/js/jquery.js"></script>
+	<script src="http://erikboesen.com/js/global.js"></script>
+</body>
+
 </html>
