@@ -13,19 +13,19 @@ header:after {
 h3 {
     line-height: 1.5;
 }
-h1, h3, .socialButtons {
+h1, h3, .social-buttons {
     position: relative;
 }
-.socialButtons {
+.social-buttons {
     margin-top: 20px;
     -webkit-animation: 1s subtitle;
     animation: 1s subtitle;
     cursor: default;
 }
-.socialButtons a {
+.social-buttons a {
     text-decoration: none;
 }
-.socialButtons img {
+.social-buttons img {
     height: 30px;
     width: 30px;
     border: none;
@@ -36,7 +36,7 @@ h1, h3, .socialButtons {
     -webkit-transition: .3s;
     transition: .3s;
 }
-.socialButtons img:hover {
+.social-buttons img:hover {
     border-color: #fff;
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);

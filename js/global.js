@@ -16,7 +16,7 @@ var menuOpen = function() {
     $('nav').animate({
         left: '0px'
     }, 300);
-    $('.menuButton').animate({
+    $('.menu-button').animate({
         left: '-20px'
     }, 200);
 
@@ -27,14 +27,14 @@ var menuClose = function() {
     $('nav').animate({
         left: '-1000px'
     }, 300);
-    $('.menuButton').animate({
+    $('.menu-button').animate({
         left: '10px'
     }, 200);
 
     isMenuOpen = false;
 };
 var menu = function() {
-    $('.menuButton').click(function() {
+    $('.menu-button').click(function() {
         if (isMenuOpen === false) {
             menuOpen();
         } else {

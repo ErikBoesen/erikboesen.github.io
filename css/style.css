@@ -108,7 +108,7 @@ h3 {
 
 /* Menu */
 
-.menuButton {
+.menu-button {
     position: fixed;
     top: 20px;
     left: 10px;
@@ -122,23 +122,23 @@ h3 {
     -ms-user-select: none;
     user-select: none;
 }
-.menuBar {
+.menu-bar {
     width: 100%;
     height: 1px;
     background-color: #fff;
     border-radius: 8px;
 }
-.menuBar:after, .menuBar:before {
+.menu-bar:after, .menu-bar:before {
     content: '';
     width: 100%;
     height: 1px;
     position: absolute;
     background-color: #fff;
 }
-.menuBar:after {
+.menu-bar:after {
     top: 20px;
 }
-.menuBar:before {
+.menu-bar:before {
     top: 10px;
 }
 nav {
@@ -264,10 +264,10 @@ header:after {
     bottom: 10px;
     left: 48%;
     position: absolute;
-    -webkit-animation: .5s arrowPulse infinite alternate-reverse ease-out;
-    animation: .5s arrowPulse infinite alternate-reverse ease-out;
+    -webkit-animation: .5s arrow-pulse infinite alternate-reverse ease-out;
+    animation: .5s arrow-pulse infinite alternate-reverse ease-out;
 }
-@-webkit-keyframes arrowPulse {
+@-webkit-keyframes arrow-pulse {
     0% {
         opacity: .1;
         filter: alpha(opacity=10);
@@ -277,7 +277,7 @@ header:after {
         filter: alpha(opacity=90);
     }
 }
-@keyframes arrowPulse {
+@keyframes arrow-pulse {
     0% {
         opacity: .1;
         filter: alpha(opacity=10);

@@ -12,8 +12,8 @@ header ul {
     font-weight: bold;
     margin-top: 50px;
     margin-right: 50px;
-    -webkit-animation: 1s fadeIn linear;
-    animation: 1s fadeIn linear;
+    -webkit-animation: 1s fade-in linear;
+    animation: 1s fade-in linear;
     white-space: nowrap;
     min-width: 100%;
 }
@@ -36,7 +36,7 @@ header ul div {
     display: inline;
     text-align: left;
 }
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes fade-in {
     0% {
         opacity: 0;
         filter: alpha(opacity=0);
@@ -46,7 +46,7 @@ header ul div {
         filter: alpha(opacity=100);
     }
 }
-@keyframes fadeIn {
+@keyframes fade-in {
     0% {
         opacity: 0;
         filter: alpha(opacity=0);
