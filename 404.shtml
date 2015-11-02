@@ -39,7 +39,7 @@
 		<img src="http://erikboesen.com/images/404.png" alt="404">
 	</article>
 	<script src="http://erikboesen.com/js/jquery.js"></script>
-	<script src="http://erikboesen.com/js/global.js"></script>
+	<script src="http://erikboesen.com/js/scripts.js"></script>
 </body>
 
 </html>
