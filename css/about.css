@@ -5,7 +5,9 @@ h1 {
     position: fixed;
     right: -5%;
     top: 30%;
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
     font-size: 5em;
     text-align: center;
 }
@@ -71,7 +73,9 @@ article > h3 {
 @media (max-width: 1000px) {
     h1 {
         position: static;
-        transform: none;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
         margin-top: 50px;
         white-space: normal;
     }

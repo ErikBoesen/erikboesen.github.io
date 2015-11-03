@@ -1,6 +1,7 @@
 body {
     padding-top: 50px;
-    animation: .2s colorFlash infinite linear;
+    -webkit-animation: .2s colorFlash infinite linear;
+            animation: .2s colorFlash infinite linear;
 }
 article {
     text-align: center;
@@ -9,20 +10,20 @@ article {
 @keyframes colorFlash {
     0% {
         -webkit-filter: hue-rotate(0) saturate(2);
-        filter: hue-rotate(0) saturate(2);
+                filter: hue-rotate(0) saturate(2);
     }
     100% {
         -webkit-filter: hue-rotate(360deg) saturate(2);
-        filter: hue-rotate(360deg) saturate(2);
+                filter: hue-rotate(360deg) saturate(2);
     }
 }
 @-webkit-keyframes colorFlash {
     0% {
         -webkit-filter: hue-rotate(0) saturate(2);
-        filter: hue-rotate(0) saturate(2);
+                filter: hue-rotate(0) saturate(2);
     }
     100% {
         -webkit-filter: hue-rotate(360deg) saturate(2);
-        filter: hue-rotate(360deg) saturate(2);
+                filter: hue-rotate(360deg) saturate(2);
     }
 }
