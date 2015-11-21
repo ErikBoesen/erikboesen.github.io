@@ -1,13 +1,13 @@
-.menu-bar, .menu-bar:before, .menu-bar:after {
-    background: black;
+.menu-button span {
+    background: #333;
 }
 h1 {
     position: fixed;
     right: -5%;
     top: 30%;
     -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
     font-size: 5em;
     text-align: center;
 }
@@ -74,8 +74,8 @@ article > h3 {
     h1 {
         position: static;
         -webkit-transform: none;
-            -ms-transform: none;
-                transform: none;
+        -ms-transform: none;
+        transform: none;
         margin-top: 50px;
         white-space: normal;
     }

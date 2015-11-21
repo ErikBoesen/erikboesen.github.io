@@ -9,41 +9,26 @@ $(window).scroll(function() {
     });
 });
 
-var isMenuOpen = false;
-
-var menuOpen = function() {
-    $('nav').stop();
-    $('nav').animate({
-        left: '0px'
-    }, 300);
-    $('.menu-button').animate({
-        left: '-20px'
-    }, 200);
-
-    isMenuOpen = true;
-};
-var menuClose = function() {
-    $('nav').stop();
-    $('nav').animate({
-        left: '-1000px'
-    }, 300);
-    $('.menu-button').animate({
-        left: '10px'
-    }, 200);
-
-    isMenuOpen = false;
-};
-var menu = function() {
-    $('.menu-button').click(function() {
-        if (isMenuOpen === false) {
-            menuOpen();
-        } else {
-            menuClose();
+$(document).ready(function() {
+    var isMenuOpen = false;
+	$('.menu-button').click(function(){
+		$(this).toggleClass('open');
+        if (isMenuOpen) {
+            $('nav').stop();
+            $('nav').animate({
+                'left': '-200px'
+            }, 300);
+            isMenuOpen = false;
         }
-    });
-};
-
-addEventListener('load', menu);
+        else {
+            $('nav').stop();
+            $('nav').animate({
+                'left': '0'
+            }, 300);
+            isMenuOpen = true;
+        }
+	});
+});
 
 // Email address mask
 var emailMe = function() {
