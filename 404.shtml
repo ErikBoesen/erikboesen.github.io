@@ -2,44 +2,32 @@
 <html>
 
 <head>
-	<title>Erik Boesen | :&#40;</title>
+	<title>Fluffy: A Short Tale</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#222832">
-	<link rel="stylesheet" href="http://erikboesen.com/css/global.css">
-	<link rel="stylesheet" media="only screen and (max-width: 800px)" href="http://erikboesen.com/css/mobile.css">
-	<link rel="stylesheet" href="http://erikboesen.com/css/404.css">
+	<style>
+		body {
+			text-align: center;
+		}
+		p {
+			margin: 20px auto 0;
+			max-width: 50%
+		}
+		@media (max-width: 800px) {
+			p {
+				max-width: 90%;
+			}
+		}
+	</style>
 </head>
 
 <body>
-	<div class="menu-button">
-		<div class="menu-bar"></div>
-	</div>
-	<nav>
-		<ul>
-			<li><a href="http://erikboesen.com">HOME</a></li>
-			<li><a href="http://erikboesen.com/web">WEB</a></li>
-			<li><a href="http://flickr.com/photos/108614122@N04">PHOTOGRAPHY</a></li>
-			<li><a href="http://erikboesen.com/blog">BLOG</a></li>
-		</ul>
-	</nav>
-
-	<article>
-		<h1>Error 404: Couldn't find nuthin'.</h1>
-		<p>
-			<strong>Things you can try:</strong>
-		</p>
-		<ul>
-			<li>Go <a href="http://erikboesen.com">Home</a></li>
-			<li>Looking for a blog post? Start the URL with erikboesen.com/blog/... instead of erikboesen.com/... (I recently migrated my blog.)</li>
-			<li>Remove the / from the end of the URL.</li>
-		</ul>
-		<p>Found a broken link or other error?</p>
-		<button class="button" onclick="emailMe();">Email Me</button>
-		<img src="http://erikboesen.com/images/404.png" alt="404">
-	</article>
-	<script src="http://erikboesen.com/js/jquery.js"></script>
-	<script src="http://erikboesen.com/js/scripts.js"></script>
+	<h1>Meet Fluffy.</h1>
+	<img src="images/fluffy.jpg">
+	<p>Fluffy is an innocent bear. One day, Fluffy was walking along, minding his own business when he happened upon a 404 page. "What's this?" asked Fluffy, who was confused; never having used a computer before. "This is a 404 page," said the 404 page. "It means the page or file you tried to go to can't be found," continued the page. "The best thing to do is just click on the Home button."</p>
+	<p>Fluffy was a skeptical and closed-minded bear, and was mistrustful of this foreign concept. Refusing to be persuaded, he pushed past the well-meaning 404 page, muttering obscenities. "Suit yourself," said the 404 page, and blew Fluffy's brains out with his trusty Glock 19. Fluffy never knew what hit him.</p>
+	<p>Click the button. Or else.</p>
+	<p><a href="http://erikboesen.com">Home</a></p>
 </body>
 
 </html>

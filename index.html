@@ -2,57 +2,42 @@
 <html>
 
 <head>
-    <title>Erik Boesen's Website</title>
+    <title>Erik Boesen</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#222832">
     <meta name="google-site-verification" content="esL1yRi6xqeu_NB5YqZIFlYGAQE0ZOC7rfH-Fg28DlI">
-    <meta name="description" content="Teenage photographer, writer, web designer, & geek.">
+    <meta name="description" content="Teenage photographer, web designer, guitarist & geek.">
     <link rel="icon" type="image/ico" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" media="only screen and (max-width: 800px)" href="css/mobile.css">
-    <link rel="stylesheet" href="css/index.css">
+    <!--[if lte IE 9]>
+        This site makes no effort to support IE 6, 7, 8, or 9. All of them are humbly requested to die in a fire.
+    <![endif]-->
 </head>
 
 <body>
-    <div class="bg" data-ibg-bg="images/bgs/Camera.jpg"></div>
+    <div class="bg" data-ibg-bg="images/Camera.jpg"></div>
     <header>
         <h1>Hi.</h1>
-        <h3>I'm Erik, teenage <a href="http://flickr.com/photos/108614122@N04">photographer</a>, <a href="blog">writer</a>, <a href="web">web designer</a>, &amp; <a href="about">geek</a>.</h3>
-        <div class="social-buttons">
-            <a class="email-button" href="" onclick="emailMe();">
-                <img src="images/social/Email.png" alt="Email me">
-            </a>
-            <a class="google-plus-button" href="http://plus.google.com/+ErikBoesen">
-                <img src="images/social/Google.png" alt="Google+">
-            </a>
-            <a class="twitter-button" href="http://twitter.com/ErikBoesen">
-                <img src="images/social/Twitter.png" alt="Twitter">
-            </a>
-            <a class="instagram-button" href="http://instagram.com/erikboesen">
-                <img src="images/social/Instagram.png" alt="Instagram">
-            </a>
-            <a class="github-button" href="http://github.com/ErikBoesen">
-                <img src="images/social/GitHub.png" alt="GitHub">
-            </a>
-            <a class="flickr-button" href="http://flickr.com/photos/108614122@N04">
-                <img src="images/social/Flickr.png" alt="Flickr">
-            </a>
-        </div>
+        <h2>I'm Erik, a teenage <a href="http://flickr.com/photos/108614122@N04">photographer</a>, writer, web designer, &amp; geek.</h2>
     </header>
+    <article>
+        <p>I'm a freshman at George Mason High School. I love <a href="http://flickr.com/photos/108614122@N04">photography</a>, guitar, making websites, Zen Buddhism, and <a href="https://open.spotify.com/user/erikboesen/starred">this music</a>.</p>
+        <p>I've created over 50 websites for my own use and for clients, including <a href="http://english-now.com">English Now!</a> and my friend <a href="http://erikboesen.github.io/nc.io/">Nicholas Costa</a>.
+        <h3>Contact Me</h3>
+        <hr>
+        <ul class="social-buttons">
+            <li><a href="" onclick="emailMe();"><img src="images/social/Email.png" alt="Email me"></a></li>
+            <li><a href="http://plus.google.com/+ErikBoesen"><img src="images/social/Google.png" alt="Google+"></a></li>
+            <li><a href="http://twitter.com/ErikBoesen"><img src="images/social/Twitter.png" alt="Twitter"></a></li>
+            <li><a href="http://instagram.com/erikboesen"><img src="images/social/Instagram.png" alt="Instagram"></a></li>
+            <li><a href="http://github.com/ErikBoesen"><img src="images/social/GitHub.png" alt="GitHub"></a></li>
+            <li><a href="http://flickr.com/photos/108614122@N04"><img src="images/social/Flickr.png" alt="Flickr"></a></li>
+        </div>
+    </article>
     <script src="js/jquery.js"></script>
     <script src="js/jquery.interactive_bg.js"></script>
-    <script src="js/scripts.js">
-    <script>
-        $('.bg').interactive_bg();
-
-        $(window).resize(function() {
-            $('.bg > .ibg-bg').css({
-                width: $(window).outerWidth(),
-                height: $(window).outerHeight()
-            });
-        });
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
