@@ -1,12 +1,3 @@
-$('.bg').interactive_bg();
-
-$(window).resize(function () {
-	$('.bg > .ibg-bg').css({
-		width: $(window).outerWidth(),
-		height: $(window).outerHeight()
-	});
-});
-
 // Email address mask
 var emailMe = function() {
     window.open('mailto:erikboesen@erikboesen.com');

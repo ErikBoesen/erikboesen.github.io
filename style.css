@@ -12,26 +12,28 @@
     src: local('Open Sans Light'), local('OpenSans-Light'), url(font/OpenSans-300.woff2) format('woff2'), url(font/OpenSans-300.ttf) format('truetype');
     unicode-range: U+0000—001F;
 }
-html, body {
+html,
+body {
     height: 100%;
 }
 body {
     font-family: 'Open Sans', 'Raleway', sans-serif;
     margin: 0;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
 }
 .bg {
+    background: url(images/Camera.jpg) center;
+    background-size: cover;
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    width: 50vw;
     left: 0;
+    top: 0;
+    bottom: 0;
     z-index: -100;
+    transition: .3s;
+}
+body:hover .bg {
+    transform: scale(1.05);
+    transition: .3s;
 }
 a {
     color: inherit;
@@ -49,6 +51,7 @@ h3 {
 h1 {
     font-size: 9em;
     letter-spacing: -10px;
+    margin-left: -11px;
 }
 h2 {
     font-size: 25px;
@@ -56,26 +59,22 @@ h2 {
 }
 h2 a {
     text-decoration: none;
-    border-bottom: solid 1px rgba(255, 255, 255, .5);
-    transition: .5s;
+    border-bottom: solid 1px rgba(0,0,0,.4);
+    transition: .2s;
 }
 h2 a:hover {
-    border-color: #fff;
-    transition: 1s;
+    border-color: black;
+    transition: .5s;
 }
 article {
-    margin-top: 20px;
-}
-h3 {
-    position: relative;
-    margin: .5em;
-}
-hr {
-    width: 300px;
-    border: 0;
-    height: 1px;
+    box-sizing: border-box;
+    width: 50vw;
+    min-height: 100vh;
+    position: absolute;
+    right: 0;
+    padding: 2em 3em;
     background: white;
-    margin: 0 auto;
+    color: #333;
 }
 ul {
     cursor: default;
@@ -93,14 +92,14 @@ ul img {
     width: 30px;
     border: none;
     border-radius: 100%;
-    border: solid 1px rgba(255, 255, 255, 0.5);
-    padding: 2px;
+    border: solid 1px rgba(51, 51, 51, .8);
+    padding: 4px;
     cursor: pointer;
     transition: .3s;
     display: inline-block;
 }
 ul img:hover {
-    border-color: #fff;
+    border-color: black;
     transform: rotate(360deg);
     transition: .5s;
 }
