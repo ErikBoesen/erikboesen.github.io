@@ -120,6 +120,8 @@ ul img:hover {
     article {
         position: static;
         width: 100%;
+        padding: 1em;
+        font-size: 1.05em;
     }
 }
 @media (min-width: 1500px) {
