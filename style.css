@@ -21,23 +21,14 @@ body {
     margin: 0;
 }
 .bg {
-    background: url(images/Camera.jpg) center;
-    background-size: cover;
     position: fixed;
-    width: 50vw;
-    left: 0;
+    width: 80vw;
+    left: -15vw;
     top: 0;
     bottom: 0;
     z-index: -100;
-    -webkit-transition: .3s;
-            transition: .3s;
-}
-body:hover .bg {
-    -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-            transform: scale(1.05);
-    -webkit-transition: .3s;
-            transition: .3s;
+    -webkit-transition: .5s;
+            transition: .5s;
 }
 a {
     color: inherit;
