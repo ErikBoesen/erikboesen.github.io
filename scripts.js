@@ -7,16 +7,24 @@ $('.bg').interactive_bg({
 	contain: true,
 	wrapContent: false
 });
+
 $(window).resize(function() {
-	$('.ibg-bg').css({
-		width: $(window).outerWidth(),
-		height: $(window).outerHeight()
-	});
+	if ($(window).outerWidth() > 1500) {
+		$('.bg > .ibg-bg').css({
+			width: $(window).outerWidth() * 0.75,
+			height: $(window).outerHeight()
+		});
+	} else {
+		$('.bg > .ibg-bg').css({
+			width: $(window).outerWidth() / 2,
+			height: $(window).outerHeight()
+		});
+	}
 });
 
 
 var emailMe = function() {
-    window.open('mailto:erikboesen@erikboesen.com');
+    window.open('mailto:me@erikboesen.com');
 };
 
 if(document.location.protocol=='http:'){

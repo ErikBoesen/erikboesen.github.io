@@ -118,6 +118,7 @@ ul img:hover {
 @media (min-width: 1500px) {
     .bg {
         width: 75%;
+        left: 0;
     }
     article {
         width: 25%;
