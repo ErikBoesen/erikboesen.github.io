@@ -23,11 +23,11 @@
 
 <body>
 	<h1>Meet Fluffy.</h1>
-	<img src="images/fluffy.jpg">
-	<p>Fluffy is an innocent bear. One day, Fluffy was walking along, minding his own business when he happened upon a 404 page. "What's this?" asked Fluffy, who was confused; never having used a computer before. "This is a 404 page," said the 404 page. "It means the page or file you tried to go to can't be found," continued the page. "The best thing to do is just click on the Home button."</p>
+	<img src="/images/fluffy.jpg">
+	<p>Fluffy is a nice bear. One day, Fluffy was walking along, minding his own business when he happened upon a 404 page. "What's this?" asked Fluffy, who was confused; never having used a computer before. "This is a 404 page," said the 404 page. "It means the page or file you tried to go to can't be found," continued the page. "The best thing to do is just click on the Home button."</p>
 	<p>Fluffy was a skeptical and closed-minded bear, and was mistrustful of this foreign concept. Refusing to be persuaded, he pushed past the well-meaning 404 page, muttering obscenities. "Suit yourself," said the 404 page, and blew Fluffy's brains out with his trusty Glock 19. Fluffy never knew what hit him.</p>
 	<p>Click the button. Or else.</p>
-	<p><a href="http://erikboesen.com">Home</a></p>
+	<p><a href="/">Home</a></p>
 </body>
 
 </html>

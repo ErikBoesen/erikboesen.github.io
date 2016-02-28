@@ -22,7 +22,6 @@ $(window).resize(function() {
 	}
 });
 
-
 var emailMe = function() {
     window.open('mailto:me@erikboesen.com');
 };
