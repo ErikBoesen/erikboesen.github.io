@@ -1,10 +1,3 @@
-@font-face {
-    font-family: 'Bukhari';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Bukhari Script'), url(Bukhari.otf) format('opentype');
-    unicode-range: U+0000—001F;
-}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,37 +9,16 @@ body {
 }
 body {
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background: black;
+    font-family: monospace;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    animation: 5s background infinite ease-in-out;
-}
-@keyframes background {
-    0% { background: #00BCD4; }
-    15% { background: #009688; }
-    30% { background: #4CAF50; }
-    45% { background: #E65100; }
-    60% { background: #607D8B; }
-    75% { background: #F44336; }
-    90% { background: #4527A0; }
 }
 a {
     color: inherit;
 }
 a:hover {
     text-decoration: none;
-}
-h1 {
-    font-family: 'Bukhari', sans-serif;
-    font-size: 8em;
-    text-shadow: -1px -1px lightgrey;
-}
-h2 {
-    font-size: 25px;
-    letter-spacing: 1px;
 }
 ul {
     cursor: default;
