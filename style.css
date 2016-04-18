@@ -1,34 +1,28 @@
 @font-face {
-    font-family: 'Raleway';
+    font-family: 'Bukhari';
     font-style: normal;
-    font-weight: 100;
-    src: local('Raleway Thin'), local('Raleway-Thin'), url(font/Raleway-100.woff2) format('woff2'), url(font/Raleway-100.ttf) format('truetype');
+    font-weight: normal;
+    src: local('Bukhari Script'), url(Bukhari.otf) format('opentype');
     unicode-range: U+0000—001F;
 }
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Open Sans Light'), local('OpenSans-Light'), url(font/OpenSans-300.woff2) format('woff2'), url(font/OpenSans-300.ttf) format('truetype');
-    unicode-range: U+0000—001F;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 html,
 body {
     height: 100%;
 }
 body {
-    font-family: 'Open Sans', 'Raleway', sans-serif;
-    margin: 0;
-}
-.bg {
-    position: fixed;
-    width: 80vw;
-    left: -15vw;
-    top: 0;
-    bottom: 0;
-    z-index: -100;
-    -webkit-transition: .5s;
-            transition: .5s;
+    background: linear-gradient(0deg, #00897B, #00B8D4);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 a {
     color: inherit;
@@ -36,42 +30,14 @@ a {
 a:hover {
     text-decoration: none;
 }
-h1,
-h2,
-h3 {
-    font-family: 'Raleway', 'Open Sans', sans-serif;
-    margin: 0;
-    font-weight: 100;
-}
 h1 {
-    font-size: 9em;
-    letter-spacing: -10px;
-    margin-left: -11px;
+    font-family: 'Bukhari', sans-serif;
+    font-size: 8em;
+    text-shadow: -1px -1px lightgrey;
 }
 h2 {
     font-size: 25px;
     letter-spacing: 1px;
-}
-h2 a {
-    text-decoration: none;
-    border-bottom: solid 1px rgba(0, 0, 0, .4);
-    -webkit-transition: .2s;
-            transition: .2s;
-}
-h2 a:hover {
-    border-color: black;
-    -webkit-transition: .5s;
-            transition: .5s;
-}
-article {
-    box-sizing: border-box;
-    width: 50vw;
-    min-height: 100vh;
-    position: absolute;
-    right: 0;
-    padding: 2em 3em;
-    background: white;
-    color: #333;
 }
 ul {
     cursor: default;
@@ -85,42 +51,22 @@ ul a {
     text-decoration: none;
 }
 ul img {
-    height: 30px;
-    width: 30px;
+    height: 45px;
+    width: 45px;
     border: none;
     border-radius: 100%;
-    border: solid 1px rgba(51, 51, 51, .8);
-    padding: 4px;
+    border: solid 1px white;
+    padding: 5px;
     cursor: pointer;
     -webkit-transition: .3s;
             transition: .3s;
     display: inline-block;
 }
 ul img:hover {
-    border-color: black;
+    border-color: rgba(255, 255, 255, 0.8);
     -webkit-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
             transform: rotate(360deg);
     -webkit-transition: .5s;
             transition: .5s;
-}
-@media (max-width: 800px) {
-    .bg {
-        display: none;
-    }
-    article {
-        position: static;
-        width: 100%;
-        padding: 1em;
-        font-size: 1.05em;
-    }
-}
-@media (min-width: 1500px) {
-    .bg {
-        width: 75%;
-        left: 0;
-    }
-    article {
-        width: 25%;
-    }
 }
