@@ -5,8 +5,8 @@
 	<title>404</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/ico" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/ico" href="/favicon.ico">
+    <link rel="stylesheet" href="/style.css">
     <style>
         body {
             animation: none;
@@ -30,10 +30,7 @@
 <body>
 	<h1>404.</h1>
 	<a href="/" class="button">Home</a>
-    <script src="404.js"></script>
+    <script src="/404.js"></script>
 </body>
 
 </html>
-
-
-<!--ADD /s beforeLINKS BEFORE PUBLISHING!!!!! -->
