@@ -15,7 +15,6 @@ body {
     height: 100%;
 }
 body {
-    background: linear-gradient(0deg, #00897B, #00B8D4);
     color: white;
     display: flex;
     flex-direction: column;
@@ -23,6 +22,16 @@ body {
     align-items: center;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    animation: 5s background infinite ease-in-out;
+}
+@keyframes background {
+    0% { background: #00BCD4; }
+    15% { background: #009688; }
+    30% { background: #4CAF50; }
+    45% { background: #E65100; }
+    60% { background: #607D8B; }
+    75% { background: #F44336; }
+    90% { background: #4527A0; }
 }
 a {
     color: inherit;

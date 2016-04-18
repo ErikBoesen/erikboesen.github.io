@@ -2,32 +2,38 @@
 <html>
 
 <head>
-	<title>Fluffy: A Short Tale</title>
+	<title>404</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-		body {
-			text-align: center;
-		}
-		p {
-			margin: 20px auto 0;
-			max-width: 50%
-		}
-		@media (max-width: 800px) {
-			p {
-				max-width: 90%;
-			}
-		}
-	</style>
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            animation: none;
+        }
+        h1, .button { text-shadow: 0 0 10px rgba(0, 0, 0, .1); }
+        .button {
+            font-size: 1.2em;
+            font-family: sans-serif;
+            text-decoration: none;
+            border: solid 2px white;
+            padding: 7px 10px;
+            transition: .3s;
+        }
+        .button:hover {
+            background: rgba(255, 255, 255, .3);
+            transition: .3s;
+        }
+    </style>
 </head>
 
 <body>
-	<h1>Meet Fluffy.</h1>
-	<img src="/images/fluffy.jpg">
-	<p>Fluffy is a nice bear. One day, Fluffy was walking along, minding his own business when he happened upon a 404 page. "What's this?" asked Fluffy, who was confused; never having used a computer before. "This is a 404 page," said the 404 page. "It means the page or file you tried to go to can't be found," continued the page. "The best thing to do is just click on the Home button."</p>
-	<p>Fluffy was a skeptical and closed-minded bear, and was mistrustful of this foreign concept. Refusing to be persuaded, he pushed past the well-meaning 404 page, muttering obscenities. "Suit yourself," said the 404 page, and blew Fluffy's brains out with his trusty Glock 19. Fluffy never knew what hit him.</p>
-	<p>Click the button. Or else.</p>
-	<p><a href="/">Home</a></p>
+	<h1>404.</h1>
+	<a href="/" class="button">Home</a>
+    <script src="404.js"></script>
 </body>
 
 </html>
+
+
+<!--ADD /s beforeLINKS BEFORE PUBLISHING!!!!! -->
