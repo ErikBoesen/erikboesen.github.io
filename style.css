@@ -74,8 +74,8 @@ li:first-child svg:hover {
     fill: #ff6f32;
 }
 li:nth-child(2) svg:hover {
-    border-color: #333;
-    fill: #333;
+    border-color: #4fec51;
+    fill: #4fec51;
 }
 li:nth-child(3) svg:hover {
     border-color: #dd4e41;
