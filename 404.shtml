@@ -1,36 +1,6 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>404</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/ico" href="/favicon.ico">
-    <link rel="stylesheet" href="/style.css">
-    <style>
-        body {
-            animation: none;
-        }
-        h1, .button { text-shadow: 0 0 10px rgba(0, 0, 0, .1); }
-        .button {
-            font-size: 1.2em;
-            font-family: sans-serif;
-            text-decoration: none;
-            border: solid 2px white;
-            padding: 7px 10px;
-            transition: .3s;
-        }
-        .button:hover {
-            background: rgba(255, 255, 255, .3);
-            transition: .3s;
-        }
-    </style>
+    <meta http-equiv="refresh" content="0;URL=/">
 </head>
-
-<body>
-	<h1>404.</h1>
-	<a href="/" class="button">Home</a>
-    <script src="/404.js"></script>
-</body>
-
 </html>

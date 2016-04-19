@@ -1,29 +1,48 @@
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Raleway Thin'), local('Raleway-Thin'), url(font/Raleway-100.woff2) format('woff2'), url(font/Raleway-100.ttf) format('truetype');
+    unicode-range: U+0000—001F;
+}
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-html,
+html, body { height: 100%; }
 body {
-    height: 100%;
+    background: white;
+    color: #444;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
 }
-body {
-    color: white;
-    background: black;
-    font-family: monospace;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-}
-a {
-    color: inherit;
-}
-a:hover {
-    text-decoration: none;
+h1 {
+    font-family: 'Raleway', 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 5em;
+    line-height: .8;
+    margin-bottom: 20px;
 }
 ul {
     cursor: default;
     list-style: none;
-    padding: 0;
 }
 ul li {
     display: inline-block;
@@ -31,23 +50,46 @@ ul li {
 ul a {
     text-decoration: none;
 }
-ul img {
-    height: 45px;
-    width: 45px;
+ul svg {
+    height: 40px;
+    width: 40px;
     border: none;
     border-radius: 100%;
-    border: solid 1px white;
-    padding: 5px;
+    border: solid 1px rgba(51, 51, 51, .8);
+    padding: 4px;
     cursor: pointer;
     -webkit-transition: .3s;
             transition: .3s;
     display: inline-block;
 }
-ul img:hover {
-    border-color: rgba(255, 255, 255, 0.8);
+ul svg:hover {
     -webkit-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
             transform: rotate(360deg);
     -webkit-transition: .5s;
             transition: .5s;
+}
+li:first-child svg:hover {
+    border-color: #ff6f32;
+    fill: #ff6f32;
+}
+li:nth-child(2) svg:hover {
+    border-color: #333;
+    fill: #333;
+}
+li:nth-child(3) svg:hover {
+    border-color: #dd4e41;
+    fill: #dd4e41;
+}
+li:nth-child(4) svg:hover {
+    border-color: #55acee;
+    fill: #55acee;
+}
+li:nth-child(5) svg:hover {
+    border-color: #9b6954;
+    fill: #9b6954;
+}
+li:nth-child(6) svg:hover {
+    border-color: #FF0084;
+    fill: #FF0084;
 }
