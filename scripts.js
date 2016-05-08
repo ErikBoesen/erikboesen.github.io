@@ -1,17 +1,22 @@
-var page = {
+var e = {
     email: document.getElementById('email'),
     down: document.getElementById('down'),
     sections: {
         bwnt: document.getElementById('bwnt')
     },
-    clock: document.getElementById('clock')
+    clock: document.getElementById('clock'),
+    clockSection: document.getElementById('clockSection'),
+    gyro: {
+        arm: document.getElementById('gyroArm'),
+        number: document.getElementById('gyroNumber')
+    }
 };
 
-page.email.onclick = function() {
+e.email.onclick = function() {
     window.open('mailto:me@erikboesen.com');
 };
 
-page.down.onclick = function() {
+e.down.onclick = function() {
 	var previousSection = window.innerHeight * Math.floor(document.body.scrollTop / window.innerHeight);
 	animation = setInterval(function() {
 		document.body.scrollTop += 8;
@@ -24,6 +29,7 @@ page.down.onclick = function() {
 
 m = 0;
 h = 24;
+angle = 0;
 // This section manages the clock portion of the pageview
 setInterval(function() {
     m++;
@@ -35,31 +41,22 @@ setInterval(function() {
         }
     }
 	if (h >= 6 && h <= 20) {
-		page.sections.bwnt.className = 'light';
+		e.sections.bwnt.className = 'light';
 	} else {
-		page.sections.bwnt.className = 'night';
+		e.sections.bwnt.className = 'night';
 	}
     var vh;
 	if (h > 12) { vh = h - 12; }
     else { vh = h; }
 	if (m < 10) { m = '0' + m; }
-    page.clock.innerHTML = vh + ':' + m;
+    e.clock.innerHTML = vh + ':' + m;
+    angle++;
+    if (angle === 360) angle = 0;
+    e.gyro.arm.style.transform = 'rotate(' + angle + 'deg)';
+    e.gyro.number.innerHTML = angle + 'º';
 }, 10);
-clockSection.onclick = function() {
-    window.location.href = '';
-};
 
-
-
-
-
-
-
-
-
-
-
-
+// Google Analytics
 if (document.location.protocol=='http:') {
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
