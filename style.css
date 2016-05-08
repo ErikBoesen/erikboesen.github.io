@@ -1,41 +1,33 @@
 @font-face {
-    font-family: 'Raleway';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 100;
-    src: local('Raleway Thin'), local('Raleway-Thin'), url(font/Raleway-100.woff2) format('woff2'), url(font/Raleway-100.ttf) format('truetype');
-    unicode-range: U+0000—001F;
+    src: local('Roboto Thin'), local('Roboto-Thin'), url(font/Roboto-100.woff2) format('woff2'), url(font/Roboto-100.ttf) format('truetype');
+    unicode-range: U+0000-00FF;
 }
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-html, body { height: 100%; }
+html,
 body {
+    height: 100%;
+}
+header,
+article {
+    height: 100vh;
     background: white;
     color: #444;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+        font-family: 'Roboto', 'Open Sans', sans-serif;
+        font-weight: 100;
 }
 h1 {
-    font-family: 'Raleway', 'Open Sans', sans-serif;
-    font-weight: 100;
     font-size: 5em;
     line-height: .8;
     margin-bottom: 20px;
@@ -43,9 +35,16 @@ h1 {
 ul {
     cursor: default;
     list-style: none;
+    top: 10px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 ul li {
     display: inline-block;
+    margin: 2px;
 }
 ul a {
     text-decoration: none;
@@ -59,15 +58,15 @@ ul svg {
     padding: 4px;
     cursor: pointer;
     -webkit-transition: .3s;
-            transition: .3s;
+    transition: .3s;
     display: inline-block;
 }
 ul svg:hover {
     -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
     -webkit-transition: .5s;
-            transition: .5s;
+    transition: .5s;
 }
 li:first-child svg:hover {
     border-color: #ff6f32;
@@ -93,3 +92,36 @@ li:nth-child(6) svg:hover {
     border-color: #FF0084;
     fill: #FF0084;
 }
+.float-container {
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+button {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background: none;
+    border: solid 2px #333;
+    outline: 0;
+    cursor: pointer;
+}
+button svg {
+    width: 20px;
+    height: 20px;
+}
+#bwnt {
+    transition: .5s;
+}
+#clock {
+    font-size: 10em;
+    line-height: 1;
+}
+.light { background: white; }
+.light #clock { color: #333; }
+
+.night { background: #222; }
+.night #clock { color: white; }
