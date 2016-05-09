@@ -1,6 +1,5 @@
 @font-face {
     font-family: 'Roboto';
-    font-style: normal;
     font-weight: 100;
     src: local('Roboto Thin'), local('Roboto-Thin'), url(font/Roboto-100.woff2) format('woff2'), url(font/Roboto-100.ttf) format('truetype');
     unicode-range: U+0000-00FF;
@@ -10,56 +9,57 @@
     margin: 0;
     padding: 0;
 }
-html,
-body {
-    height: 100%;
-}
 header,
-article {
+section {
     height: 100vh;
     background: white;
-    color: #444;
+    color: #333;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     font-family: 'Roboto', 'Open Sans', sans-serif;
     font-weight: 100;
+    text-align: center;
 }
 h1 {
     font-weight: 100;
-    /* This shouldn't be necessary, figure out the problem */
+    /* Two font-weight definitions shouldn't be necessary */
     font-size: 5em;
 }
 h2 {
     font-weight: 100;
     font-size: 4em;
 }
-ul {
-    cursor: default;
-    list-style: none;
-    top: 10px;
-    position: absolute;
+a {
+    color: inherit;
+    text-decoration: none;
+}
+svg {
+    fill: #333;
+}
+ul, .float-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
+ul {
+    position: absolute;
+    cursor: default;
+    list-style: none;
+    top: 10px;
+}
 ul li {
     display: inline-block;
     margin: 2px;
-}
-a {
-    color: inherit;
-    text-decoration: none;
 }
 ul svg {
     height: 40px;
     width: 40px;
     border: none;
-    border-radius: 100%;
-    border: solid 1px rgba(51, 51, 51, .8);
+    border-radius: 50%;
+    border: solid 1px grey;
     padding: 4px;
     cursor: pointer;
     -webkit-transition: .3s;
@@ -67,10 +67,7 @@ ul svg {
     display: inline-block;
 }
 ul svg:hover {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
     transform: rotate(360deg);
-    -webkit-transition: .5s;
     transition: .5s;
 }
 li:first-child svg:hover {
@@ -100,10 +97,6 @@ li:nth-child(6) svg:hover {
 .float-container {
     position: fixed;
     bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
 }
 button {
     height: 50px;
@@ -115,15 +108,15 @@ button {
     cursor: pointer;
 }
 button svg {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
 }
 #bwnt {
     transition: .5s;
 }
 #clock {
     font-size: 10em;
-    line-height: 1;
 }
 .light { background: white; }
 .light #clock { color: #333; }
@@ -136,17 +129,13 @@ button svg {
     height: 175px;
     border: solid 2px #333;
     border-radius: 50%;
+    margin-bottom: 10px;
 }
 #gyroCircle,
 #gyroArm {
     fill: white;
     stroke: #333;
     stroke-width: 2;
-}
-#gyroNumber {
-    font-family: monospace;
-    font-size: 25px;
-    text-anchor: middle;
 }
 #gyroArm {
     transform-origin: bottom;
