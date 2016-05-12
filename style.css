@@ -10,17 +10,36 @@
     padding: 0;
 }
 header,
+section,
+ul,
+.float-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+}
+header,
 section {
     height: 100vh;
     background: white;
     color: #333;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-family: 'Roboto', 'Open Sans', sans-serif;
     font-weight: 100;
     text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 h1 {
     font-weight: 100;
@@ -38,12 +57,6 @@ a {
 svg {
     fill: #333;
 }
-ul, .float-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
 ul {
     position: absolute;
     cursor: default;
@@ -54,20 +67,26 @@ ul li {
     display: inline-block;
     margin: 2px;
 }
+ul a {
+    cursor: default;
+}
 ul svg {
     height: 40px;
     width: 40px;
     border: none;
     border-radius: 50%;
     border: solid 1px grey;
+    display: inline-block;
     padding: 4px;
     cursor: pointer;
     -webkit-transition: .3s;
     transition: .3s;
-    display: inline-block;
 }
 ul svg:hover {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
     transform: rotate(360deg);
+    -webkit-transition: .5s;
     transition: .5s;
 }
 li:first-child svg:hover {
@@ -113,17 +132,24 @@ button svg {
     margin-top: 5px;
 }
 #bwnt {
+    -webkit-transition: .5s;
     transition: .5s;
 }
 #clock {
     font-size: 10em;
 }
-.light { background: white; }
-.light #clock { color: #333; }
-
-.night { background: #222; }
-.night #clock { color: white; }
-
+.light {
+    background: white;
+}
+.light #clock {
+    color: #333;
+}
+.night {
+    background: #222;
+}
+.night #clock {
+    color: white;
+}
 #gyro {
     width: 175px;
     height: 175px;
@@ -138,5 +164,12 @@ button svg {
     stroke-width: 2;
 }
 #gyroArm {
+    -webkit-transform-origin: bottom;
+    -ms-transform-origin: bottom;
     transform-origin: bottom;
+}
+p {
+    font-family: serif;
+    text-align: left;
+    font-size: 1.5em;
 }
