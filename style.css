@@ -76,7 +76,6 @@ ul svg {
     border: none;
     border-radius: 50%;
     border: solid 1px grey;
-    display: inline-block;
     padding: 4px;
     cursor: pointer;
     -webkit-transition: .3s;
