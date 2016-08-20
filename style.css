@@ -144,7 +144,13 @@ li:nth-child(6) svg:hover {
         overflow: visible;
     }
     ul {
-        margin: 0 auto;
+        margin: 20px auto 0;
         text-align: center;
+    }
+}
+@media (max-width: 340px) {
+    ul {
+        margin-top: 40px;
+        max-width: 145px;
     }
 }
