@@ -10,6 +10,7 @@
     padding: 0;
 }
 body {
+    font-family: 'Roboto', sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     overflow: hidden;
@@ -36,7 +37,6 @@ body {
     -ms-interpolation-mode: nearest-neighbor;
 }
 article {
-    font-family: 'Roboto', sans-serif;
     position: absolute;
     top: 0;
     right: 0;
@@ -44,7 +44,6 @@ article {
     height: 100vh;
     overflow: scroll;
     background: #333;
-    color: #cf2e2e;
     padding: 50px;
 }
 p {
@@ -54,8 +53,8 @@ p {
 }
 
 h1 {
+    color: #cf2e2e;
     font-weight: 100;
-    /* Two font-weight definitions shouldn't be necessary */
     font-size: 5em;
 }
 a {
