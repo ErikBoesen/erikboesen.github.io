@@ -13,12 +13,12 @@ body {
     font-family: 'Roboto', sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    overflow: hidden;
+    overflow-x: hidden;
     background: #333;
 }
 
 #portrait {
-    position: absolute;
+    position: fixed;
     width: 50vw;
     height: 100vh;
     top: 0;
@@ -42,9 +42,8 @@ article {
     right: 0;
     width: 50vw;
     height: 100vh;
-    overflow: scroll;
     background: #333;
-    padding: 50px;
+    padding: 50px 50px 0;
 }
 p {
     color: white;
@@ -71,6 +70,7 @@ a:hover {
 ul {
     cursor: default;
     list-style: none;
+    margin: 10px 0 30px;
 }
 ul li {
     display: inline-block;
