@@ -1,4 +1,10 @@
 @font-face {
+    font-family: 'AROLY';
+    font-weight: 100;
+    src: local('AROLY'), url(font/AROLY.ttf) format('truetype');
+    unicode-range: U+0000-00FF;
+}
+@font-face {
     font-family: 'Roboto';
     font-weight: 100;
     src: local('Roboto Thin'), local('Roboto-Thin'), url(font/Roboto-100.woff2) format('woff2'), url(font/Roboto-100.ttf) format('truetype');
@@ -15,49 +21,40 @@ body {
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     background: #333;
+    color: white;
+    font-size: 24px;
 }
-
-#portrait {
-    position: fixed;
-    width: 50vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    background-image: url(portrait.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    image-rendering: optimizeSpeed;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -o-crisp-edges;
-    image-rendering: crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: pixelated;
-    image-rendering: optimize-contrast;
-    -ms-interpolation-mode: nearest-neighbor;
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 article {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50vw;
-    height: 100vh;
     background: #333;
     padding: 50px 50px 0;
 }
 p {
     color: white;
-    font-size: 30px;
     line-height: 1.25;
     font-weight: 300;
 }
 
-h1 {
+h1,
+h2 {
+    font-family: 'AROLY', 'Roboto', sans-serif;
     color: #cf2e2e;
     font-weight: 100;
-    font-size: 5em;
+    text-transform: uppercase;
 }
+h1 {
+    font-size: 12vw;
+}
+h2 {
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -69,20 +66,94 @@ a:hover {
     transition: .5s;
 }
 
-ul {
+section {
+    padding: 50px 0;
+}
+
+#work ul {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+}
+#work li {
+    display: inline-block;
+    width: 50%;
+    margin: -2px;
+    text-align: left;
+    overflow: hidden;
+    background-size: 100%;
+    background-position: center;
+    transition: .3s;
+}
+#work li:hover {
+    background-size: 110%;
+    transition: .3s;
+}
+#work div {
+    background: rgba(255, 0, 0, 0.3);
+    padding: 30px 20px 50px;
+    transition: .2s;
+    border: solid 5px transparent;
+    min-height: 250px;
+}
+#work li:hover div {
+    background: rgba(80, 51, 51, 0.8);
+    border-color: #cf2e2e;
+    transition: .5s;
+}
+#work h3 {
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 35px;
+    transition: .3s;
+}
+#work li p {
+    position: relative;
+    left: -60px;
+    opacity: 0;
+    transition: .3s;
+    font-weight: 300;
+}
+#work li:hover p {
+    left: 0;
+    opacity: 1;
+    transition: .3s;
+}
+#work li:nth-child(1) {
+    background-image: url(frcdashboard.png);
+}
+#work li:nth-child(2) {
+    background-image: url(victiscout.png);
+}
+#work li:nth-child(3) {
+    background-image: url(firstmap.png);
+}
+#work li:nth-child(4) {
+    background-image: url(bwnt.png);
+}
+
+
+
+#awards ul {
+
+}
+
+.social {
     cursor: default;
     list-style: none;
     margin: 10px 0 30px;
 }
-ul li {
+.social li {
     display: inline-block;
     margin: 2px;
 }
-ul a {
+.social a {
     cursor: default;
     border: none;
 }
-ul svg {
+.social svg {
     fill: grey;
     height: 40px;
     width: 40px;
@@ -94,65 +165,34 @@ ul svg {
     transition: .3s;
     color:
 }
-ul svg:hover {
+.social svg:hover {
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
     -webkit-transition: .5s;
     transition: .5s;
 }
-li:first-child svg:hover {
+.social li:first-child svg:hover {
     border-color: #ff6f32;
     fill: #ff6f32;
 }
-li:nth-child(2) svg:hover {
+.social li:nth-child(2) svg:hover {
     border-color: #4fec51;
     fill: #4fec51;
 }
-li:nth-child(3) svg:hover {
+.social li:nth-child(3) svg:hover {
     border-color: #dd4e41;
     fill: #dd4e41;
 }
-li:nth-child(4) svg:hover {
+.social li:nth-child(4) svg:hover {
     border-color: #55acee;
     fill: #55acee;
 }
-li:nth-child(5) svg:hover {
+.social li:nth-child(5) svg:hover {
     border-color: #9b6954;
     fill: #9b6954;
 }
-li:nth-child(6) svg:hover {
+.social li:nth-child(6) svg:hover {
     border-color: #FF0084;
     fill: #FF0084;
-}
-@media (max-width: 730px) {
-    article {
-        padding: 25px;
-    }
-}
-@media (max-width: 680px) {
-    * {
-        overflow: auto;
-    }
-    #portrait, article {
-        position: static;
-        width: 100vw;
-    }
-    #portrait {
-        height: 100vw;
-    }
-    article {
-        height: auto;
-        overflow: visible;
-    }
-    ul {
-        margin: 20px auto 0;
-        text-align: center;
-    }
-}
-@media (max-width: 340px) {
-    ul {
-        margin-top: 40px;
-        max-width: 145px;
-    }
 }
