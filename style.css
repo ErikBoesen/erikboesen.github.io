@@ -1,9 +1,9 @@
 @font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v11/_P8jt3Y65hJ9c4AzRE0V1OvvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v11/_P8jt3Y65hJ9c4AzRE0V1OvvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
+    unicode-range: U+0000-00FF;
 }
 @font-face {
     font-family: 'AHAMONO';
@@ -53,6 +53,62 @@ h2 {
     font-size: 80px;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.social {
+    cursor: default;
+    list-style: none;
+    margin: 10px 0 30px;
+}
+.social li {
+    display: inline-block;
+}
+.social a {
+    cursor: default;
+    border: none;
+}
+.social svg {
+    fill: grey;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: solid 1px grey;
+    padding: 4px;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    transition: .3s;
+    color:
+}
+.social svg:hover {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+.social li:first-child svg:hover {
+    border-color: #cf2e2e;
+    fill: #cf2e2e;
+}
+.social li:nth-child(2) svg:hover {
+    border-color: #4fec51;
+    fill: #4fec51;
+}
+.social li:nth-child(3) svg:hover {
+    border-color: #dd4e41;
+    fill: #dd4e41;
+}
+.social li:nth-child(4) svg:hover {
+    border-color: #55acee;
+    fill: #55acee;
+}
+.social li:nth-child(5) svg:hover {
+    border-color: #9b6954;
+    fill: #9b6954;
+}
+.social li:nth-child(6) svg:hover {
+    border-color: #FF0084;
+    fill: #FF0084;
 }
 a {
     color: inherit;
@@ -133,70 +189,13 @@ section {
 #work li:nth-child(4) {
     background-image: url(img/bwnt.png);
 }
-#awards ul {
-    padding: 0 50px;
+li ul {
+    margin-left: 40px;
 }
-
 footer {
     padding: 30px 0;
     text-align: center;
 }
 footer p {
     color: grey;
-}
-.social {
-    cursor: default;
-    list-style: none;
-    margin: 10px 0 30px;
-}
-.social li {
-    display: inline-block;
-    margin: 2px;
-}
-.social a {
-    cursor: default;
-    border: none;
-}
-.social svg {
-    fill: grey;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    border: solid 1px grey;
-    padding: 4px;
-    cursor: pointer;
-    -webkit-transition: .3s;
-    transition: .3s;
-    color:
-}
-.social svg:hover {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-    -webkit-transition: .5s;
-    transition: .5s;
-}
-.social li:first-child svg:hover {
-    border-color: #ff6f32;
-    fill: #ff6f32;
-}
-.social li:nth-child(2) svg:hover {
-    border-color: #4fec51;
-    fill: #4fec51;
-}
-.social li:nth-child(3) svg:hover {
-    border-color: #dd4e41;
-    fill: #dd4e41;
-}
-.social li:nth-child(4) svg:hover {
-    border-color: #55acee;
-    fill: #55acee;
-}
-.social li:nth-child(5) svg:hover {
-    border-color: #9b6954;
-    fill: #9b6954;
-}
-.social li:nth-child(6) svg:hover {
-    border-color: #FF0084;
-    fill: #FF0084;
 }
