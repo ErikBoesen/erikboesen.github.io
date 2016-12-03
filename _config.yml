@@ -1,0 +1,20 @@
+title: Erik Boesen
+email: me@erikboesen.com
+description: Programmer in DC.
+baseurl: ""
+url: "http://erikboesen.com"
+twitter_username: ErikBoesen
+github_username: ErikBoesen
+instagram_username: erikboesen
+google_plus_username: ErikBoesen
+flickr_url: 108614122@N04
+
+# Build settings
+sass:
+    style: compressed
+markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
