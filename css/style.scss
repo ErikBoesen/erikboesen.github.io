@@ -40,7 +40,7 @@ header {
     align-items: center;
 }
 article {
-    padding: 30px 100px 0;
+    padding: 30px 10vw 0;
 }
 p {
     line-height: 1.25;
@@ -134,7 +134,7 @@ a {
         text-decoration: none;
     }
 }
-code, .highlight {
+code {
     font-size: .9em;
 }
 /**
@@ -148,6 +148,9 @@ code, .highlight {
     margin: 20px;
     border-radius: 5px;
 
+    span {
+        white-space: normal;
+    }
     .highlighter-rouge & {
         background: #eef;
     }
