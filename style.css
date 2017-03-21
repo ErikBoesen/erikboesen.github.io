@@ -14,7 +14,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    background: #333;
+    background: #148598;
 }
 
 #portrait {
@@ -24,7 +24,7 @@ body {
     top: 0;
     left: 0;
     background-color: #333;
-    background-image: url(portrait.png);
+    background-image: url(portrait.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -43,30 +43,34 @@ article {
     right: 0;
     width: 50vw;
     height: 100vh;
-    background: #333;
+    background: #148598;
     padding: 50px 50px 0;
 }
 p {
-    color: white;
+    color: black;
     font-size: 30px;
     line-height: 1.25;
     font-weight: 300;
 }
 
 h1 {
-    color: #cf2e2e;
+    color: #127687;
     font-weight: 100;
     font-size: 5em;
+    margin-left: -5px;
 }
 a {
     color: inherit;
     text-decoration: none;
-    border-bottom: solid 1px #666;
+    border-bottom: solid 1px transparent;
     transition: .3s;
 }
 a:hover {
-    border-bottom-color: white;
+    border-bottom-color: currentColor;
     transition: .5s;
+}
+a:first-of-type {
+    color: #d12727 !important;
 }
 
 ul {
@@ -83,11 +87,11 @@ ul a {
     border: none;
 }
 ul svg {
-    fill: grey;
+    fill: black;
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    border: solid 1px grey;
+    border: solid 1px black;
     padding: 4px;
     cursor: pointer;
     -webkit-transition: .3s;
