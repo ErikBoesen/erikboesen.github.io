@@ -15,79 +15,118 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    background: #148598;
 }
-#portrait {
-    position: fixed;
-    width: 40vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    background-image: url(portrait.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+header {
+    text-align: center;
 }
 article {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60vw;
-    height: 100vh;
-    background: #148598;
     padding: 50px 50px 0;
 }
-p {
-    color: #09353c;
-    font-size: 30px;
-    line-height: 1.25;
+article.post {
+    margin: 0 auto;
+    max-width: 8in;
+    padding-bottom: 40px;
 }
-h1 {
+.post-title, .post-meta {
+    text-align: center;
+}
+.post-title {
+    color: #127687;
+    font-size: 50px;
+    font-weight: 100;
+}
+.post-meta {
+    margin-bottom: 20px;
+}
+.post p:nth-of-type(2):first-letter {
+    font-size: 50px;
+    vertical-align: bottom;
+    line-height: 1.01;
+    color: #127687;
+}
+
+.post h2,
+.post h3,
+.post h4 {
+    margin: 15px 0 10px;
+    color: #127687;
+    font-weight: 100;
+}
+
+.post h2 {
+    font-size: 35px;
+}
+.post h3 {
+    font-size: 30px;
+}
+.post h4 {
+
+}
+.post ul {
+    margin: 20px;
+    margin-left: 40px;
+    list-style-type: circle;
+}
+p, ul, li {
+    color: #09353c;
+    font-size: 22px;
+    line-height: 1.4;
+}
+.post p {
+    margin: 10px 0;
+}
+.highlight {
+    margin: 20px 5px;
+    padding: 20px;
+    background: #eee;
+    border-radius: 5px;
+    font-size: 20px;
+}
+code {
+    background: #eee;
+    padding: 2px 3px;
+    font-size: 0.8em;
+}
+.post img {
+    max-width: 100%;
+}
+
+h2 {
     color: #127687;
     font-size: 100px;
     font-weight: 100;
-    margin-left: -8px;
+}
+h2 a {
+    border-bottom: none;
 }
 a {
     color: inherit;
     text-decoration: none;
     border-bottom: solid 1px #09353c;
-    transition: .3s;
+    transition: .3s color border-bottom-color;
 }
 a:hover {
+    color: #127687;
+    border-bottom-color: #127687;
     transition: .1s;
+    transition: .3s color border-bottom-color;
 }
-a:nth-child(1):hover {
-    color: #d12727;
-    border-bottom-color: #d12727;
-}
-a:nth-child(2):hover {
-    color: #4fec51;
-    border-bottom-color: #4fec51;
-}
-a:nth-child(3):hover {
-    color: white;
-    border-bottom-color: white;
-}
-a:nth-child(4):hover {
-    color: #f2f63e;
-    border-bottom-color: #f2f63e;
-}
-ul {
+
+
+.social-buttons {
     cursor: default;
     list-style: none;
     margin: 10px 0 30px;
 }
-ul li {
+.social-buttons li {
     display: inline-block;
     margin: 2px;
 }
-ul a {
+.social-buttons a {
     cursor: default;
     border: none;
 }
-ul svg {
+.social-buttons svg {
     fill: #222;
     height: 40px;
     width: 40px;
@@ -98,13 +137,14 @@ ul svg {
     -webkit-transition: .3s;
     transition: .3s;
 }
-ul svg:hover {
+.social-buttons svg:hover {
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
     -webkit-transition: .5s;
     transition: .5s;
 }
+
 li:first-child svg:hover {
     border-color: #ff6f32;
     fill: #ff6f32;
@@ -129,6 +169,8 @@ li:nth-child(6) svg:hover {
     border-color: #FF0084;
     fill: #FF0084;
 }
+
+
 @media (max-width: 730px) {
     article {
         padding: 25px;
@@ -138,24 +180,13 @@ li:nth-child(6) svg:hover {
     * {
         overflow: auto;
     }
-    #portrait, article {
-        position: static;
-        width: 100vw;
-    }
-    #portrait {
-        height: 100vw;
-    }
-    article {
-        height: auto;
-        overflow: visible;
-    }
-    ul {
+    .social-buttons {
         margin: 20px auto 0;
         text-align: center;
     }
 }
 @media (max-width: 340px) {
-    ul {
+    .social-buttons {
         margin-top: 40px;
         max-width: 145px;
     }
