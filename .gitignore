@@ -1,3 +1,4 @@
 _site
 .bundle
 ruby
+.DS_Store

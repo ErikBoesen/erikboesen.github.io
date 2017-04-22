@@ -5,22 +5,22 @@ date:   2017-04-21 19:36:55 -0400
 categories: tech programming
 photo: https://pbs.twimg.com/media/C2aOd1bXEAABT_1.jpg:large
 ---
-Running a personal server is an excellent idea for even casual programmers. It allows you to be able to easily offload constant tasks like running a chatbot, ~~a botnet C&C server,~~ or even a website, all of which would be inconvenient if not impossible to run on one's personal laptop or other computer. While that's definitely a good solution for some situations -- such as hosting a high-traffic website -- running a server at home is often a superior option for several reasons:
+Running a personal server is an excellent idea for even casual programmers. It allows you to be able to easily offload constant tasks like running a chatbot, ~~a botnet C&C server,~~ or even a website, all of which would be inconvenient if not impossible to run on one's personal laptop or other computer. Many people turn to using a VPS to run services like these. While that's definitely a good solution for some situations -- such as hosting a high-traffic website -- running a server at home is often a superior option for several reasons:
 
 * Cost. A VPS with only 512MB RAM can cost five dollars per month, or 60 dollars per year. Running your own server costs essentially nothing.
 * Control. As sysadmin, you control everything and don't have to be beholden to a company if you want to switch to a non-standard distribution, mess with your hardware, etc.
 * Coolness. This isn't a real reason, but it's pretty neat to have a whirring box sitting in your study. Take that, Digital Ocean.
 
-During this post, I'm going to be guiding you through a process I used to set up my home server and explaining my own configuration. You do not have to set anything up the way I did. This is just what works for me.
+During this post, I'm going to be guiding you through a process I used to set up my home server and explaining my own configuration. You do not have to set anything up the way I did. This is just what works for me. I encourage you to experiment and figure out what works best for you.
 
 ## Finding a server
-You really don't need a top-of-the-line server rack or an ultra-powerful overclocked gaming-quality PC to run a home server. The computer I use is an [HP Compaq dc5750 Microtower](http://h20564.www2.hp.com/hpsc/doc/public/display?docId=emr_na-c01383214) with 2GB of RAM and an 80GB HDD. Definitely not top of the line, but for what my server is used for, it works more than well enough. I highly recommend using a desktop computer rather than a laptop.
+You really don't need a top-of-the-line server rack or an ultra-powerful overclocked gaming-quality PC to run a home server. The computer I use is an [HP Compaq dc5750 Microtower](http://h20564.www2.hp.com/hpsc/doc/public/display?docId=emr_na-c01383214) with 2GB of RAM and an 80GB HDD. Definitely not top of the line, but for what my server is used for, it works more than well enough. I highly recommend using a desktop tower rather than a laptop.
 
 For those who don't have a computer to use: I've noticed a surprisingly large number of people have an old PC sitting around in an attic or otherwise unused. By just asking around to my neighbors several years ago, I got a couple PCs that people had no use for and had simply not had an opportunity to dispose of. After a little while, I had the idea to industrialize the process, and posted to OurCommonPlace, a now-defunct website which allowed citizens to post notices, invitations, questions, and items they were selling to be viewed by people in their town. I asked if anyone had old computers they were willing to pass on to me for research and experimentation, and promised to properly recycle anything I didn't need (and did). I collected at least 20 computers over the course of a few months.
 
 More recently, I did the same thing on [NextDoor](https://nextdoor.com), which is still active, and in just a week, accumulated 16 assorted computers -- about 50/50 between laptops and desktops. Several didn't have hard drives, unfortunately, but at least 10 were in working condition.
 
-I ended up giving away most of the computers after messing with Linux on them and playing with their hardware, but I kept one as a personal computer for a few years, and another to use as my personal server.
+I ended up giving away most of the computers after messing with Linux on them and playing with their hardware, but I kept one to use as my primary laptop for a few years, and another to use as my personal server.
 
 ## Setting up your hardware
 For running your server, you'll need these supplies:
@@ -73,7 +73,6 @@ On Arch:
     systemctl enable sshd.socket  # Always start on startup
     systemctl start sshd.socket   # Start now
 
-
 Next, add yourself to the list of users allowed to connect via ssh:
 
     sudo nano /etc/ssh/sshd_config
@@ -102,7 +101,9 @@ Now, you should be ready to connect to the server via ssh. In the terminal on yo
 
 Replace `user` with your username and `XXX` with the end of the IP you just found.
 
-If all goes well, you should be logged in and have shell access from your own computer. To disconnect, type `exit` or press `Ctrl+D`.
+If all goes well, you should be logged in and have shell access from your own computer. You can now run commands remotely. To disconnect, type `exit` or press `Ctrl+D`.
+
+(You can now disconnect your server's monitor and keyboard and put them away. You won't be needing them any more.)
 
 If you want to set up SSH keys to remove the need to type your password while still ensuring a secured connection, follow [these steps](http://www.linuxproblem.org/art_9.html). This step is optional, but _highly_ recommended.
 
@@ -115,7 +116,7 @@ The process for setting up port forwarding varies slightly from router to router
 
 First, open [192.168.1.1](http://192.168.1.1) in your browser. This is your router's IP, and you can use the control panel it offers to set up port forwarding, as well as other things. Sign into your router -- usually the username is `admin` and the password may be written on the router.
 
-After you sign in, click "Port Forwarding" on the left sidebar. Search the page for those words if it's not there. In the first select box, choose your server. Then in the next one, choose "custom ports." Type in 22 (the SSH port), and click Add.
+After you sign in, click "Port Forwarding" on the left sidebar. Search the page for those words if it's not there. In the first select box, choose your server. Then in the next one, choose "custom ports." Type in `22` (the SSH port), and click Add.
 
 Now, from your server, type:
 
@@ -153,7 +154,7 @@ into your terminal. Run whichever commands you like in the `tmux` buffer that ap
 
     tmux attach
 
-(`attach` can be shortened to `a`.) If you want to see the tmux windows you have open, type
+(`attach` can be shortened to `a`.) If you want to see the `tmux` windows you have open, type
 
     tmux list-sessions
 
@@ -161,9 +162,10 @@ If you want to attach to a specific session:
 
     tmux attach -t X
 
-where X is the number of the session of choice.
+where `X` is the number of the session of choice.
 
 ### Shell
 I'd recommend using `zsh` combined with [`oh-my-zsh`](http://ohmyz.sh) rather than the default bash on your server (and, for that matter, on your client computer). That's just a personal choice, though. If you're curious, I use [this theme](https://github.com/ErikBoesen/erkbsn).
 
 ## Conclusion
+A home server is a really helpful thing to have. I hope this tutorial has helped you set up your own server. If not, feel free to [Tweet at me](https://twitter.com/ErikBoesen) or email me with any questions.

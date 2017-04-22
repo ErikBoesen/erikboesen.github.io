@@ -16,7 +16,6 @@ sass:
 markdown: kramdown
 gems:
   - jekyll-feed
-  - jekyll-twitter-plugin
 
 exclude:
   - Gemfile
