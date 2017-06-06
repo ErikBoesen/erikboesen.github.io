@@ -15,7 +15,7 @@ sass:
     style: compressed
 markdown: kramdown
 gems:
-  - jekyll-feedm
+  - jekyll-feed
 
 exclude:
   - Gemfile
