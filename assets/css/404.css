@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v13/22JRxvfANxSmnAhzbFH8PgLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+    unicode-range: U+0000-00FF;
+}
+* { margin: 0; }
+html, body { height: 100%; }
+body {
+    background-image: url('/assets/img/404.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1, h2, a {
+    color: white;
+    font-weight: 100
+}
+h1 {
+    font-size: 100px;
+}
+a {
+    text-decoration: none;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+}
+a:hover { border-bottom-color: white; }

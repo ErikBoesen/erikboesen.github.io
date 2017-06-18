@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="0;URL=/">
+    <title>¯\_(ツ)_/¯</title>
+    <link rel="stylesheet" href="/assets/css/404.css">
 </head>
+<body>
+    <h1>Whoops.</h1>
+    <h2>Go <a href="/">home</a>?</h2>
+</body>
 </html>
