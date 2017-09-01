@@ -8,15 +8,32 @@
 * { margin: 0; }
 html, body { height: 100%; }
 body {
-    background-image: url('/assets/img/404.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: #F44336;
     font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: colors 30s infinite linear;
+}
+@keyframes colors {
+    0% { background-color: #F44336; }
+    6% { background-color: #FF5722; }
+    12% { background-color: #FF9800; }
+    18% { background-color: #FFC107; }
+    24% { background-color: #FFEB3B; }
+    30% { background-color: #CDDC39; }
+    36% { background-color: #8BC34A; }
+    42% { background-color: #4CAF50; }
+    48% { background-color: #009688; }
+    54% { background-color: #00BCD4; }
+    60% { background-color: #03A9F4; }
+    66% { background-color: #2196F3; }
+    72% { background-color: #3F51B5; }
+    78% { background-color: #673AB7; }
+    84% { background-color: #9C27B0; }
+    90% { background-color: #E91E63; }
+    100% { background-color: #F44336; }
 }
 h1, h2, a {
     color: white;
