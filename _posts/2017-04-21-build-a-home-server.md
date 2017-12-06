@@ -47,11 +47,13 @@ This is where your setup will very likely vary from mine. I'd advocate very stro
 
 Now, you must choose the Linux distribution to use. Let me give you a couple to choose from if you're stuck:
 
-* Ubuntu is a popular Linux distribution for beginners. For this purpose, it's an okay choice. I wouldn't personally recommend it since almost all of its helpful features are in the GUI, which you won't be using. But it would work just fine if you wanted to use it. You can find out how to install Ubuntu [here](https://www.ubuntu.com/download/desktop/install-ubuntu-desktop).
-* Debian is another very nice choice. It may help to think of it as a bare-bones version of Ubuntu, without many of its helpful features but with significantly less bloat in terms of preinstalled packages. For everyone but intermediate experience with Linux systems, I'd recommend Debian. It's simple and fits most peoples' needs well. You can download it [here](https://www.debian.org/releases/wheezy/installmanual). (During the installation you'll need to unselect all desktop environments when asked if you want to install extra packages. Since you'll only be using your server via remote terminal, you don't need this.)
-* Arch Linux is my personal distribution of choice. It's very complicated to install and configure and I do not recommend it for new users, but if you can pull off the installation it's a truly amazing system. The distribution revolves around constant rolling updates and the system is designed with minimalist intent, and thus only includes those packages which are necessary to the system. Everything you need must be installed by you. This may bother some people, but I like it a lot. If you choose to go the Arch route, I recommend [this install tutorial](https://www.youtube.com/watch?v=Wqh9AQt3nho).
+* Ubuntu is a popular Linux distribution for beginners. For this purpose, it's a fine choice. You can find out how to install Ubuntu Server [here](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-server).
+* Debian is another very nice choice. Ubuntu is based of Debian, so if you're familiar with `apt` and the Ubuntu system, you'll be right at home. Debian is simple and fits most peoples' needs well. You can download it [here](https://www.debian.org/releases/wheezy/installmanual). (During the installation you'll need to unselect all desktop environments when asked if you want to install extra packages. Since you'll only be using your server via remote terminal, you don't need this.)
+* Arch Linux is my personal distribution of choice for desktop computing. Using it for a server isn't quite what it's designed for, and I don't use it, but it's totally possible. In addition, it's very complicated to install and configure and I do not recommend it for new users, but if you can pull off the installation it's a truly amazing system. The distribution revolves around constant rolling updates and the system is designed with minimalist intent, and thus only includes those packages which are necessary to the system. Everything you need must be installed by you. This may bother some people, but I like it a lot. If you choose to go the Arch route, I recommend [this install tutorial](https://www.youtube.com/watch?v=Wqh9AQt3nho).
 
-Other distributions you can try include OpenSUSE, CentOS, Fedora, Gentoo, etc.
+Other distributions you can try include OpenSUSE (which I use on my server), CentOS, Fedora, Gentoo, etc.
+
+You should not install a desktop environment on your server. You won't be needing it.
 
 Once you've got your distro of choice installed, proceed to the next section.
 
@@ -66,12 +68,14 @@ Sound nice? Let's set it up.
 The installation process is different depending on the distribution you chose. On a Debian or Ubuntu install:
 
     sudo apt-get install openssh-client openssh-server
+    sudo systemctl enable sshd.service
+    sudo systemctl start sshd.service
 
 On Arch:
 
     sudo pacman -S openssh
-    systemctl enable sshd.socket  # Always start on startup
-    systemctl start sshd.socket   # Start now
+    sudo systemctl enable sshd.socket  # Always start on startup
+    sudo systemctl start sshd.socket   # Start now
 
 Next, add yourself to the list of users allowed to connect via ssh:
 
