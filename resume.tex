@@ -1,0 +1,71 @@
+\documentclass[11pt,a4paper,sans]{}
+\moderncvstyle{oldstyle} % 'casual', 'classic', 'oldstyle', 'banking'
+\moderncvcolor{grey}
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.75]{geometry}
+
+\name{Erik}{Boesen}
+\email{me@erikboesen.com}
+\homepage{erikboesen.com}
+\photo[64pt][0.4pt]{assets/img/portrait.jpg}
+\quote{Some quote}
+
+\begin{document}
+\makecvtitle
+
+\section{Education}
+%\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+\cventry{2015--2019}{IB Diploma}{George Mason High School}{Falls Church, VA}{\textit{Grade}}{Attended for all of High School. Graduated in 2019 with IB Diploma as Valedictorian.}
+
+\section{Experience}
+\subsection{Vocational}
+\cventry{2015--2019}{Various}{George Mason High School Robotics Team}{Falls Church, VA}{}{Occupied a variety of leadership positions on GMHS' FIRST Robotics Team 1418.\newline{}%
+Positions:%
+\begin{itemize}%
+\item Achievement 1;
+\item Achievement 2, with sub-achievements:
+  \begin{itemize}%
+  \item Sub-achievement (a);
+  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
+    \begin{itemize}
+    \item Sub-sub-achievement i;
+    \item Sub-sub-achievement ii;
+    \item Sub-sub-achievement iii;
+    \end{itemize}
+  \item Sub-achievement (c);
+  \end{itemize}
+\item Achievement 3.
+\end{itemize}}
+\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
+\subsection{Miscellaneous}
+\cventry{year--year}{Job title}{Employer}{City}{}{Description}
+
+\section{Languages}
+\cvitemwithcomment{English US}{Native Fluency}{}
+\cvitemwithcomment{Spanish}{Working Proficiency}{Took classes from Kindergarten through Junior year of High School, took all levels offered. Participated in exchange program to Santiago de Chile as a Junior.}
+\cvitemwithcomment{Esperanto}{Working Proficiency}{Taught myself the world's most popular international auxillary constructed language.}
+\cvitemwithcommend{Mandarin Chinese}{Basic Proficiency}{}
+
+\section{Languages}
+\cvitem{Proficient}{HTML/CSS/JS, Python, C/C++, Golang, Java, Ruby, Shell/UNIX}
+\cvitem{Familiar}{Perl, Server-Side NodeJS, Lisp}
+
+\section{Interests}
+\cvitem{Hobby}{Description}
+
+\section{References}
+\begin{cvcolumns}
+  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+\end{cvcolumns}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+\clearpage
+\end{document}
