@@ -33,12 +33,13 @@
             - Created OpenCV machine-vision system for autonomous movement
         - Team Captain 2017-2019
 - CyberPatriot // Captain, Team 10-1018. Currently #4 in the state.
-- GMHS Hack Club // Founder and club leader
 - [The Academist](http://academist.press) // Started and administrated a high school news and opinion journal
+- GMHS Hack Club // Founder and club leader
 
-### Awards
+### Awards & Accomplishments
 - Winner of US Congressional App Challenge 2017 for [Opinr](http://opinr.me)
-- FIRST Robotics Innovation in Control (2016, 2016, 2017)
+- Worked with VA General Assembly to pass HB1111, a bill organizing a STEAM Education Fund for technology education programs at underserved high schools
+- Created robot driving dashboard which won FIRST Robotics Innovation in Control Award (2016, 2016, 2017)
 
 ### Interests
 - Capoeira
