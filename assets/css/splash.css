@@ -4,30 +4,18 @@ h2 {
 body {
     background: #148598;
 }
-#portrait {
-    position: fixed;
-    width: 40vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    background-image: url(/assets/img/portrait.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 main {
     position: absolute;
     top: 0;
     right: 0;
-    width: 60vw;
+    width: 100vw;
     height: 100vh;
     background: #148598;
+    border: solid 6px #333;
 }
 p {
     font-size: 30px;
 }
-
 
 a:nth-child(1):hover {
     color: #d12727;
