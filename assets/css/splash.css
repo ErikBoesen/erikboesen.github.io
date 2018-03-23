@@ -1,5 +1,6 @@
 h2 {
     margin-left: -8px;
+    color: #333;
 }
 body {
     background: #148598;
@@ -12,9 +13,11 @@ main {
     height: 100vh;
     background: #148598;
     border: solid 6px #333;
+    color: #333;
 }
 p {
     font-size: 30px;
+    font-style: italic;
 }
 
 a:nth-child(1):hover {
