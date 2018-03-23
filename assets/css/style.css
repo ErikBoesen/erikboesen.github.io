@@ -171,27 +171,27 @@ h2 a {
     transition: .5s;
 }
 
-li:first-child svg:hover {
+.social-buttons li:first-child svg:hover {
     border-color: #ff6f32;
     fill: #ff6f32;
 }
-li:nth-child(2) svg:hover {
+.social-buttons li:nth-child(2) svg:hover {
     border-color: #4fec51;
     fill: #4fec51;
 }
-li:nth-child(3) svg:hover {
+.social-buttons li:nth-child(3) svg:hover {
     border-color: #dd4e41;
     fill: #dd4e41;
 }
-li:nth-child(4) svg:hover {
+.social-buttons li:nth-child(4) svg:hover {
     border-color: #55acee;
     fill: #55acee;
 }
-li:nth-child(5) svg:hover {
+.social-buttons li:nth-child(5) svg:hover {
     border-color: #9b6954;
     fill: #9b6954;
 }
-li:nth-child(6) svg:hover {
+.social-buttons li:nth-child(6) svg:hover {
     border-color: #FF0084;
     fill: #FF0084;
 }
