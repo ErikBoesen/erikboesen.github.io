@@ -16,7 +16,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-article {
+main {
     position: absolute;
     top: 0;
     right: 0;
@@ -52,14 +52,14 @@ a:nth-child(5):hover {
 
 
 @media (max-width: 680px) {
-    #portrait, article {
+    #portrait, main {
         position: static;
         width: 100vw;
     }
     #portrait {
         height: 100vw;
     }
-    article {
+    main {
         height: auto;
     }
 }

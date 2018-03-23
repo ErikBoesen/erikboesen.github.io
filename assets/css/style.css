@@ -19,7 +19,7 @@ body {
 header {
     text-align: center;
 }
-article {
+main {
     padding: 50px 50px 0;
 }
 
@@ -37,7 +37,7 @@ a:hover {
 }
 
 
-article.post {
+main.post {
     margin: 0 auto;
     max-width: 8in;
     padding-bottom: 40px;
@@ -198,7 +198,7 @@ li:nth-child(6) svg:hover {
 
 
 @media (max-width: 730px) {
-    article {
+    main {
         padding: 25px;
     }
 }

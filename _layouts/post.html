@@ -6,7 +6,7 @@
 <body>
     {% include header.html %}
 
-    <article class="post">
+    <main class="post">
         <a href="/blog" class="back-button"><span></span><span></span></a>
         <h1 class="post-title">{{ page.title | escape }}</h1>
         <p class="post-meta">
@@ -14,7 +14,7 @@
         <img src="{{ page.photo }}" alt="{{ page.title }} header image">
         {{ content }}
         <a href="/blog" class="back-button"><span></span><span></span></a>
-    </article>
+    </main>
 
     {% include footer.html %}
 </body>
