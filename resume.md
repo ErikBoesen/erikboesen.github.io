@@ -42,7 +42,7 @@
 - Worked with VA General Assembly to pass HB1111, a bill organizing a STEAM Education Fund for technology education programs at underserved high schools
 - Created robot driving dashboard which won FIRST Robotics Innovation in Control Award (2016, 2016, 2017)
 
-### Interests
+### Hobbies & Interests
 - Capoeira
 - Music
 - Politics
