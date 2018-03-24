@@ -37,6 +37,10 @@ a:hover {
     transition: .3s color border-bottom-color;
 }
 
+ul {
+    list-style: square inside;
+}
+
 h2 {
     color: #127687;
     font-size: 100px;
@@ -45,7 +49,6 @@ h2 {
 h2 a {
     border-bottom: none;
 }
-
 
 .social-buttons {
     cursor: default;
