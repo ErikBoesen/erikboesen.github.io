@@ -36,99 +36,6 @@ a:hover {
     transition: .3s color border-bottom-color;
 }
 
-
-main.post {
-    margin: 0 auto;
-    max-width: 8in;
-    padding-bottom: 40px;
-}
-
-.post .back-button {
-    display: block;
-    width: 30px;
-    height: 30px;
-    margin: 0 auto;
-    border-bottom: none;
-    padding-top: 7.5px;
-    padding-left: 3px;
-}
-.post .back-button span {
-    display: block;
-    height: 2px;
-    width: 20px;
-    background: #127687;
-}
-.post .back-button span:first-child {
-    transform: rotate(-45deg);
-}
-.post .back-button span:last-child {
-    transform: rotate(45deg);
-    margin-top: 11px;
-}
-.post-title, .post-meta {
-    text-align: center;
-}
-.post-title {
-    color: #127687;
-    font-size: 50px;
-    font-weight: 100;
-}
-.post-meta {
-    margin-bottom: 20px;
-}
-.post p:nth-of-type(2):first-letter {
-    font-size: 50px;
-    vertical-align: bottom;
-    line-height: 1.01;
-    color: #127687;
-}
-
-.post h2,
-.post h3,
-.post h4 {
-    margin: 15px 0 10px;
-    color: #127687;
-    font-weight: 100;
-}
-
-.post h2 {
-    font-size: 35px;
-}
-.post h3 {
-    font-size: 30px;
-}
-.post h4 {
-
-}
-.post ul {
-    margin: 20px;
-    margin-left: 40px;
-    list-style-type: circle;
-}
-p, ul, li {
-    color: #09353c;
-    font-size: 22px;
-    line-height: 1.4;
-}
-.post p {
-    margin: 10px 0;
-}
-.highlight {
-    margin: 20px 5px;
-    padding: 20px;
-    background: #eee;
-    border-radius: 5px;
-    font-size: 20px;
-}
-code {
-    background: #eee;
-    padding: 2px 3px;
-    font-size: 0.8em;
-}
-.post img {
-    max-width: 100%;
-}
-
 h2 {
     color: #127687;
     font-size: 100px;
@@ -216,4 +123,47 @@ h2 a {
         margin-top: 40px;
         max-width: 145px;
     }
+}
+
+h2 {
+    margin-left: -8px;
+    color: #333;
+}
+body {
+    background: #148598;
+}
+main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background: #148598;
+    border: solid 6px #333;
+    color: #333;
+}
+p {
+    font-size: 30px;
+    font-style: italic;
+}
+
+main a:nth-child(1):hover {
+    color: #d12727;
+    border-bottom-color: #d12727;
+}
+main a:nth-child(2):hover {
+    color: #4fd4ec;
+    border-bottom-color: #4fd4ec;
+}
+main a:nth-child(3):hover {
+    color: #4fec51;
+    border-bottom-color: #4fec51;
+}
+main a:nth-child(4):hover {
+    color: white;
+    border-bottom-color: white;
+}
+main a:nth-child(5):hover {
+    color: #f2f63e;
+    border-bottom-color: #f2f63e;
 }
