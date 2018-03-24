@@ -12,7 +12,7 @@
 ## Experience
 ### Technologies
 - Proficient // Python, HTML/CSS/JS, C/C++, Go, Java, Ruby, GNU/Linux, Shell/UNIX
-- Familiar // Perl, Lisp, Machine Learning, Haskell
+- Familiar // Perl, Lisp, Haskell
 
 ### Languages
 - English (US) // Native Fluency
@@ -20,7 +20,7 @@
 - Esperanto // Working Proficiency - Taught myself the world's most popular international auxillary constructed language.
 - Mandarin Chinese // Basic Proficiency - Took classes during, before, and after traveling in the PRC.
 
-### Organizations
+### Organizations & Work
 - FIRST Robotics Team 1418 // Occupied a variety of leadership positions on GMHS' FIRST Robotics Team 1418.
     - Positions:
         - Director of UI development 2016-2017:
@@ -36,6 +36,7 @@
 - [MasonHacks](https://masonhacks.github.io) // Founded and directed George Mason High School's inaugural Hackathon.
 - [The Academist](http://academist.press) // Started and administrated a high school news and opinion journal
 - GMHS Hack Club // Founder and club leader
+- Researching Convolutional Neural Networking for IB Extended Essay
 
 ### Awards & Accomplishments
 - Winner of US Congressional App Challenge 2017 for [Opinr](http://opinr.me)
