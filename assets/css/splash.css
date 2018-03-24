@@ -10,7 +10,7 @@ main {
     top: 0;
     right: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background: #148598;
     border: solid 6px #333;
     color: #333;
@@ -49,8 +49,5 @@ main a:nth-child(5):hover {
     }
     #portrait {
         height: 100vw;
-    }
-    main {
-        height: auto;
     }
 }
