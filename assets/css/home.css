@@ -42,6 +42,24 @@ h2 {
     font-size: 100px;
     font-weight: 100;
 }
+h2:hover span {
+    animation: blink infinite alternate-reverse linear;
+}
+h2:hover span:nth-child(1) { animation-duration: 12s; }
+h2:hover span:nth-child(2) { animation-duration: 21s; }
+h2:hover span:nth-child(3) { animation-duration: 4s; }
+h2:hover span:nth-child(4) { animation-duration: 11s; }
+h2:hover span:nth-child(5) { animation-duration: 15s; }
+h2:hover span:nth-child(6) { animation-duration: 30s; }
+h2:hover span:nth-child(7) { animation-duration: 6s; }
+h2:hover span:nth-child(8) { animation-duration: 18s; }
+h2:hover span:nth-child(9) { animation-duration: 25s; }
+h2:hover span:nth-child(10) { animation-duration: 21s; }
+
+@keyframes blink {
+    from { color: #148598; }
+    to   { color: #333; }
+}
 
 .social-buttons {
     cursor: default;
