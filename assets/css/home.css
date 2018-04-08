@@ -15,7 +15,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    font-size: 24px;
+    font-size: 26px;
 }
 header {
     text-align: center;
@@ -141,6 +141,10 @@ main {
     border: solid 6px #333;
     color: #333;
     padding: 50px 50px 0;
+}
+main p {
+    max-width: 8in;
+    line-height: 1.5;
 }
 
 main a:nth-child(1):hover {
