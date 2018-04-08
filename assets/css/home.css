@@ -112,28 +112,6 @@ h2:hover span:nth-child(10) { animation-duration: 21s; }
     fill: #dd4e41;
 }
 
-
-@media (max-width: 730px) {
-    main {
-        padding: 25px;
-    }
-}
-@media (max-width: 680px) {
-    * {
-        overflow: auto;
-    }
-    .social-buttons {
-        margin: 20px auto 0;
-        text-align: center;
-    }
-}
-@media (max-width: 340px) {
-    .social-buttons {
-        margin-top: 40px;
-        max-width: 145px;
-    }
-}
-
 h2 {
     margin-left: -8px;
     color: #333;
@@ -177,4 +155,27 @@ main a:nth-child(5) {
 main a:nth-child(6) {
     color: #fff130;
     border-bottom-color: #fff130;
+}
+
+@media (max-width: 680px) {
+    * {
+        overflow: auto;
+    }
+    .social-buttons {
+        margin: 20px auto 0;
+        text-align: center;
+    }
+    main {
+        padding: 15px;
+    }
+    h2 {
+        font-size: 24vw;
+        text-align: center;
+    }
+}
+@media (max-width: 340px) {
+    .social-buttons {
+        margin-top: 40px;
+        max-width: 145px;
+    }
 }
