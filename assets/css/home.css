@@ -24,7 +24,7 @@ header {
 a {
     color: inherit;
     text-decoration: none;
-    border-bottom: solid 1px #09353c;
+    border-bottom: solid 1px #333;
     transition: .3s color border-bottom-color;
 }
 a:hover {
@@ -39,12 +39,8 @@ ul {
 }
 
 h2 {
-    color: #127687;
     font-size: 100px;
     font-weight: 100;
-}
-h2 a {
-    border-bottom: none;
 }
 
 .social-buttons {
@@ -65,7 +61,7 @@ h2 a {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    border: solid 1px #222;
+    border: solid 1px #333;
     padding: 4px;
     cursor: pointer;
     -webkit-transition: .3s;
@@ -131,40 +127,42 @@ h2 {
     color: #333;
 }
 body {
-    background: #148598;
+    background: #222;
 }
 main {
     position: absolute;
     width: 100vw;
     min-height: 100vh;
-    background: #148598;
-    border: solid 6px #333;
     color: #333;
     padding: 50px 50px 0;
 }
 main p {
+    color: #444;
     max-width: 8in;
     line-height: 1.5;
 }
 
-main a:nth-child(1):hover {
+main a:nth-child(1) {
     color: #d12727;
     border-bottom-color: #d12727;
 }
-main a:nth-child(2):hover {
+main a:nth-child(2) {
     color: #d12727;
     border-bottom-color: #d12727;
 }
-main a:nth-child(3):hover {}
-main a:nth-child(4):hover {
+main a:nth-child(3) {
+    color: #148598;
+    border-bottom-color: #148598;
+}
+main a:nth-child(4) {
     color: lightgreen;
     border-bottom-color: lightgreen;
 }
-main a:nth-child(5):hover {
+main a:nth-child(5) {
     color: white;
     border-bottom-color: white;
 }
-main a:nth-child(6):hover {
+main a:nth-child(6) {
     color: #fff130;
     border-bottom-color: #fff130;
 }
