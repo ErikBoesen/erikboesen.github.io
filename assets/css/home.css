@@ -28,14 +28,8 @@ a {
     transition: .3s color border-bottom-color;
 }
 a:hover {
-    color: #127687;
-    border-bottom-color: #127687;
     transition: .1s;
     transition: .3s color border-bottom-color;
-}
-
-ul {
-    list-style: square inside;
 }
 
 h2 {
