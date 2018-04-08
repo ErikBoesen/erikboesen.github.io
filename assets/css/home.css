@@ -20,9 +20,6 @@ body {
 header {
     text-align: center;
 }
-main {
-    padding: 50px 50px 0;
-}
 
 a {
     color: inherit;
@@ -138,13 +135,12 @@ body {
 }
 main {
     position: absolute;
-    top: 0;
-    right: 0;
     width: 100vw;
     min-height: 100vh;
     background: #148598;
     border: solid 6px #333;
     color: #333;
+    padding: 50px 50px 0;
 }
 
 main a:nth-child(1):hover {
