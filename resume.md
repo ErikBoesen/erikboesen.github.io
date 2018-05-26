@@ -42,6 +42,7 @@
 - FIRST Dean's List winner in 2018: chosen as one of FIRST Robotics Competition's top students
 - Winner of US Congressional App Challenge 2017 for [Opinr](http://opinr.me)
 - Worked with VA General Assembly to pass HB1111, a bill organizing a STEAM Education Fund for technology education programs at underserved high schools
+- Won George Mason High School Outstanding Computer Scientist award, being recognized as GMHS' top Computer Science student.
 - Created robot driving dashboard which won FIRST Robotics Innovation in Control Award (2016, 2016, 2017)
 
 ### Hobbies & Interests
