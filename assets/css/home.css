@@ -157,6 +157,15 @@ main a:nth-child(6) {
     border-bottom-color: #fff130;
 }
 
+canvas#bg {
+    width: 400px;
+    height: 160px;
+    margin: -80px 0 -20px;
+    position: relative;
+    z-index: -10;
+    display: none
+}
+
 @media (max-width: 680px) {
     * {
         overflow: auto;
@@ -171,6 +180,9 @@ main a:nth-child(6) {
     h2 {
         font-size: 24vw;
         text-align: center;
+    }
+    canvas#bg {
+
     }
 }
 @media (max-width: 340px) {
