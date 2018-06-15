@@ -137,22 +137,26 @@ main a:nth-child(1) {
     border-bottom-color: #d12727;
 }
 main a:nth-child(2) {
+    color: #4e9ecb;
+    border-bottom-color: #4e9ecb;
+}
+main a:nth-child(3) {
     color: #d12727;
     border-bottom-color: #d12727;
 }
-main a:nth-child(3) {
+main a:nth-child(4) {
     color: #148598;
     border-bottom-color: #148598;
 }
-main a:nth-child(4) {
+main a:nth-child(5) {
     color: lightgreen;
     border-bottom-color: lightgreen;
 }
-main a:nth-child(5) {
+main a:nth-child(6) {
     color: white;
     border-bottom-color: white;
 }
-main a:nth-child(6) {
+main a:nth-child(7) {
     color: #fff130;
     border-bottom-color: #fff130;
 }
