@@ -32,6 +32,8 @@
             - Directed all programming operations
             - Created OpenCV machine-vision system for autonomous movement
         - Team Captain 2017-2019
+    - Awards:
+        - 2018 FIRST Robotics Competition Dean's List: I was one of 10 FRC students selected out of 91,000 to be placed on the FRC Dean's List in 2018. The Dean's List award is FIRST's most prestegious award for individual students and represents commitment to technical expertise and excellence as well as a passion for spreading the message of FIRST and STEM through one's community.
 - [MIT Marine Autonomy Lab](http://oceanai.mit.edu/pavlab/pmwiki/pmwiki.php) intern
 - CyberPatriot // Captain, Team 10-1018. Currently #4 in the state.
 - [MasonHacks](https://masonhacks.github.io) // Founded and directed George Mason High School's inaugural Hackathon.
