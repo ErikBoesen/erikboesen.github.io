@@ -1,0 +1,82 @@
+==================================================================
+https://keybase.io/erikboesen
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://erikboesen.com
+  * I am erikboesen (https://keybase.io/erikboesen) on keybase.
+  * I have a public key with fingerprint 0D7C FF67 68CF 10D8 CBE7  2D8A AE87 239A 4A8A 2A1A
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101661d45a0cda969106bc518f4777175771cceab2b4a9408796e931c762293283c0a",
+      "fingerprint": "0d7cff6768cf10d8cbe72d8aae87239a4a8a2a1a",
+      "host": "keybase.io",
+      "key_id": "ae87239a4a8a2a1a",
+      "kid": "0101661d45a0cda969106bc518f4777175771cceab2b4a9408796e931c762293283c0a",
+      "uid": "43c00f14b329e7ec24531baca87d0419",
+      "username": "erikboesen"
+    },
+    "merkle_root": {
+      "ctime": 1529722520,
+      "hash_meta": "4bc0acc3ee15a6434546884625da2833ee410fff7be5ee335d2592c668421e96",
+      "seqno": 3129626
+    },
+    "revoke": {
+      "sig_ids": [
+        "48d9656db5a8f6badd321d7406eb9518286e3013c3a2af51a02d1f2507ca94c10f"
+      ]
+    },
+    "service": {
+      "hostname": "erikboesen.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1529722535,
+  "expire_in": 157680000,
+  "prev": "46d6f6fa876cdc6430c94536d310c90a19af3213dc82c9cb509116ffdc8b5ba3",
+  "seqno": 50,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.77
+Comment: https://keybase.io/crypto
+
+yMK7AnicrZNvaFZVHMefzTXxoVHBlkSicqVezXX+3HPuOQ9FMhJhDEYjMnkmj+ff
+3W7Pnuc+3Xv3mNnAMHrV/kQ4h9OEmVqOLKlNZRCbrBcxjCSdWgw1A0EzggVBoHXu
+KILqZffFved37vf3+33P55wz17Aik605e2XT9Y8/PzJTM3/utb5MfuPU8d2ODPUu
+J7fbKZrlj+nVJk4KxUA7OQdAACmF2iUCKC045RBQqQhkvut5HvSIfSllhETSFdwF
+zOPUcAyVRxHiGDGsgHCaHT8od5uoEgXlJC2rPeX71KNM+RBopqTxkGZCGOYhzIUr
+mEACpok9YZxmWHNSxKYlCO2cDQrL9v5D/z/77lsu59oI+NCVGHHjGYVcgqEUSjBP
+AxfyVBibqCxKxqpNFBRlaGJTdvqbnZKJir2mEIVhkuJVSZCKIEHcQ4ggYJco4p5C
+ySQi7SRtX6WwMZAI6mKXuJQxlyKihTVl510IfN/3pCHGYEw0IhwpSpmLoOHUOonN
+K+XQyWGIOEXUOohMNSyatHkcdFtwsZPLOy7TnBKqJRHMp1JojRHUnguokdxyQowa
+DCBW2JL1CRQAaegjAjxleSlrwtnenzaLqoFaLp7u1L8ItKiwZD1VojAJVdhr//Uk
+SSXOpWSSXZVUvNPIwp9lCjIoa3tSbEbVRHEQli0pq/wHNEyaHfNqJYhMIUgVxB4k
+YJ+0j6mmFKmmPvXt9lCllcUIFLdbRjWGdgQE5MK3y8VaMaS4kgRwCKnv21gSKfDf
+FIktmohuW9OyK4ukLzJO/7mZrrpMTTZT/0BteoUy2VUP/3WxNhxfeZ8VLjS1f992
+46u11zbNssGtjSsfbO+4ADoP6ktjuUOjpaX8tqnn97au2Tly7PGWi3Xrr37705WB
+2lPn+RH/1prpd47ey3dsjj4hHUM347usI3tt3XuTJ8emDndOT0wsdJ3Z/9mKE4sX
+J27cJe49Vv/d/Bt1j+6/fH9D4w+jz9XeeWjj+I6ZFxtHmhYfI+9v6xxevXB+Krun
+9ffXq15rffvW2w2r2xZ+bHvh14bRtW8/u2d+7qnB2fHC4JOzw3eGDs86H33YFJaX
+trw0PL635eV9XW+d/GDf0jNNn95aN7BjZvOZX06/+e6J2498ceDAb2Prbx7aPnk9
+/HKA5Oe+3jJ5dKhhenHkiW9qnz7187GDfwAtzIbu
+=Ye1I
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/erikboesen
+
+==================================================================
+
