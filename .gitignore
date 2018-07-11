@@ -3,6 +3,6 @@ _site
 ruby
 .DS_Store
 vendor
-*.pdf
 
 *.log
+*.aux
