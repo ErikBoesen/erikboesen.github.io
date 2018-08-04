@@ -1,4 +1,4 @@
-<img src="assets/img/portrait.jpg" width="100" align="right">
+<img src="images/portrait.jpg" width="100" align="right">
 
 # Erik Boesen
 - me@erikboesen.com
