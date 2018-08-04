@@ -1,3 +1,3 @@
 ADDR = 'me';
 DOMAIN = 'erikboesen.com';
-document.getElementById('email').href = ADDR + '@' + DOMAIN;
+document.getElementById('email').href = 'mailto' + ':' + ADDR + '@' + DOMAIN;
