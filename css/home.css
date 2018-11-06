@@ -20,6 +20,7 @@ body {
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     font-size: 26px;
+    background: #222;
 }
 header {
     text-align: center;
@@ -120,9 +121,6 @@ h2 span:nth-child(10) { animation-duration: 21s; }
 h2 {
     margin-left: -8px;
     color: #333;
-}
-body {
-    background: #222;
 }
 main {
     position: absolute;
