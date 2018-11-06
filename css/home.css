@@ -63,7 +63,7 @@ h2 span:nth-child(10) { animation-duration: 21s; }
 .social-buttons {
     cursor: default;
     list-style: none;
-    margin: 10px 0 30px;
+    margin: 30px 0;
 }
 .social-buttons li {
     display: inline-block;
