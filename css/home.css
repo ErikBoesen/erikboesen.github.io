@@ -42,24 +42,22 @@ h2 {
     font-weight: 100;
 }
 h2:hover span {
-    animation: blink infinite alternate-reverse linear;
+    animation: blink 0.2s step-start;
 }
-h2 span:nth-child(1) { animation-duration: 12s; }
-h2 span:nth-child(2) { animation-duration: 21s; }
-h2 span:nth-child(3) { animation-duration: 4s; }
-h2 span:nth-child(4) { animation-duration: 11s; }
-h2 span:nth-child(5) { animation-duration: 15s; }
-h2 span:nth-child(6) { animation-duration: 30s; }
-h2 span:nth-child(7) { animation-duration: 6s; }
-h2 span:nth-child(8) { animation-duration: 18s; }
-h2 span:nth-child(9) { animation-duration: 25s; }
-h2 span:nth-child(10) { animation-duration: 21s; }
+h2 span:nth-child(1) { animation-duration: 0.1s; }
+h2 span:nth-child(2) { animation-duration: 0.2s; }
+h2 span:nth-child(3) { animation-duration: 0.3s; }
+h2 span:nth-child(4) { animation-duration: 0.4s; }
+h2 span:nth-child(5) { animation-duration: 0.5s; }
+h2 span:nth-child(6) { animation-duration: 0.6s; }
+h2 span:nth-child(7) { animation-duration: 0.7s; }
+h2 span:nth-child(8) { animation-duration: 0.8s; }
+h2 span:nth-child(9) { animation-duration: 0.9s; }
 
 @keyframes blink {
-    from { color: #148598; }
-    to   { color: #333; }
+    from { color: transparent; }
+    to   { color: transparent; }
 }
-
 .social-buttons {
     cursor: default;
     list-style: none;
@@ -108,7 +106,7 @@ h2 span:nth-child(10) { animation-duration: 21s; }
     border-color: #9b6954;
     fill: #9b6954;
 }
-.social-buttons li:nth-child(5) svg:hover {
+.social-buttons li:nth-child(5) svg:hover {i
     border-color: #FF0084;
     fill: #FF0084;
 }
