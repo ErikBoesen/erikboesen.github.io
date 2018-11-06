@@ -20,7 +20,6 @@ body {
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     font-size: 26px;
-    background: #222;
 }
 header {
     text-align: center;
@@ -156,12 +155,12 @@ main a:nth-child(5) {
     border-bottom-color: lightgreen;
 }
 main a:nth-child(6) {
-    color: white;
-    border-bottom-color: white;
+    color: inherit;
+    border-bottom-color: inherit;
 }
 main a:nth-child(7) {
-    color: #fff130;
-    border-bottom-color: #fff130;
+    color: #3D4C87;
+    border-bottom-color: #3D4C87;
 }
 
 canvas#bg {
