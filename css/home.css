@@ -1,4 +1,8 @@
 @font-face {
+    font-family: 'LECO 1976';
+    src: url(../fonts/LECO_1976.otf) format('opentype');
+}
+@font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 300;
@@ -33,6 +37,7 @@ a:hover {
 }
 
 h2 {
+    font-family: 'LECO 1976', 'Lato', sans-serif;
     font-size: 100px;
     font-weight: 100;
 }
