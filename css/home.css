@@ -41,23 +41,6 @@ h2 {
     font-size: 100px;
     font-weight: 100;
 }
-h2:hover span {
-    animation: blink 0.2s step-start;
-}
-h2 span:nth-child(1) { animation-duration: 0.1s; }
-h2 span:nth-child(2) { animation-duration: 0.2s; }
-h2 span:nth-child(3) { animation-duration: 0.3s; }
-h2 span:nth-child(4) { animation-duration: 0.4s; }
-h2 span:nth-child(5) { animation-duration: 0.5s; }
-h2 span:nth-child(6) { animation-duration: 0.6s; }
-h2 span:nth-child(7) { animation-duration: 0.7s; }
-h2 span:nth-child(8) { animation-duration: 0.8s; }
-h2 span:nth-child(9) { animation-duration: 0.9s; }
-
-@keyframes blink {
-    from { color: transparent; }
-    to   { color: transparent; }
-}
 .social-buttons {
     cursor: default;
     list-style: none;
