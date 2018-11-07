@@ -33,10 +33,6 @@ a {
     color: inherit;
     text-decoration: none;
     border-bottom: solid 1px #333;
-    transition: .3s color border-bottom-color;
-}
-a:hover {
-    transition: .3s color border-bottom-color;
 }
 h2 {
     font-family: 'LECO 1976', 'Lato', sans-serif;
@@ -99,14 +95,12 @@ a:nth-child(7):hover {
     border: solid 1px #333;
     padding: 4px;
     cursor: pointer;
-    -webkit-transition: .3s;
     transition: .3s;
 }
 .social svg:hover {
     transform: rotate(360deg);
     transition: transform .5s;
 }
-
 .social li:first-child svg:hover {
     border-color: #ff6f32;
     fill: #ff6f32;
