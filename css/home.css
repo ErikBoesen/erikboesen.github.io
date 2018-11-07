@@ -114,32 +114,37 @@ main p {
     max-width: 8in;
     line-height: 1.5;
 }
-
-main a:nth-child(1) {
+main a {
+    transition-duration: 0.2s;
+}
+main a:hover {
+    transition: 0.1s;
+}
+main a:nth-child(1):hover {
     color: #d12727;
     border-bottom-color: #d12727;
 }
-main a:nth-child(2) {
+main a:nth-child(2):hover {
     color: #2bb7e3;
     border-bottom-color: #2bb7e3;
 }
-main a:nth-child(3) {
+main a:nth-child(3):hover {
     color: #d12727;
     border-bottom-color: #d12727;
 }
-main a:nth-child(4) {
+main a:nth-child(4):hover {
     color: #148598;
     border-bottom-color: #148598;
 }
-main a:nth-child(5) {
+main a:nth-child(5):hover {
     color: lightgreen;
     border-bottom-color: lightgreen;
 }
-main a:nth-child(6) {
+main a:nth-child(6):hover {
     color: inherit;
     border-bottom-color: inherit;
 }
-main a:nth-child(7) {
+main a:nth-child(7):hover {
     color: #3D4C87;
     border-bottom-color: #3D4C87;
 }
