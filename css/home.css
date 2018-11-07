@@ -42,20 +42,20 @@ h2 {
     line-height: 1;
     margin: 0 0 10px -4px;
 }
-.social-buttons {
+.social {
     cursor: default;
     list-style: none;
     margin: 30px 0;
 }
-.social-buttons li {
+.social li {
     display: inline-block;
     margin: 2px;
 }
-.social-buttons a {
+.social a {
     cursor: default;
     border: none;
 }
-.social-buttons svg {
+.social svg {
     fill: #333;
     height: 40px;
     width: 40px;
@@ -66,32 +66,32 @@ h2 {
     -webkit-transition: .3s;
     transition: .3s;
 }
-.social-buttons svg:hover {
+.social svg:hover {
     transform: rotate(360deg);
     transition: transform .5s;
 }
 
-.social-buttons li:first-child svg:hover {
+.social li:first-child svg:hover {
     border-color: #ff6f32;
     fill: #ff6f32;
 }
-.social-buttons li:nth-child(2) svg:hover {
+.social li:nth-child(2) svg:hover {
     border-color: #4fec51;
     fill: #4fec51;
 }
-.social-buttons li:nth-child(3) svg:hover {
+.social li:nth-child(3) svg:hover {
     border-color: #55acee;
     fill: #55acee;
 }
-.social-buttons li:nth-child(4) svg:hover {
+.social li:nth-child(4) svg:hover {
     border-color: #9b6954;
     fill: #9b6954;
 }
-.social-buttons li:nth-child(5) svg:hover {
+.social li:nth-child(5) svg:hover {
     border-color: #FF0084;
     fill: #FF0084;
 }
-.social-buttons li:nth-child(6) svg:hover {
+.social li:nth-child(6) svg:hover {
     border-color: #dd4e41;
     fill: #dd4e41;
 }
@@ -103,36 +103,36 @@ main {
     color: #333;
     padding: 40px 50px;
 }
-main p {
+p {
     color: #444;
     max-width: 8in;
     line-height: 1.5;
 }
-main a:nth-child(1):hover {
+a:nth-child(1):hover {
     color: #d12727;
     border-bottom-color: #d12727;
 }
-main a:nth-child(2):hover {
+a:nth-child(2):hover {
     color: #2bb7e3;
     border-bottom-color: #2bb7e3;
 }
-main a:nth-child(3):hover {
+a:nth-child(3):hover {
     color: #d12727;
     border-bottom-color: #d12727;
 }
-main a:nth-child(4):hover {
+a:nth-child(4):hover {
     color: #148598;
     border-bottom-color: #148598;
 }
-main a:nth-child(5):hover {
+a:nth-child(5):hover {
     color: lightgreen;
     border-bottom-color: lightgreen;
 }
-main a:nth-child(6):hover {
+a:nth-child(6):hover {
     color: inherit;
     border-bottom-color: inherit;
 }
-main a:nth-child(7):hover {
+a:nth-child(7):hover {
     color: #3D4C87;
     border-bottom-color: #3D4C87;
 }
@@ -141,7 +141,7 @@ main a:nth-child(7):hover {
     * {
         overflow: auto;
     }
-    .social-buttons {
+    .social {
         margin: 20px auto 0;
     }
     main {
@@ -149,13 +149,11 @@ main a:nth-child(7):hover {
     }
     h2 {
         font-size: 24vw;
-    }
-    canvas#bg {
-
+        margin-left: 0;
     }
 }
 @media (max-width: 340px) {
-    .social-buttons {
+    .social {
         margin-top: 40px;
         max-width: 145px;
     }
