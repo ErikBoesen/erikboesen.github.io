@@ -32,7 +32,6 @@ a {
     transition: .3s color border-bottom-color;
 }
 a:hover {
-    transition: .1s;
     transition: .3s color border-bottom-color;
 }
 
@@ -40,6 +39,8 @@ h2 {
     font-family: 'LECO 1976', 'Lato', sans-serif;
     font-size: 100px;
     font-weight: 100;
+    line-height: 1;
+    margin: 0 0 10px -4px;
 }
 .social-buttons {
     cursor: default;
@@ -95,16 +96,12 @@ h2 {
     fill: #dd4e41;
 }
 
-h2 {
-    margin-left: -8px;
-    color: #333;
-}
 main {
     position: absolute;
     width: 100vw;
     min-height: 100vh;
     color: #333;
-    padding: 50px 50px 0;
+    padding: 40px 50px;
 }
 main p {
     color: #444;
