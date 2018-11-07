@@ -21,8 +21,12 @@ body {
     overflow-x: hidden;
     font-size: 26px;
 }
-header {
-    text-align: center;
+main {
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    color: #333;
+    padding: 40px 50px;
 }
 
 a {
@@ -34,13 +38,45 @@ a {
 a:hover {
     transition: .3s color border-bottom-color;
 }
-
 h2 {
     font-family: 'LECO 1976', 'Lato', sans-serif;
     font-size: 100px;
     font-weight: 100;
     line-height: 1;
     margin: 0 0 10px -4px;
+}
+p {
+    color: #444;
+    max-width: 8in;
+    line-height: 1.5;
+}
+a:nth-child(1):hover {
+    color: #d12727;
+    border-bottom-color: #d12727;
+}
+a:nth-child(2):hover {
+    color: #2bb7e3;
+    border-bottom-color: #2bb7e3;
+}
+a:nth-child(3):hover {
+    color: #d12727;
+    border-bottom-color: #d12727;
+}
+a:nth-child(4):hover {
+    color: #148598;
+    border-bottom-color: #148598;
+}
+a:nth-child(5):hover {
+    color: lightgreen;
+    border-bottom-color: lightgreen;
+}
+a:nth-child(6):hover {
+    color: inherit;
+    border-bottom-color: inherit;
+}
+a:nth-child(7):hover {
+    color: #3D4C87;
+    border-bottom-color: #3D4C87;
 }
 .social {
     cursor: default;
@@ -94,47 +130,6 @@ h2 {
 .social li:nth-child(6) svg:hover {
     border-color: #dd4e41;
     fill: #dd4e41;
-}
-
-main {
-    position: absolute;
-    width: 100vw;
-    min-height: 100vh;
-    color: #333;
-    padding: 40px 50px;
-}
-p {
-    color: #444;
-    max-width: 8in;
-    line-height: 1.5;
-}
-a:nth-child(1):hover {
-    color: #d12727;
-    border-bottom-color: #d12727;
-}
-a:nth-child(2):hover {
-    color: #2bb7e3;
-    border-bottom-color: #2bb7e3;
-}
-a:nth-child(3):hover {
-    color: #d12727;
-    border-bottom-color: #d12727;
-}
-a:nth-child(4):hover {
-    color: #148598;
-    border-bottom-color: #148598;
-}
-a:nth-child(5):hover {
-    color: lightgreen;
-    border-bottom-color: lightgreen;
-}
-a:nth-child(6):hover {
-    color: inherit;
-    border-bottom-color: inherit;
-}
-a:nth-child(7):hover {
-    color: #3D4C87;
-    border-bottom-color: #3D4C87;
 }
 
 @media (max-width: 680px) {
