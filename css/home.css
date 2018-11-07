@@ -66,11 +66,8 @@ h2 {
     transition: .3s;
 }
 .social-buttons svg:hover {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
     transform: rotate(360deg);
-    -webkit-transition: .5s;
-    transition: .5s;
+    transition: transform .5s;
 }
 
 .social-buttons li:first-child svg:hover {
@@ -89,7 +86,7 @@ h2 {
     border-color: #9b6954;
     fill: #9b6954;
 }
-.social-buttons li:nth-child(5) svg:hover {i
+.social-buttons li:nth-child(5) svg:hover {
     border-color: #FF0084;
     fill: #FF0084;
 }
@@ -113,12 +110,6 @@ main p {
     color: #444;
     max-width: 8in;
     line-height: 1.5;
-}
-main a {
-    transition-duration: 0.2s;
-}
-main a:hover {
-    transition: 0.1s;
 }
 main a:nth-child(1):hover {
     color: #d12727;
