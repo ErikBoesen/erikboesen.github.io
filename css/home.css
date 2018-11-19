@@ -121,10 +121,6 @@ a:nth-child(7):hover {
     border-color: #FF0084;
     fill: #FF0084;
 }
-.social li:nth-child(6) svg:hover {
-    border-color: #dd4e41;
-    fill: #dd4e41;
-}
 
 @media (max-width: 680px) {
     main {
