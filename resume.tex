@@ -1,22 +1,14 @@
-%!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
-
 \documentclass[10pt, a4paper]{article}
 \usepackage{fontspec}
 
-% DOCUMENT LAYOUT
 \usepackage{geometry}
 \geometry{a4paper, left=3cm, right=2cm, top=2cm, bottom=1cm, marginparsep=7pt, marginparwidth=0.5in}
 \setlength\parindent{0in}
 
-% FONTS
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{xunicode}
 \usepackage{xltxtra}
 \defaultfontfeatures{Mapping=tex-text}
-%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
-%\setmonofont[Scale=0.8]{Monaco}
-%%% modified by Karol Kozioł for ShareLaTeX use
 \setmainfont[
   Ligatures={Common}, Numbers={OldStyle}, Variant=01,
   BoldFont=LinLibertine_RB.otf,
@@ -27,37 +19,31 @@
 
 \pagenumbering{gobble}
 
-% ---- CUSTOM COMMANDS
 \chardef\&="E050
 \newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
 \newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
 \newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
-% ---- MARGIN YEARS
+
 \usepackage{marginnote}
 \newcommand{\amper{}}{\chardef\amper="E0BD }
 \newcommand{\years}[1]{\marginnote{\scriptsize #1}}
 \renewcommand*{\raggedleftmarginnote}{}
 \reversemarginpar
 
-% HEADINGS
 \usepackage{sectsty}
 \usepackage[normalem]{ulem}
 \sectionfont{\mdseries\upshape\Large}
 \subsectionfont{\mdseries\scshape\normalsize}
 \subsubsectionfont{\mdseries\upshape\large}
 
-% PDF SETUP
-% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
 \usepackage[%dvipdfm,
 bookmarks, colorlinks, breaklinks,
-% ---- FILL IN HERE THE TITLE AND AUTHOR
 	pdftitle={Erik Boesen - vita},
 	pdfauthor={Erik Boesen},
 	pdfproducer={http://nitens.org/taraborelli/cvtex}
 ]{hyperref}
 \hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue}
 
-% DOCUMENT
 \begin{document}
 {\LARGE Erik Bøsen}\\
 \href{mailto:me@erikboesen.com}{me@erikboesen.com} // \href{https://erikboesen.com}{erikboesen.com}\\
@@ -83,7 +69,7 @@ bookmarks, colorlinks, breaklinks,
 \noindent
 \years{2018}\textsc{FIRST Dean's List} // I was selected as one of ten students from 92,000 eligible to receive the highest student award in FIRST Robotics Competition.\\
 \years{2017}\textsc{US Congressional App Challenge Winner} // Winner of US Congress challenge for creation of \href{http://opinr.me}{Opinr}, a web application exposing users to opposing political ideology paired with a social network for open discussion.\\
-\years{2016-2019}Created \href{https://frcdashboard.github.io}{FRC Dashboard} and derived driving dashboard, which has won FIRST Robotics Innovation in Control Award five times\\
+\years{2016-2018}\textsc{FIRST Innovation in Control Award} // Won for created of open-source \href{https://frcdashboard.github.io}{FRC Dashboard} platform, now used by over 100 robotics teams for advanced, customizable robot control.\\
 \years{2018}Recipient of George Mason High School Outstanding Computer Scientist award, awarded to GMHS' top Computer Science student\\
 
 \subsection*{Skills}
@@ -97,10 +83,8 @@ bookmarks, colorlinks, breaklinks,
 %International Politics\\
 %Vexillology\\
 
-
 \begin{center}
-{\scriptsize  Last updated: \today\- •\-
-\href{https://erikboesen.com/resume.pdf}{erikboesen.com/resume.pdf}}
+{\scriptsize  \today\-  - \href{https://erikboesen.com/resume.pdf}{erikboesen.com/resume.pdf}}
 \end{center}
 
 \end{document}
