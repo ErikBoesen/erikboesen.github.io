@@ -42,8 +42,14 @@ h2 {
     margin: 0 0 10px -4px;
 }
 #headshot {
-    max-width: 100%;
     width: 500px;
+    height: 350px;
+    background-size: cover;
+    background-image: url('../images/formal.jpg');
+    margin-bottom: 10px;
+}
+#headshot:hover {
+    background-image: url('../images/casual.jpg');
 }
 p {
     color: #444;
