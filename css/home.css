@@ -41,6 +41,10 @@ h2 {
     line-height: 1;
     margin: 0 0 10px -4px;
 }
+#headshot {
+    max-width: 100%;
+    width: 500px;
+}
 p {
     color: #444;
     max-width: 8in;
