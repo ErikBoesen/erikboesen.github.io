@@ -48,11 +48,11 @@ h2 {
     width: 100%;
     padding-top: 75%;
     background-size: cover;
-    background-image: url('../images/formal.jpg');
+    background-image: url('../images/formal-small.jpg');
     margin-bottom: 15px;
 }
 #headshot:hover {
-    background-image: url('../images/casual.jpg');
+    background-image: url('../images/casual-small.jpg');
 }
 p {
     color: #444;
