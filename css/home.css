@@ -62,31 +62,35 @@ p {
     max-width: 8in;
     line-height: 1.5;
 }
-a:nth-child(1):hover {
+p a#esperanto:hover {
+    color: #009900;
+    border-bottom-color: #009900;
+}
+p a#robotics:hover {
     color: #d12727;
     border-bottom-color: #d12727;
 }
-a:nth-child(2):hover {
+p a#mit:hover {
     color: #2bb7e3;
     border-bottom-color: #2bb7e3;
 }
-a:nth-child(3):hover {
+p a#masonhacks:hover {
     color: #d12727;
     border-bottom-color: #d12727;
 }
-a:nth-child(4):hover {
+p a#hackclub:hover {
     color: #148598;
     border-bottom-color: #148598;
 }
-a:nth-child(5):hover {
+p a#capoeira:hover {
     color: lightgreen;
     border-bottom-color: lightgreen;
 }
-a:nth-child(6):hover {
+p a#minimalism:hover {
     color: inherit;
     border-bottom-color: inherit;
 }
-a:nth-child(7):hover {
+p a#politics:hover {
     color: #3D4C87;
     border-bottom-color: #3D4C87;
 }
