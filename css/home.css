@@ -28,7 +28,9 @@ main {
     color: #333;
     padding: 40px 50px;
 }
-
+p {
+    margin: 10px 0;
+}
 a {
     color: inherit;
     text-decoration: none;
@@ -42,7 +44,8 @@ h2 {
     margin: 0 0 10px -4px;
 }
 #headshot-container {
-    max-width: 500px;
+    /* Match name in header */
+    max-width: 555px;
 }
 #headshot {
     width: 100%;
