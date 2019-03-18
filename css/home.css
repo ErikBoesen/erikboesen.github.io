@@ -46,9 +46,11 @@ h2 {
     background-image: url('../images/casual-small.jpg');
     margin-bottom: 15px;
 }
+/*
 #headshot:hover {
     background-image: url('../images/formal-small.jpg');
 }
+*/
 p {
     color: #444;
     max-width: 8in;
