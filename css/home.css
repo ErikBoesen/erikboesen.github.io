@@ -119,23 +119,27 @@ p a#politics:hover {
     transform: rotate(360deg);
     transition: transform .5s;
 }
-.social li:first-child svg:hover {
+.social li#mail svg:hover {
     border-color: #ff6f32;
     fill: #ff6f32;
 }
-.social li:nth-child(2) svg:hover {
+.social li#github svg:hover {
     border-color: #4fec51;
     fill: #4fec51;
 }
-.social li:nth-child(3) svg:hover {
+.social li#linkedin svg:hover {
+    border-color: #0077B5;
+    fill: #0077B5;
+}
+.social li#twitter svg:hover {
     border-color: #55acee;
     fill: #55acee;
 }
-.social li:nth-child(4) svg:hover {
+.social li#instagram svg:hover {
     border-color: #9b6954;
     fill: #9b6954;
 }
-.social li:nth-child(5) svg:hover {
+.social li#flickr svg:hover {
     border-color: #FF0084;
     fill: #FF0084;
 }
