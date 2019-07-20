@@ -97,11 +97,12 @@ function tick() {
 function draw() {
     for (row = 0; row < HEIGHT; row++) {
         for (col = 0; col < WIDTH; col++) {
-            ctx.fillStyle = 'rgb(0,' + (255/MAX_GRASS_GROWTH * grass[row][col]) + ',0)';
+            let shade = 155 + (100/MAX_GRASS_GROWTH * grass[row][col]);
+            ctx.fillStyle = 'rgb(' + shade + ',' + shade + ',' + shade + ')';
             ctx.fillRect(col * SIZE, row * SIZE, SIZE, SIZE);
         }
     }
-    ctx.fillStyle = '#333';
+    ctx.fillStyle = '#aaa';
     for (bunny of bunnies) {
         ctx.fillRect(bunny.x * SIZE + BUNNY_PADDING, bunny.y * SIZE + BUNNY_PADDING, SIZE - 2*BUNNY_PADDING, SIZE - 2*BUNNY_PADDING);
     }
