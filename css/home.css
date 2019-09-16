@@ -36,12 +36,12 @@ h2 {
     margin: 0 0 10px -4px;
 }
 #headshot-container {
-    /* Match name in header */
-    max-width: 555px;
+    max-width: 400px;
 }
 #headshot {
     width: 100%;
     padding-top: 75%;
+    /* Match name in header */
     background-size: cover;
     background-image: url('../images/casual-small.jpg');
     margin-bottom: 15px;
@@ -74,11 +74,7 @@ p a#mit:hover {
     color: #2bb7e3;
     border-bottom-color: #2bb7e3;
 }
-p a#masonhacks:hover {
-    color: #d12727;
-    border-bottom-color: #d12727;
-}
-p a#hackclub:hover {
+p a#schoology:hover {
     color: #148598;
     border-bottom-color: #148598;
 }
