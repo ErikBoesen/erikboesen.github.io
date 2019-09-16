@@ -150,9 +150,13 @@ p a#politics:hover {
         font-size: 24vw;
         margin-left: 0;
     }
+    .social svg {
+        height: 60px;
+        width: 60px;
+    }
 }
-@media (max-width: 340px) {
+@media (max-width: 450px) {
     .social {
-        max-width: 145px;
+        max-width: 250px;
     }
 }
