@@ -1,0 +1,2 @@
+resume:
+	xelatex resume.tex
