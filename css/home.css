@@ -44,7 +44,7 @@ h2 {
     user-select: none;
 }
 #headshot {
-    max-width: 200px;
+    max-width: 180px;
     border-radius: 100%;
 }
 p {
@@ -143,7 +143,7 @@ p a#politics:hover {
         padding: 15px;
     }
     h2 {
-        font-size: 24vw;
+        font-size: 22vw;
         margin-left: 0;
     }
     .social svg {
