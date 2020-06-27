@@ -2,7 +2,7 @@ const canvas = document.getElementsByTagName('canvas')[0];
 const ctx = canvas.getContext('2d');
 
 let ops = {
-    lineCount: 33,
+    lineCount: 35,
     lineLength: 15,
     rotationIncrement: -0.02,
     rotationDifference: 0.4,
@@ -55,3 +55,12 @@ function draw() {
 
 draw();
 setInterval(draw, 3);
+
+function color() {
+    return Math.random() * 255;
+}
+function recolor() {
+    var newColor = 'rgb(' + color() + ',' + color() + ',' + color() + ')';
+    ctx.strokeStyle = newColor;
+}
+canvas.onclick = recolor;
