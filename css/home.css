@@ -33,7 +33,7 @@ h2 {
     font-size: 80px;
     font-weight: 100;
     line-height: 1;
-    margin: 0 0 10px -4px;
+    margin-left: -4px;
 }
 #headshot {
     max-width: 200px;
@@ -43,7 +43,7 @@ p {
     color: #444;
     max-width: 6in;
     line-height: 1.5;
-    margin: 10px 0;
+    margin: 6px 0 10px;
 }
 a {
     color: inherit;

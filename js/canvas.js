@@ -1,18 +1,19 @@
 const canvas = document.getElementsByTagName('canvas')[0];
 const ctx = canvas.getContext('2d');
 
-ctx.strokeStyle = 'black';
-ctx.lineWidth = 1;
-
 let ops = {
-    lineCount: 20,
-    lineLength: 20,
-    rotationIncrement: 0.02,
-    rotationDifference: 0.1,
+    lineCount: 30,
+    lineLength: 15,
+    rotationIncrement: -0.02,
+    rotationDifference: 0.4,
 }
 
 canvas.width = ops.lineLength * ops.lineCount;
 canvas.height = ops.lineLength;
+
+ctx.globalAlpha = 0.05;
+ctx.strokeStyle = '#333333';
+ctx.lineWidth = 2;
 
 let baseTheta = 0;
 
@@ -30,11 +31,11 @@ function draw() {
     ctx.beginPath();
 
     for (let i = 0; i < ops.lineCount; i++) {
-        line(i * ops.lineLength + ops.lineLength / 2, ops.lineLength / 2, baseTheta);
+        line(i * ops.lineLength + ops.lineLength / 2, ops.lineLength / 2, baseTheta + i * ops.rotationDifference);
     }
 
     baseTheta += ops.rotationIncrement;
 }
 
 draw();
-setInterval(draw, 100);
+setInterval(draw, 8);
