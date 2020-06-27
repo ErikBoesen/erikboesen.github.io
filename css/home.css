@@ -103,7 +103,7 @@ p a#politics:hover {
 }
 .social svg:hover {
     transform: rotate(360deg);
-    transition: transform .5s;
+    transition: .5s;
 }
 .social li#mail svg:hover {
     border-color: #ff6f32;
