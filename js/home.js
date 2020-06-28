@@ -21,7 +21,7 @@ for (let letter of name) {
 
 var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
 
-function playNote(frequency, duration) {
+function playNote(frequency, duration, callback) {
     var oscillator = audioCtx.createOscillator();
 
     oscillator.type = 'sine';
@@ -31,6 +31,7 @@ function playNote(frequency, duration) {
 
     setTimeout(function() {
         oscillator.stop();
+        callback();
     }, duration);
 }
 
@@ -58,10 +59,17 @@ const notes = [
     1760,
 ];
 
+function color() {
+    return 'rgb(' + colorRange() + ',' + colorRange() + ',' + colorRange() + ')';
+}
+
 function playKey(target) {
     if (target.parentNode == E_NAME) {
         let index = parseInt(target.id.slice(PREFIX.length));
-        playNote(notes[index], 200);
+        target.style.color = color();
+        playNote(notes[index], 200, function() {
+            target.style.removeProperty('color');
+        });
     }
 }
 mouseDown = false;
