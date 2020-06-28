@@ -6,13 +6,14 @@ let ops = {
     lineLength: 15,
     rotationIncrement: -0.02,
     rotationDifference: 0.4,
+    color: '#333333',
 }
 
 canvas.width = ops.lineLength * ops.lineCount;
 canvas.height = ops.lineLength;
 
 ctx.globalAlpha = 0.05;
-ctx.strokeStyle = '#333333';
+ctx.strokeStyle = ops.color;
 ctx.lineWidth = 2;
 
 let baseTheta = 0;
@@ -62,7 +63,10 @@ function colorRange() {
 function color() {
     return 'rgb(' + colorRange() + ',' + colorRange() + ',' + colorRange() + ')';
 }
-function recolor() {
+
+canvas.onmousedown = function() {
     ctx.strokeStyle = color();
-}
-canvas.onclick = recolor;
+};
+canvas.onmouseup = function() {
+    ctx.strokeStyle = ops.color;
+};
