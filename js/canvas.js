@@ -56,11 +56,13 @@ function draw() {
 draw();
 setInterval(draw, 3);
 
-function color() {
+function colorRange() {
     return Math.random() * 255;
 }
+function color() {
+    return 'rgb(' + color() + ',' + color() + ',' + color() + ')';
+}
 function recolor() {
-    var newColor = 'rgb(' + color() + ',' + color() + ',' + color() + ')';
     ctx.strokeStyle = newColor;
 }
 canvas.onclick = recolor;
