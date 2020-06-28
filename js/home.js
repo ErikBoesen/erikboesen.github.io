@@ -11,6 +11,10 @@ for (let letter of name) {
     let container = document.createElement('span');
     container.textContent = letter;
     container.id = PREFIX + i;
+    container.onmouseenter = function(e) {
+        console.log('Entered!');
+        if (mouseDown) playKey(e.target);
+    }
     E_NAME.appendChild(container);
     i++;
 }
@@ -54,9 +58,19 @@ const notes = [
     1760,
 ];
 
-onclick = function(e) {
-    if (e.target.parentNode == E_NAME) {
-        let index = parseInt(e.target.id.slice(PREFIX.length));
+function playKey(target) {
+    if (target.parentNode == E_NAME) {
+        let index = parseInt(target.id.slice(PREFIX.length));
         playNote(notes[index], 200);
     }
+}
+mouseDown = false;
+onmousedown = function(e) {
+    console.log('Mouse down!');
+    playKey(e.target);
+    mouseDown = true;
+}
+onmouseup = function() {
+    console.log('Mouse up!');
+    mouseDown = false;
 }

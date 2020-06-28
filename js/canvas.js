@@ -60,9 +60,9 @@ function colorRange() {
     return Math.random() * 255;
 }
 function color() {
-    return 'rgb(' + color() + ',' + color() + ',' + color() + ')';
+    return 'rgb(' + colorRange() + ',' + colorRange() + ',' + colorRange() + ')';
 }
 function recolor() {
-    ctx.strokeStyle = newColor;
+    ctx.strokeStyle = color();
 }
 canvas.onclick = recolor;
