@@ -6,17 +6,21 @@ const E_NAME = document.getElementById('name');
 let name = E_NAME.textContent;
 let i = 0;
 E_NAME.textContent = '';
-const PREFIX = 'key_';
+const CLASS = 'key',
+      PREFIX = 'key_';
 for (let letter of name) {
     let container = document.createElement('span');
     container.textContent = letter;
-    container.id = PREFIX + i;
-    container.onmouseenter = function(e) {
-        console.log('Entered!');
-        if (mouseDown) playKey(e.target);
+    if (letter != ' ') {
+        container.className = CLASS;
+        container.id = PREFIX + i;
+        container.onmouseenter = function(e) {
+            console.log('Entered!');
+            if (mouseDown) playKey(e.target);
+        }
+        i++;
     }
     E_NAME.appendChild(container);
-    i++;
 }
 
 var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
@@ -64,7 +68,7 @@ function color() {
 }
 
 function playKey(target) {
-    if (target.parentNode == E_NAME) {
+    if (target.className == CLASS) {
         let index = parseInt(target.id.slice(PREFIX.length));
         target.style.color = color();
         playNote(notes[index], 200, function() {
