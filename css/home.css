@@ -34,7 +34,7 @@ h2 {
     font-size: 80px;
     font-weight: 100;
     line-height: 1;
-    margin-left: -3px;
+    margin-left: -4px;
     /* Prevent selection on all browsers */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -43,7 +43,7 @@ h2 {
     -ms-user-select: none;
     user-select: none;
 }
-#headshot {
+#portrait {
     max-width: 180px;
     border-radius: 100%;
 }
@@ -61,30 +61,6 @@ a {
 p a#esperanto:hover {
     color: #009900;
     border-bottom-color: #009900;
-}
-p a#robotics:hover {
-    color: #d12727;
-    border-bottom-color: #d12727;
-}
-p a#mit:hover {
-    color: #2bb7e3;
-    border-bottom-color: #2bb7e3;
-}
-p a#schoology:hover {
-    color: #148598;
-    border-bottom-color: #148598;
-}
-p a#capoeira:hover {
-    color: lightgreen;
-    border-bottom-color: lightgreen;
-}
-p a#minimalism:hover {
-    color: inherit;
-    border-bottom-color: inherit;
-}
-p a#politics:hover {
-    color: #3D4C87;
-    border-bottom-color: #3D4C87;
 }
 .social {
     cursor: default;
