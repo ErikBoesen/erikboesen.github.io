@@ -62,6 +62,26 @@ p a#esperanto:hover {
     color: #009900;
     border-bottom-color: #009900;
 }
+p a#powerschool:hover {
+    color: #00b6ef;
+    border-bottom-color: #00b6ef;
+}
+p a#vexillology:hover {
+    color: #EEC900;
+    border-bottom-color: #EEC900;
+}
+p a#minimalism:hover {
+    color: #B22222;
+    border-bottom-color: #B22222;
+}
+p a#open_source:hover {
+    color: #43B00D;
+    border-bottom-color: #43B00D;
+}
+p a#resume:hover {
+    color: #077bc1;
+    border-bottom-color: #077bc1;
+}
 .social {
     cursor: default;
     list-style: none;
