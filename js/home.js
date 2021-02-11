@@ -63,6 +63,9 @@ const notes = [
     1760,
 ];
 
+function colorRange() {
+    return Math.random() * 255;
+}
 function color() {
     return 'rgb(' + colorRange() + ',' + colorRange() + ',' + colorRange() + ')';
 }
