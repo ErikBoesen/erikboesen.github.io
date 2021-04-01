@@ -39,6 +39,7 @@ h2 {
     user-select: none;
 }
 #portrait {
+    display: inline-block;
     max-width: 180px;
     border-radius: 100%;
 }
@@ -147,3 +148,9 @@ p a#resume:hover {
         max-width: 250px;
     }
 }
+
+#flag {
+    display: none;
+    height: 130px;
+}
+

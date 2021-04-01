@@ -100,3 +100,95 @@ onmouseup = function() {
     console.log('Mouse up!');
     mouseDown = false;
 }
+
+//////////////
+// Vexillology
+//
+const E_PORTRAIT = document.getElementById('portrait'),
+      E_FLAG = document.getElementById('flag'),
+      E_VEXILLOLOGY = document.getElementById('vexillology');
+
+E_VEXILLOLOGY.onclick = function(e) {
+    e.preventDefault();
+    //E_PORTRAIT.style.display = 'none';
+    E_FLAG.style.display = 'inline-block';
+    flaggify();
+};
+
+const F_LIGHT = 1;
+const FLAGS = [
+    {
+        image: 'austria.png',
+        colors: [
+            '#C8102E',
+            ['white', F_LIGHT],
+        ],
+        order: [0, 1, 0, 1, 0, 1],
+    },
+    {
+        image: 'canada.png',
+        colors: [
+            '#EF3340'
+            ['white', F_LIGHT],
+        ],
+        order: [0, 0, 1, 1, 0, 0],
+    },
+    {
+        image: 'chile.png',
+        colors: [
+            '#0033A0',
+            ['white', F_LIGHT],
+            '#DA291C',
+        ],
+        order: [0, 1, 2, 0, 1, 2],
+    },
+/*
+    {
+        image: 'colorado.svg',
+        colors: [
+        ],
+        'order': [],
+    },
+    {
+        image: 'dc.svg',
+        colors: [
+        ],
+        order: [],
+    },
+    {
+        image: 'denmark.png',
+        colors: [
+        ],
+        order: [],
+    },
+    {
+        image: 'new_mexico.svg',
+        colors: [
+        ],
+        order: [],
+    },
+*/
+];
+
+function shuffle(items) {
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+}
+
+function flaggify() {
+    const flag = random_pick(FLAGS);
+    E_FLAG.src = 'images/flags/' + flag.image;
+    for (letter_index = 0; letter_index < E_NAME.childNodes.length; letter_index++) {
+        let color = flag.colors[flag.order[letter_index]];
+        if (Array.isArray(color)) {
+            let flag = color[1];
+            if (E_FLAG & F_LIGHT) {
+                E_NAME.childNodes.style.boxShadow = '0 0 5px rgba(0, 0, 0, 0.5)';
+            }
+            color = color[0];
+        }
+        E_NAME.childNodes[letter_index].style.color = color;
+    }
+}
