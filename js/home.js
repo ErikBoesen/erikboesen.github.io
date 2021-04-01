@@ -1,13 +1,21 @@
+const E_NAME = document.getElementById('name');
+
+////////////////////
+// Email obfuscation
+//
 const ADDR = 'me',
       DOMAIN = 'erikboesen.com';
 document.getElementById('email').href = 'mailto' + ':' + ADDR + '@' + DOMAIN;
 
-const E_NAME = document.getElementById('name');
+/////////////////////////
+// Name element splitting
+//
 let name = E_NAME.textContent;
 let i = 0;
 E_NAME.textContent = '';
-const CLASS = 'key',
-      PREFIX = 'key_';
+const CLASS = 'letter',
+      PREFIX = 'letter_';
+
 for (let letter of name) {
     let container = document.createElement('span');
     container.textContent = letter;
@@ -23,6 +31,9 @@ for (let letter of name) {
     E_NAME.appendChild(container);
 }
 
+////////
+// Piano
+//
 var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
 
 function playNote(frequency, duration, callback) {
