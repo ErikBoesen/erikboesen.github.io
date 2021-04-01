@@ -24,6 +24,11 @@ body {
     color: #333;
     padding: 40px 50px;
 }
+#portrait {
+    display: inline-block;
+    max-width: 170px;
+    border-radius: 100%;
+}
 h2 {
     font-family: 'LEMONMILK', 'Lato', sans-serif;
     font-size: 80px;
@@ -37,11 +42,12 @@ h2 {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-#portrait {
     display: inline-block;
-    max-width: 170px;
-    border-radius: 100%;
+}
+#flag {
+    display: none;
+    height: 64px;
+    margin-bottom: -1px;
 }
 p {
     color: #444;
@@ -136,7 +142,11 @@ p a#resume:hover {
     }
     h2 {
         font-size: 22vw;
-        margin-left: 0;
+    }
+    #flag {
+        margin-top: 6px;
+        margin-left: 1px;
+        height: 128px;
     }
     .social svg {
         height: 60px;
@@ -148,13 +158,3 @@ p a#resume:hover {
         max-width: 250px;
     }
 }
-
-h2 {
-    display: inline-block;
-}
-#flag {
-    display: none;
-    height: 64px;
-    margin-bottom: -1px;
-}
-
