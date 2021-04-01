@@ -149,8 +149,12 @@ p a#resume:hover {
     }
 }
 
+h2 {
+    display: inline-block;
+}
 #flag {
     display: none;
-    height: 130px;
+    height: 64px;
+    margin-bottom: -1px;
 }
 
