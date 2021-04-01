@@ -21,11 +21,6 @@ body {
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     font-size: 26px;
-}
-main {
-    position: absolute;
-    width: 100vw;
-    min-height: 100vh;
     color: #333;
     padding: 40px 50px;
 }
@@ -135,7 +130,7 @@ p a#resume:hover {
 }
 
 @media (max-width: 680px) {
-    main {
+    body {
         padding: 15px;
     }
     h2 {
