@@ -121,53 +121,47 @@ const FLAGS = [
         image: 'austria',
         colors: [
             '#C8102E',
-            ['white', F_LIGHT],
         ],
-        order: [0, 1, 0, 1, 0, 1],
     },
     {
         image: 'canada',
         colors: [
             '#EF3340',
-            ['white', F_LIGHT],
         ],
-        order: [0, 0, 1, 1, 0, 0],
     },
     {
         image: 'chile',
         colors: [
             '#0033A0',
-            ['white', F_LIGHT],
             '#DA291C',
         ],
-        order: [0, 1, 2, 0, 1, 2],
     },
-/*
     {
         image: 'colorado',
         colors: [
+            '#002868',
+            '#bf0a30',
+            'gold',
         ],
-        'order': [],
     },
     {
         image: 'dc',
         colors: [
+            '#e81b39',
         ],
-        order: [],
     },
     {
         image: 'denmark',
         colors: [
+            '#c60c30',
         ],
-        order: [],
     },
     {
         image: 'new_mexico',
         colors: [
+            '#ffd700',
         ],
-        order: [],
     },
-*/
 ];
 
 function shuffle(arr) {
