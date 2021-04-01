@@ -118,7 +118,7 @@ E_VEXILLOLOGY.onclick = function(e) {
 const F_LIGHT = 1;
 const FLAGS = [
     {
-        image: 'austria.png',
+        image: 'austria',
         colors: [
             '#C8102E',
             ['white', F_LIGHT],
@@ -126,15 +126,15 @@ const FLAGS = [
         order: [0, 1, 0, 1, 0, 1],
     },
     {
-        image: 'canada.png',
+        image: 'canada',
         colors: [
-            '#EF3340'
+            '#EF3340',
             ['white', F_LIGHT],
         ],
         order: [0, 0, 1, 1, 0, 0],
     },
     {
-        image: 'chile.png',
+        image: 'chile',
         colors: [
             '#0033A0',
             ['white', F_LIGHT],
@@ -144,25 +144,25 @@ const FLAGS = [
     },
 /*
     {
-        image: 'colorado.svg',
+        image: 'colorado',
         colors: [
         ],
         'order': [],
     },
     {
-        image: 'dc.svg',
+        image: 'dc',
         colors: [
         ],
         order: [],
     },
     {
-        image: 'denmark.png',
+        image: 'denmark',
         colors: [
         ],
         order: [],
     },
     {
-        image: 'new_mexico.svg',
+        image: 'new_mexico',
         colors: [
         ],
         order: [],
@@ -170,22 +170,27 @@ const FLAGS = [
 */
 ];
 
-function shuffle(items) {
+function shuffle(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [arr[i], arr[j]] = [arr[j], arr[i]];
     }
 }
+shuffle(FLAGS);
 
+let flag_index = -1;
+const NAME_OFFSET = 5;
 function flaggify() {
-    const flag = random_pick(FLAGS);
-    E_FLAG.src = 'images/flags/' + flag.image;
-    for (letter_index = 0; letter_index < E_NAME.childNodes.length; letter_index++) {
-        let color = flag.colors[flag.order[letter_index]];
+    flag_index = (flag_index + 1) % FLAGS.length;
+    const flag = FLAGS[flag_index];
+    E_FLAG.src = 'images/flags/' + flag.image + '.svg';
+    for (letter_index = NAME_OFFSET; letter_index < E_NAME.childNodes.length; letter_index++) {
+        let color = flag.colors[flag.order[letter_index - NAME_OFFSET]];
+        E_NAME.childNodes[letter_index].style.textShadow = '';
         if (Array.isArray(color)) {
             let flag = color[1];
-            if (E_FLAG & F_LIGHT) {
-                E_NAME.childNodes.style.boxShadow = '0 0 5px rgba(0, 0, 0, 0.5)';
+            if (flag & F_LIGHT) {
+                E_NAME.childNodes[letter_index].style.textShadow = '0 0 5px rgba(0, 0, 0, 0.5)';
             }
             color = color[0];
         }
