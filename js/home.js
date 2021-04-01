@@ -118,18 +118,21 @@ E_VEXILLOLOGY.onclick = function(e) {
 const F_LIGHT = 1;
 const FLAGS = [
     {
+        name: 'Austria',
         image: 'austria',
         colors: [
             '#C8102E',
         ],
     },
     {
+        name: 'Canada',
         image: 'canada',
         colors: [
             '#EF3340',
         ],
     },
     {
+        name: 'Chile',
         image: 'chile',
         colors: [
             '#0033A0',
@@ -137,6 +140,7 @@ const FLAGS = [
         ],
     },
     {
+        name: 'Colorado',
         image: 'colorado',
         colors: [
             '#002868',
@@ -145,24 +149,28 @@ const FLAGS = [
         ],
     },
     {
+        name: 'Washington D.C.',
         image: 'dc',
         colors: [
             '#e81b39',
         ],
     },
     {
+        name: 'Denmark',
         image: 'denmark',
         colors: [
             '#c60c30',
         ],
     },
     {
+        name: 'New Mexico',
         image: 'new_mexico',
         colors: [
             '#ffd700',
         ],
     },
     {
+        name: 'United Nations',
         image: 'un',
         colors: [
             '#418fde',
@@ -184,6 +192,8 @@ function flaggify() {
     flag_index = (flag_index + 1) % FLAGS.length;
     const flag = FLAGS[flag_index];
     E_FLAG.src = 'images/flags/' + flag.image + '.svg';
+    E_FLAG.title = flag.name;
+    E_FLAG.alt = flag.name + ' flag';
     for (letter_index = NAME_OFFSET; letter_index < E_NAME.childNodes.length; letter_index++) {
         let color = flag.colors[0];
         E_NAME.childNodes[letter_index].style.color = color;
