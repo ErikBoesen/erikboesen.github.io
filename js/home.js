@@ -179,15 +179,7 @@ function flaggify() {
     const flag = FLAGS[flag_index];
     E_FLAG.src = 'images/flags/' + flag.image + '.svg';
     for (letter_index = NAME_OFFSET; letter_index < E_NAME.childNodes.length; letter_index++) {
-        let color = flag.colors[flag.order[letter_index - NAME_OFFSET]];
-        E_NAME.childNodes[letter_index].style.textShadow = '';
-        if (Array.isArray(color)) {
-            let flag = color[1];
-            if (flag & F_LIGHT) {
-                E_NAME.childNodes[letter_index].style.textShadow = '0 0 5px rgba(0, 0, 0, 0.5)';
-            }
-            color = color[0];
-        }
+        let color = flag.colors[0];
         E_NAME.childNodes[letter_index].style.color = color;
     }
 }
