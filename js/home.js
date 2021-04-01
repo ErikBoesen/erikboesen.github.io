@@ -162,6 +162,12 @@ const FLAGS = [
             '#ffd700',
         ],
     },
+    {
+        image: 'un',
+        colors: [
+            '#418fde',
+        ],
+    },
 ];
 
 function shuffle(arr) {
