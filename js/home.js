@@ -110,7 +110,6 @@ const E_PORTRAIT = document.getElementById('portrait'),
 
 E_VEXILLOLOGY.onclick = function(e) {
     e.preventDefault();
-    //E_PORTRAIT.style.display = 'none';
     E_FLAG.style.display = 'inline-block';
     flaggify();
 };
