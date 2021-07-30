@@ -25,8 +25,8 @@ body {
     padding: 40px 50px;
 }
 #portrait {
-    display: inline-block;
-    max-width: 170px;
+    max-height: 63px;
+    margin-right: 5px;
     border-radius: 100%;
 }
 h2 {
@@ -139,6 +139,9 @@ p a#resume:hover {
 @media (max-width: 680px) {
     body {
         padding: 15px;
+    }
+    #portrait {
+        max-height: 170px;
     }
     h2 {
         font-size: 22vw;
