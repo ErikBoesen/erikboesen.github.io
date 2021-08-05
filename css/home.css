@@ -23,6 +23,11 @@ body {
     font-size: 26px;
     color: #333;
     padding: 40px 50px;
+    transition: 0.2s;
+}
+body.dark {
+    color: white;
+    background: #222;
 }
 #portrait {
     max-height: 63px;
@@ -54,33 +59,41 @@ p {
     max-width: 6in;
     line-height: 1.5;
     margin: 6px 0 10px;
+    transition: 0.2s;
+}
+.dark p {
+    color: white;
 }
 a {
     color: inherit;
     text-decoration: none;
     border-bottom: solid 1px #333;
+    transition: 0.2s;
 }
-p a#esperanto:hover {
+.dark a {
+    border-bottom-color: #ddd;
+}
+p a#esperanto:hover, .dark a#esperanto {
     color: #009900;
     border-bottom-color: #009900;
 }
-p a#powerschool:hover {
+p a#powerschool:hover, .dark a#powerschool {
     color: #00b6ef;
     border-bottom-color: #00b6ef;
 }
-p a#vexillology:hover {
+p a#vexillology:hover, .dark a#vexillology {
     color: #EEC900;
     border-bottom-color: #EEC900;
 }
-p a#minimalism:hover {
+p a#minimalism:hover, .dark a#minimalism {
     color: #B22222;
     border-bottom-color: #B22222;
 }
-p a#open_source:hover {
+p a#open_source:hover, .dark a#open_source {
     color: #43B00D;
     border-bottom-color: #43B00D;
 }
-p a#resume:hover {
+p a#resume:hover, .dark a#resume {
     color: #077bc1;
     border-bottom-color: #077bc1;
 }
@@ -107,31 +120,31 @@ p a#resume:hover {
     cursor: pointer;
     transition: .3s;
 }
-.social svg:hover {
+.social svg:hover, .dark .social svg {
     transform: rotate(360deg);
     transition: .5s;
 }
-.social li#mail svg:hover {
+.social li#mail svg:hover, .dark li#mail svg {
     border-color: #ff6f32;
     fill: #ff6f32;
 }
-.social li#github svg:hover {
+.social li#github svg:hover, .dark li#github svg {
     border-color: #4fec51;
     fill: #4fec51;
 }
-.social li#linkedin svg:hover {
+.social li#linkedin svg:hover, .dark li#linkedin svg {
     border-color: #0077B5;
     fill: #0077B5;
 }
-.social li#twitter svg:hover {
+.social li#twitter svg:hover, .dark li#twitter svg {
     border-color: #55acee;
     fill: #55acee;
 }
-.social li#instagram svg:hover {
+.social li#instagram svg:hover, .dark li#instagram svg {
     border-color: #9b6954;
     fill: #9b6954;
 }
-.social li#flickr svg:hover {
+.social li#flickr svg:hover, .dark li#flickr svg {
     border-color: #FF0084;
     fill: #FF0084;
 }

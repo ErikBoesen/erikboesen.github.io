@@ -198,3 +198,9 @@ function flaggify() {
         E_NAME.childNodes[letter_index].style.color = color;
     }
 }
+
+let dark_mode = false;
+E_PORTRAIT.onclick = function() {
+    dark_mode = !dark_mode;
+    document.body.classList.toggle('dark');
+}
