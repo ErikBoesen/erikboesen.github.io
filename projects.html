@@ -5,80 +5,119 @@
     <title>Erik Boesen / Projects</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff">
-    <meta name="Description" content="A builder and learner of things.">
+    <meta name="Description" content="My side and not-so-side projects.">
     <meta name="author" content="Erik Boesen">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:title" content="Erik Boesen">
-    <meta property="og:description" content="A builder and learner of things.">
+    <meta property="og:description" content="My side and not-so-side projects.">
     <meta property="og:image" content="https://erikboesen.com/images/portrait.jpg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/projects.css">
 </head>
 
 <body>
-    <main>
+    <header>
         <div class="row">
-            <h2 id="name">ERIK BOESEN</h2>
+            <h2 id="name">Project Archive</h2>
             <img src="" id="flag">
         </div>
-        <img src="images/portrait.jpg" id="portrait">
-        <p><a id="esperanto" href="https://www.youtube.com/watch?v=ZJWVOkdWQAs">Saluton!</a> I'm Erik. I'm a computer science student at Yale, currently on leave working as a Software Engineer for <a id="powerschool" href="https://powerschool.com">PowerSchool</a>. I'm passionate about <a id="vexillology" href="https://www.youtube.com/watch?v=pnv5iKB2hl4">vexillology</a>, <a id="minimalism" href="https://mnmlist.com">minimalism</a>, and <a id="open_source" href="https://github.com/ErikBoesen">open source projects</a>. Check out <a id="resume" href="resume.pdf">my resume</a>, or click below to get in touch! I'd love to hear from you.</p>
-        <ul class="social">
-            <li id="mail">
-                <a href id="email">
-                    <svg viewBox="-1 -1 16 16">
-                        <path d="M7,9L5.268,7.484l-4.952,4.245C0.496,11.896,0.739,12,1.007,12h11.986c0.267,0,0.509-0.104,0.688-0.271L8.732,7.484L7,9z" />
-                        <path d="M13.684,2.271C13.504,2.103,13.262,2,12.993,2H1.007C0.74,2,0.498,2.104,0.318,2.273L7,8L13.684,2.271z" />
-                        <polygon points="0,2.878 0,11.186 4.833,7.079" />
-                        <polygon points="9.167,7.079 14,11.186 14,2.875" />
-                    </svg>
+    </header>
+    <main>
+        <div class="project">
+            <h3><a href="https://yalemenus.com">Yale Menus</a></h3>
+            <div class="screenshots">
+                <a href="https://yalemenus.com/images/screenshots/home.png" class="screenshot" target="_blank">
+                    <img src="https://yalemenus.com/images/screenshots/home.png">
                 </a>
-            </li>
-            <li id="github">
-                <a href="https://github.com/ErikBoesen">
-                    <svg viewBox="-30 -30 570 570">
-                        <path d="M0,262.285c0,23.198,2.17,44.188,6.511,62.967c4.339,18.777,10.348,35.092,18.026,48.946
-                    c7.678,13.854,17.442,26.039,29.293,36.554c11.85,10.516,24.703,19.112,38.556,25.788c13.853,6.675,29.668,12.099,47.444,16.273c17.776,4.173,35.928,7.094,54.455,8.764c18.527,1.669,38.89,2.503,61.089,2.503c22.366,0,42.813-0.834,61.341-2.503c18.525-1.67,36.721-4.592,54.58-8.764c17.857-4.174,33.756-9.598,47.693-16.273c13.938-6.677,26.873-15.272,38.809-25.788c11.936-10.515,21.781-22.702,29.543-36.554c7.76-13.854,13.811-30.168,18.15-48.946c4.34-18.777,6.51-39.769,6.51-62.967c0-41.395-13.854-77.197-41.559-107.408c1.502-4.006,2.879-8.554,4.131-13.646c1.252-5.091,2.42-12.351,3.504-21.781c1.086-9.432,0.668-20.321-1.252-32.673c-1.918-12.353-5.465-24.953-10.643-37.807l-3.754-0.751c-2.672-0.5-7.055-0.375-13.146,0.376s-13.186,2.253-21.279,4.507c-8.096,2.253-18.527,6.594-31.297,13.02s-26.248,14.479-40.436,24.16c-24.367-6.677-57.834-10.016-100.396-10.016c-42.396,0-75.778,3.339-100.147,10.016c-14.188-9.682-27.75-17.734-40.685-24.16S91.8,55.355,84.122,53.103c-7.677-2.254-14.855-3.714-21.531-4.382c-6.677-0.668-10.892-0.876-12.644-0.626c-1.752,0.25-3.13,0.543-4.131,0.876c-5.174,12.854-8.721,25.453-10.64,37.807c-1.919,12.352-2.337,23.242-1.252,32.673c1.085,9.43,2.254,16.69,3.505,21.781c1.252,5.092,2.629,9.64,4.131,13.646C13.854,185.088,0,220.89,0,262.285z M62.842,325.127c0-24.035,10.933-46.068,32.798-66.097c6.509-6.012,14.104-10.559,22.783-13.646c8.679-3.089,18.485-4.841,29.418-5.259c10.933-0.417,21.406-0.334,31.421,0.251c10.014,0.584,22.366,1.377,37.054,2.378c14.688,1.002,27.374,1.502,38.056,1.502c10.683,0,23.368-0.5,38.056-1.502c14.689-1.001,27.039-1.794,37.057-2.378c10.014-0.585,20.486-0.668,31.42-0.251c10.934,0.418,20.738,2.17,29.42,5.259c8.678,3.088,16.271,7.635,22.781,13.646c21.865,19.695,32.799,41.728,32.799,66.097c0,14.354-1.795,27.081-5.385,38.182c-3.588,11.102-8.178,20.405-13.771,27.915c-5.592,7.511-13.352,13.896-23.283,19.153c-9.932,5.258-19.611,9.305-29.041,12.146c-9.432,2.837-21.533,5.049-36.305,6.635c-14.773,1.586-27.959,2.546-39.559,2.879c-11.602,0.334-26.33,0.501-44.189,0.501c-17.859,0-32.589-0.167-44.189-0.501c-11.6-0.333-24.787-1.293-39.558-2.879s-26.872-3.798-36.303-6.635c-9.43-2.841-19.111-6.889-29.042-12.146c-9.931-5.257-17.693-11.641-23.284-19.153c-5.591-7.511-10.182-16.813-13.77-27.915M320,320.08c0,26.51,14.326,48,32,48s32-21.49,32-48s-14.326-48-32-48S320,293.57,320,320.08z M128,320.08c0,26.51,14.327,48,32,48s32-21.49,32-48s-14.327-48-32-48S128,293.57,128,320.08z" />
-                    </svg>
+                <a href="https://yalemenus.com/images/screenshots/hall.png" class="screenshot" target="_blank">
+                    <img src="https://yalemenus.com/images/screenshots/hall.png">
                 </a>
-            </li>
-            <li id="linkedin">
-                <a href="https://www.linkedin.com/in/erikboesen/">
-                    <svg viewBox="0 0 512 512">
-                        <g transform="translate(0,512) scale(0.1,-0.1)">
-                            <path d="M1010 4411 c-193 -62 -320 -237 -320 -441 0 -186 95 -340 256 -417 112 -53 224 -62 345 -28 214 61 353 284 319 514 -19 133 -120 280 -230 336 -112 57 -261 71 -370 36z"/>
-                            <path d="M3345 3115 c-169 -31 -309 -107 -437 -236 l-88 -88 0 145 0 144 -390 0 -390 0 0 -1160 0 -1160 390 0 390 0 0 690 c0 471 4 706 11 742 38 177 195 308 369 308 174 0 331 -131 369 -308 7 -36 11 -271 11 -742 l0 -690 391 0 390 0 -4 798 c-4 860 -2 830 -58 982 -112 304 -406 536 -732 580 -97 12 -133 12 -222 -5z"/>
-                            <path d="M760 1920 l0 -1160 390 0 390 0 0 1160 0 1160 -390 0 -390 0 0 -1160z"/>
-                        </g>
-                    </svg>
+                <a href="https://yalemenus.com/images/screenshots/item.png" class="screenshot" target="_blank">
+                    <img src="https://yalemenus.com/images/screenshots/item.png">
                 </a>
-            <li>
-            <li id="twitter">
-                <a href="https://twitter.com/ErikBoesen">
-                    <svg viewBox="-60 -60 720 720">
-                        <path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z" />
-                    </svg>
+            </div>
+            <p>Yale Menus is the #1 student-made app for viewing dining hall menus at Yale. Created to replace the underwhelming official Yale Dining app, and totally rebuilt following Yale Hospitality's infrastructural redesign in 2020, Yale Menus is a clean, simple, student-driven service that helps students get the information they need when they need it. With numerous special features such as flagging problematic allergens, notifying you when your favorite menu items are served, and much more. 4,000+ active users.</p>
+            <p>After Yale Dining shut down their official API in 2020, I built the public <a href="https://api.yalemenus.com">Yale Menus API</a> which uses Selenium to trawl through the various Yale Dining websites that hold dining information and compile it for clean fetching as JSON.</p>
+            <p><strong>Role:</strong> built iOS app and API, redesigned Android app originally by <a href="https://adisamalik.com">Adisa Malik</a>.</p>
+            <p><strong>Tools:</strong> Swift, Kotlin, React, Python, Flask, Postgres, Selenium</p>
+        </div>
+        <div class="project">
+            <h3><a href="https://yalies.io">Yalies</a></h3>
+            <p>Yalies is a redesigned version of Yale's official <a href="https://students.yale.edu/facebook">Face Book</a>, which provides contact information for Yale students. It displays data from the Face Book, <a href="https://directory.yale.edu">Yale Directory</a>, and various department directories, but through a more modern, better designed, and more secure interface. Unlike official Yale sources, Yalies is accessible only to undergraduates, and censors private details (street addresses, room numbers, and phone numbers) that I believe Yale should not divulge.</p>
+            <p>Yalies also provides an <a href="/apidocs">API</a> for student developers. The API powers numerous student projects and university services, including <a href="https://coursetable.com">CourseTable</a>, <a href="https://rdb.yale.edu">Yale Research Database (RDB)</a>, <a href="https://yaledailynews.com/blog/2020/12/03/40-2-percent-of-returning-student-athletes-take-leaves-of-absence-this-fall">Yale Daily News</a>, <a href="https://mailyale.com">MailYale</a>, <a href="https://comethru.io">Comethru</a>, <a href="https://ypost.app">YPost</a>, <a href="https://github.com/ErikBoesen/yale">yale CLI</a>, <a href="https://ship.wtf">Ship</a>, student projects in S&amp;DS 315 and CPSC 490, and more.</p>
+            <p>I donated Yalies to the <a href="http://yalecompsociety.org">Yale Computer Society</a>, where I now lead a development team of 6 students to maintain the service.</p>
+            <p><strong>Tools:</strong> Python, Flask, BeautifulSoup</p>
+            <p><strong>Press:</strong> <a href="https://yaledailynews.com/blog/2020/10/08/yale-undergraduate-introduces-new-student-database-website-prompting-privacy-concerns">Yale Daily News</a></p>
+        </div>
+        <div class="project">
+            <h3><a href="https://mailyale.com">MailYale</a></h3>
+            <p>MailYale helps easily generate email lists for the Yale community based on various characteristics such as year, major, residence, home state/country, and more, to help make sending emails a breeze!</p>
+            <p>Scraper system later repurposed to build <a href="https://yalies.io">Yalies</a>.</p>
+            <p><strong>Tools:</strong> Python, Flask, BeautifulSoup</p>
+        </div>
+        <div class="project">
+            <h3>Comethru</h3>
+        </div>
+        <div class="project">
+            <h3>MeBots</h3>
+        </div>
+        <div class="project">
+            <h3>Yalebot</h3>
+        </div>
+        <div class="project">
+            <h3>Newlogy</h3>
+        </div>
+        <div class="project">
+            <h3>WristCoach</h3>
+            <div class="screenshots">
+                <a href="https://raw.githubusercontent.com/frc1418/wristcoach/master/screenshot.png" class="screenshot" target="_blank">
+                    <img src="https://raw.githubusercontent.com/frc1418/wristcoach/master/screenshot.png">
                 </a>
-            </li>
-            <li id="instagram">
-                <a href="https://instagram.com/erikboesen">
-                    <svg viewBox="0 0 230 230">
-                        <g transform="translate(0,230) scale(.1,-.1)">
-                            <path d="M645 2100 c-229 -41 -379 -182 -432 -408 -16 -68 -18 -128 -18 -542 0 -415 2 -472 18 -530 30 -112 72 -186 140 -254 71 -72 135 -108 245 -139 74 -20 96 -21 537 -21 396 0 470 3 534 17 213 49 351 182 407 392 17 64 19 113 19 545 0 523 -2 545 -64 668 -60 120 -155 199 -296 249 l-80 28 -480 2 c-264 1 -502 -3 -530 -7z m965 -171 c186 -29 285 -135 309 -329 14 -108 14 -757 1 -874 -23 -200 -124 -308 -315 -336 -91 -13 -809 -13 -900 0 -117 17 -163 37 -226 99 -104 102 -119 190 -119 686 1 336 10 468 40 548 40 107 147 187 276 206 86 13 856 13 934 0z" />
-                            <path d="M1587 1760 c-36 -29 -52 -81 -37 -125 26 -78 120 -102 182 -46 29 26 33 35 33 81 0 46 -4 55 -33 81 -40 36 -105 40 -145 9z" />
-                            <path d="M1019 1632 c-163 -43 -294 -172 -345 -341 -8 -24 -14 -84 -14 -132 0 -148 46 -255 154 -357 188 -178 478 -176 668 6 103 98 152 214 151 357 -3 321 -302 548 -614 467z m268 -187 c186 -92 235 -340 97 -494 -139 -154 -386 -138 -501 33 -41 59 -53 103 -53 187 0 225 250 375 457 274z" />
-                        </g>
-                    </svg>
+            </div>
+            <p>During my senior year on my <a href="https://1418.team">FIRST Robotics team</a>, I joined our robot drive team in the position of Drive Coach, with responsibility to keep track of the field and our objectives during each match to help the drivers plan their next move.</p>
+            <p> I found it unnecessarily challenging to keep track of time during matches. Having recently purchased a Pebble watch, I decided to build a watch app to keep track of game timing and send the user configurable vibration alerts when certain driver actions need to be taken. Because Pebble as a company shut down in 2016, I sideloaded open source software from <a href="https://rebble.io">Rebble</a> in order to bring new life to a $20 watch.</p>
+        </div>
+        <div class="project">
+            <h3>FRC Dashboard</h3>
+        </div>
+        <div class="project">
+            <h3>FIRSTMap</h3>
+        </div>
+        <div class="project">
+            <h3>FRC New Tab</h3>
+        </div>
+        <div class="project">
+            <h3>VictiScout</h3>
+        </div>
+        <div class="project">
+            <h3>BWNT New Tab</h3>
+            <div class="screenshots">
+                <a href="https://raw.githubusercontent.com/ErikBoesen/BWNT/master/screenshots/screen2.png" class="screenshot" target="_blank">
+                    <img src="https://raw.githubusercontent.com/ErikBoesen/BWNT/master/screenshots/screen2.png">
                 </a>
-            </li>
-            <li id="flickr">
-                <a href="https://flickr.com/photos/108614122@N04">
-                    <svg viewBox="0 0 512 512">
-                        <path d="M400,192c-35.289,0-64,28.71-64,64s28.711,64,64,64s64-28.71,64-64S435.289,192,400,192z M400,144L400,144c61.855,0,112,50.144,112,112c0,61.855-50.145,112-112,112s-112-50.145-112-112C288,194.144,338.145,144,400,144z M0,256c0,61.855,50.144,112,112,112s112-50.145,112-112c0-61.856-50.144-112-112-112S0,194.144,0,256z" />
-                    </svg>
+                <a href="https://raw.githubusercontent.com/ErikBoesen/BWNT/master/screenshots/screen5.png" class="screenshot" target="_blank">
+                    <img src="https://raw.githubusercontent.com/ErikBoesen/BWNT/master/screenshots/screen5.png">
                 </a>
-            </li>
-        </ul>
+                <a href="https://raw.githubusercontent.com/ErikBoesen/BWNT/master/screenshots/screen6.png" class="screenshot" target="_blank">
+                    <img src="https://raw.githubusercontent.com/ErikBoesen/BWNT/master/screenshots/screen6.png">
+                </a>
+            </div>
+            <p>A minimal but customizable new tab page for <a href="https://chrome.google.com/webstore/detail/bwnt-new-tab/doiinciigjmmlnbehjjjkeoamihggkba">Chrome</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/bwnt">Firefox</a>. 2,500+ active users.</p>
+        </div>
+
+        <h3>Honorable Mentions</h3>
+        <ul>
+            <li>The <a href="https://github.com/ErikBoesen/yale"><code>yale</code></a> CLI tool, a helpful utility for Yale students who love the terminal</li>
+            <li>Various API wrapper libraries for using Yale APIs in Python: <a href="https://github.com/ErikBoesen/yalecourses">yalecourses</a>, <a href="https://github.com/ErikBoesen/yaledining">yaledining</a>, <a href="https://github.com/Yalies/yaledirectory">yaledirectory</a>, <a href="https://github.com/ErikBoesen/yaleorgdirectory">yaleorgdirectory</a>, <a href="https://github.com/ErikBoesen/yalebuildings">yalebuildings</a>, <a href="https://github.com/ErikBoesen/yalelaundry">yalelaundry</a>, <a href="https://github.com/ErikBoesen/yaleenergydata">yaleenergydata</a>, and more</li>
+            <li><a href="https://twitter.com/puremoji">Puremoji</a>, a Twitter bot that posts wholesome emoji art (<a href="https://github.com/ErikBoesen/puremoji">GitHub</a>)</li>
+            <li><a href="https://erikboesen.com/coursenames">CourseNames</a>, a fun utility for generating fake names of Yale courses using a Markov chain. (<a href="https://github.com/ErikBoesen/coursenames">GitHub</a>)</li>
+            <li><a href="https://erikboesen.com/cascadinghands">Cascading Hands</a>, a simple tool for generating hand gradient squares as seen on Twitter (<a href="https://github.com/ErikBoesen/cascadinghands">GitHub</a>)</a>
+            <li><a href="https://github.com/ErikBoesen/psc"><code>psc</code></a>, a command line tool for checking grades on PowerSchool</li>
+            <li>FIRST Robotics robot code: <a href="https://github.com/frc1418/2019-robot">2019</a>, <a href="https://github.com/frc1418/2018-robot">2018</a>, <a href="https://github.com/frc1418/2017-robot">2017</a>.</li>
+            <li><a href="https://github.com/ErikBoesen/frc"><code>frc</code></a>, a command line tool for viewing FIRST Robotics Competition results in style</li>
+            <li><a href="https://github.com/ErikBoesen/coconet">coconet</a>, a simple proof of concept botnet created during my cybersecurity class at Virginia Governor's School</li>
+            <li>API wrappers for <a href="https://thebluealliance.com">The Blue Alliance</a>: <a href="https://github.com/frc1418/tbapy">tbapy</a>, <a href="https://github.com/frc1418/tbago">tbago</a>, <a href="https://github.com/frc1418/tbarb">tbarb</a>,
+
     </main>
     <script src="js/home.js"></script>
 </body>
