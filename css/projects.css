@@ -25,20 +25,28 @@ h2 {
     margin-bottom: 20px;
 }
 h3 {
+    font-size: 30px;
     margin-bottom: 15px;
 }
 p {
     line-height: 1.25;
 }
+a {
+    color: #00356b;
+}
 .project {
+    max-width: 8in;
+    padding: 30px;
     margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
 }
 .screenshots {
-    float: right;
 }
 .screenshots a {
-
+    text-decoration: none;
 }
 .screenshots img {
-    width: 200px;
+    max-width: 400px;
+    max-height: 400px;
 }
