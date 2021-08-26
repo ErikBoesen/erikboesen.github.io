@@ -13,9 +13,7 @@ body.dark {
     border-radius: 100%;
 }
 h2 {
-    font-family: 'LEMONMILK', 'Lato', sans-serif;
     font-size: 80px;
-    font-weight: 100;
     line-height: 1;
     margin-left: -4px;
     /* Prevent selection on all browsers */
