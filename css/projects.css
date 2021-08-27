@@ -10,6 +10,7 @@ h4 a {
 }
 p {
     line-height: 1.25;
+    margin: 10px 0;
 }
 .project {
     max-width: 8in;
@@ -23,6 +24,6 @@ p {
     text-decoration: none;
 }
 .screenshots img {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 500px;
+    max-height: 500px;
 }
