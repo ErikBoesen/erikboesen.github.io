@@ -27,3 +27,6 @@ p {
     max-width: 500px;
     max-height: 500px;
 }
+ul {
+    margin-left: 30px;
+}
