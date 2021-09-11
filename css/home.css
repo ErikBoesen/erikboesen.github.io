@@ -66,8 +66,12 @@ p a#minimalism:hover, .dark a#minimalism {
     border-bottom-color: #B22222;
 }
 p a#open_source:hover, .dark a#open_source {
-    color: #43B00D;
-    border-bottom-color: #43B00D;
+    color: #3BCE9C;
+    border-bottom-color: #3BCE9C;
+}
+p a#projects:hover, .dark a#projects {
+    color: #ec8402;
+    border-bottom-color: #ec8402;
 }
 p a#resume:hover, .dark a#resume {
     color: #077bc1;
