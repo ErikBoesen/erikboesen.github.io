@@ -33,3 +33,8 @@ h2, h3, h4 {
 h2 a {
     text-decoration: none;
 }
+@media (max-width: 680px) {
+    body {
+        padding: 15px;
+    }
+}

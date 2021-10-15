@@ -130,9 +130,6 @@ p a#resume:hover, .dark a#resume {
 }
 
 @media (max-width: 680px) {
-    body {
-        padding: 15px;
-    }
     #portrait {
         max-height: 120px;
     }
