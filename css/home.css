@@ -13,9 +13,11 @@ body.dark {
     border-radius: 100%;
 }
 h2 {
-    font-size: 80px;
+    font-size: 60px;
     line-height: 1;
     margin-left: -4px;
+    margin-top: 1px;
+    vertical-align: top;
     /* Prevent selection on all browsers */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -129,12 +131,12 @@ p a#resume:hover, .dark a#resume {
     fill: #FF0084;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 510px) {
     #portrait {
         max-height: 120px;
     }
     h2 {
-        font-size: 22vw;
+        font-size: 15vw;
     }
     #flag {
         margin-top: 6px;
@@ -146,7 +148,10 @@ p a#resume:hover, .dark a#resume {
         width: 60px;
     }
 }
-@media (max-width: 450px) {
+@media (max-width: 400px) {
+    h2 {
+        font-size: 22vw;
+    }
     .social {
         max-width: 250px;
     }

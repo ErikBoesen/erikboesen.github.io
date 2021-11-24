@@ -33,7 +33,7 @@ h2, h3, h4 {
 h2 a {
     text-decoration: none;
 }
-@media (max-width: 680px) {
+@media (max-width: 580px) {
     body {
         padding: 15px;
     }
