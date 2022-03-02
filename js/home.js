@@ -92,12 +92,10 @@ function playKey(target) {
 }
 mouseDown = false;
 onmousedown = function(e) {
-    console.log('Mouse down!');
     playKey(e.target);
     mouseDown = true;
 }
 onmouseup = function() {
-    console.log('Mouse up!');
     mouseDown = false;
 }
 
