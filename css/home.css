@@ -8,9 +8,10 @@ body.dark {
     background: #222;
 }
 #portrait {
-    max-height: 63px;
-    margin-right: 5px;
-    border-radius: 100%;
+    max-height: 300px;
+    position: absolute;
+    bottom: 0;
+    right: 50px;
 }
 h2 {
     font-size: 60px;
@@ -133,7 +134,9 @@ p a#resume:hover, .dark a#resume {
 
 @media (max-width: 510px) {
     #portrait {
-        max-height: 120px;
+        position: static;
+        max-height: auto;
+        max-width: 20vw;
     }
     h2 {
         font-size: 15vw;
@@ -149,6 +152,9 @@ p a#resume:hover, .dark a#resume {
     }
 }
 @media (max-width: 400px) {
+    #portrait {
+        max-width: 30vw;
+    }
     h2 {
         font-size: 22vw;
     }
