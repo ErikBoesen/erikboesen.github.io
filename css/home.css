@@ -140,7 +140,7 @@ p a#resume:hover, .dark a#resume {
     #portrait {
         position: static;
         max-height: auto;
-        max-width: 20vw;
+        max-width: 24vw;
     }
     h2 {
         font-size: 15vw;
@@ -155,7 +155,7 @@ p a#resume:hover, .dark a#resume {
         width: 60px;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 410px) {
     #portrait {
         max-width: 30vw;
     }
