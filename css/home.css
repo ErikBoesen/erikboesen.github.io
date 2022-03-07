@@ -12,6 +12,7 @@ body.dark {
     position: absolute;
     bottom: 0;
     right: 50px;
+    cursor: pointer;
 }
 h2 {
     font-size: 60px;
@@ -19,12 +20,6 @@ h2 {
     margin-left: -4px;
     margin-top: 1px;
     vertical-align: top;
-    /* Prevent selection on all browsers */
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     display: inline-block;
 }
@@ -101,6 +96,7 @@ p a#resume:hover, .dark a#resume {
     border: solid 1px #333;
     padding: 4px;
     cursor: pointer;
+    user-select: none;
     transition: .3s;
 }
 .social svg:hover, .dark .social svg {
