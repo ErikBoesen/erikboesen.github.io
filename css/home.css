@@ -131,6 +131,10 @@ p a#resume:hover, .dark a#resume {
     border-color: #FF0084;
     fill: #FF0084;
 }
+.social li#night svg:hover, .dark li#night svg {
+    border-color: #EEC900;
+    fill: #EEC900;
+}
 
 @media (max-width: 510px) {
     #portrait {
