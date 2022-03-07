@@ -79,6 +79,7 @@ p a#resume:hover, .dark a#resume {
     cursor: default;
     list-style: none;
     margin-top: 20px;
+    user-select: none;
 }
 .social li {
     display: inline-block;
@@ -96,7 +97,6 @@ p a#resume:hover, .dark a#resume {
     border: solid 1px #333;
     padding: 4px;
     cursor: pointer;
-    user-select: none;
     transition: .3s;
 }
 .social svg:hover, .dark .social svg {
