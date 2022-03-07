@@ -102,8 +102,7 @@ onmouseup = function() {
 //////////////
 // Vexillology
 //
-const E_PORTRAIT = document.getElementById('portrait'),
-      E_FLAG = document.getElementById('flag'),
+const E_FLAG = document.getElementById('flag'),
       E_VEXILLOLOGY = document.getElementById('vexillology');
 
 E_VEXILLOLOGY.onclick = function(e) {
@@ -197,8 +196,9 @@ function flaggify() {
     }
 }
 
+const E_NIGHT = document.getElementById('night');
 let dark_mode = false;
-E_PORTRAIT.onclick = function() {
+E_NIGHT.onclick = function() {
     dark_mode = !dark_mode;
     document.body.classList.toggle('dark');
 }
