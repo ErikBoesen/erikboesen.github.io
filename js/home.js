@@ -183,14 +183,13 @@ function shuffle(arr) {
 shuffle(FLAGS);
 
 let flag_index = -1;
-const NAME_OFFSET = 5;
 function flaggify() {
     flag_index = (flag_index + 1) % FLAGS.length;
     const flag = FLAGS[flag_index];
     E_FLAG.src = 'images/flags/' + flag.image + '.svg';
     E_FLAG.title = flag.name;
     E_FLAG.alt = flag.name + ' flag';
-    for (letter_index = NAME_OFFSET; letter_index < E_NAME.childNodes.length; letter_index++) {
+    for (letter_index = 0; letter_index < E_NAME.childNodes.length; letter_index++) {
         let color = flag.colors[0];
         E_NAME.childNodes[letter_index].style.color = color;
     }

@@ -27,6 +27,7 @@ h2 {
     display: none;
     height: 48px;
     margin-top: 9px;
+    margin-bottom: -2px;
 }
 p {
     color: #444;
