@@ -196,6 +196,9 @@ function flaggify() {
     }
 }
 
+/////////////////////////
+// Dark Mode
+//
 const E_NIGHT = document.getElementById('night');
 let dark_mode = false;
 E_NIGHT.onclick = function() {
@@ -203,6 +206,9 @@ E_NIGHT.onclick = function() {
     document.body.classList.toggle('dark');
 }
 
+/////////////////////////
+// Link to Alice Mao
+//
 const E_PORTRAIT = document.getElementById('portrait');
 E_PORTRAIT.onclick = function() {
     window.open('https://alice-mao.com', '_blank');
