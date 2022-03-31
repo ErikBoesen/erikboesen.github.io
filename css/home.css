@@ -48,9 +48,36 @@ a {
 .dark a {
     border-bottom-color: #ddd;
 }
-p a#esperanto:hover, .dark a#esperanto {
-    color: #009900;
-    border-bottom-color: #009900;
+p a#google:hover, .dark a#google {
+    color: #4086f4;
+    border-bottom-color: #4086f4;
+    animation: google 20s infinite linear;
+}
+@keyframes google {
+    14% {
+        color: #4086f4;
+        border-bottom-color: #4086f4;
+    }
+    28% {
+        color: #eb4132;
+        border-bottom-color: #eb4132;
+    }
+    42% {
+        color: #fbbd00;
+        border-bottom-color: #fbbd00;
+    }
+    56% {
+        color: #4086f4;
+        border-bottom-color: #4086f4;
+    }
+    70% {
+        color: #31aa52;
+        border-bottom-color: #31aa52;
+    }
+    84% {
+        color: #eb4132;
+        border-bottom-color: #eb4132;
+    }
 }
 p a#powerschool:hover, .dark a#powerschool {
     color: #00b6ef;
