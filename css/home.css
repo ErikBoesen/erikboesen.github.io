@@ -159,6 +159,13 @@ p a#resume:hover, .dark a#resume {
     border-color: #EEC900;
     fill: #EEC900;
 }
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: -5;
+}
 
 @media (max-width: 510px) {
     #portrait {
@@ -177,6 +184,9 @@ p a#resume:hover, .dark a#resume {
     .social svg {
         height: 60px;
         width: 60px;
+    }
+    canvas {
+        display: none;
     }
 }
 @media (max-width: 410px) {

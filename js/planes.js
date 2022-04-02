@@ -22,14 +22,14 @@ const PLANE_WIDTH = 512,
       PLANE_DRAW_WIDTH = parseInt(PLANE_WIDTH * PLANE_SIZE_MULTIPLIER),
       PLANE_DRAW_HEIGHT = parseInt(PLANE_HEIGHT * PLANE_SIZE_MULTIPLIER);
 let planeImageLeft = new Image(PLANE_WIDTH, PLANE_HEIGHT);
-planeImageLeft.src = 'plane_left.png';
+planeImageLeft.src = 'images/plane_left.png';
 let planeImageRight = new Image(PLANE_WIDTH, PLANE_HEIGHT);
-planeImageRight.src = 'plane_right.png';
+planeImageRight.src = 'images/plane_right.png';
 
 const PLANE_SPEED = 0.06;
 const G = 0.05;
 
-canvas.onmousedown = function(e) {
+onmousedown = function(e) {
     console.log('Mouse down!');
     if (instructions) {
         instructions.parentNode.removeChild(instructions);
@@ -42,7 +42,7 @@ canvas.onmousedown = function(e) {
     };
 
 }
-canvas.onmouseup = function(e) {
+onmouseup = function(e) {
     console.log('Mouse up!');
     mouseDown = false;
     currentPlane.xSpeed = PLANE_SPEED * (currentPlane.x - mousePosition.x);
@@ -50,7 +50,7 @@ canvas.onmouseup = function(e) {
     planes.push(currentPlane);
     currentPlane = null;
 }
-canvas.onmousemove = function(e) {
+onmousemove = function(e) {
     mousePosition = {
         x: e.clientX - canvas.offsetLeft,
         y: e.clientY - canvas.offsetTop
