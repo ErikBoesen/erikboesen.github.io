@@ -92,7 +92,6 @@ function playKey(target) {
 }
 mouseDown = false;
 addEventListener('mousedown', function(e) {
-    console.log('HIII');
     playKey(e.target);
     mouseDown = true;
 });
