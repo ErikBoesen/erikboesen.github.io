@@ -95,6 +95,22 @@ p a#open_source:hover, .dark a#open_source {
     color: #3BCE9C;
     border-bottom-color: #3BCE9C;
 }
+p a#yalemenus:hover, .dark a#yalemenus {
+    color: #ffd966;
+    border-bottom-color: #ffd966;
+}
+p a#yalies:hover, .dark a#yalies {
+    color: #00356b;
+    border-bottom-color: #00356b;
+}
+p a#mebots:hover, .dark a#mebots {
+    color: #00aff0;
+    border-bottom-color: #00aff0;
+}
+p a#comethru:hover, .dark a#comethru {
+    color: #15202b;
+    border-bottom-color: #15202b;
+}
 p a#projects:hover, .dark a#projects {
     color: #ec8402;
     border-bottom-color: #ec8402;
