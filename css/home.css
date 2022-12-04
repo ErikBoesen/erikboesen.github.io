@@ -15,7 +15,7 @@ body.dark {
     cursor: pointer;
 }
 h2 {
-    font-size: 60px;
+    font-size: 51px;
     line-height: 1;
     margin-left: -4px;
     margin-top: 1px;
@@ -25,8 +25,8 @@ h2 {
 }
 #flag {
     display: none;
-    height: 48px;
-    margin-top: 9px;
+    height: 40px;
+    margin-top: 8px;
     margin-bottom: -2px;
 }
 p {
@@ -183,14 +183,20 @@ canvas {
     z-index: -5;
 }
 
-@media (max-width: 510px) {
+@media (max-width: 670px) {
     #portrait {
         position: static;
         max-height: auto;
-        max-width: 24vw;
+        max-width: 25vw;
+        margin-right: 10px;
+    }
+    .row {
+        display: inline-block;
+        vertical-align: top;
     }
     h2 {
-        font-size: 15vw;
+        font-size: 12.2vw;
+        max-width: 150px;
     }
     #flag {
         margin-top: 6px;
@@ -205,13 +211,15 @@ canvas {
         display: none;
     }
 }
-@media (max-width: 410px) {
+@media (max-width: 580px) {
     #portrait {
-        max-width: 30vw;
+        max-width: 28vw;
     }
     h2 {
-        font-size: 22vw;
+        font-size: 13.7vw;
     }
+}
+@media (max-width: 440px) {
     .social {
         max-width: 250px;
     }
