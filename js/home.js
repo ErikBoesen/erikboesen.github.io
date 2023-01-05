@@ -102,6 +102,7 @@ onmouseup = function() {
 //////////////
 // Vexillology
 //
+/*
 const E_FLAG = document.getElementById('flag'),
       E_VEXILLOLOGY = document.getElementById('vexillology');
 
@@ -194,6 +195,7 @@ function flaggify() {
         E_NAME.childNodes[letter_index].style.color = color;
     }
 }
+*/
 
 /////////////////////////
 // Dark Mode
