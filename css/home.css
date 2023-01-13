@@ -84,24 +84,24 @@ p a#yalemenus:hover, .dark a#yalemenus {
     border-bottom-color: #ffd966;
 }
 p a#yalies:hover, .dark a#yalies {
-    color: #00356b;
-    border-bottom-color: #00356b;
+    color: #077bc1;
+    border-bottom-color: #077bc1;
 }
 p a#mebots:hover, .dark a#mebots {
     color: #00aff0;
     border-bottom-color: #00aff0;
 }
 p a#comethru:hover, .dark a#comethru {
-    color: #15202b;
-    border-bottom-color: #15202b;
+    color: #ff6f32;
+    border-bottom-color: #ff6f32;
 }
 p a#projects:hover, .dark a#projects {
-    color: #ec8402;
-    border-bottom-color: #ec8402;
+    color: #3BCE9C;
+    border-bottom-color: #3BCE9C;
 }
 p a#resume:hover, .dark a#resume {
-    color: #077bc1;
-    border-bottom-color: #077bc1;
+    color: #eb4132;
+    border-bottom-color: #eb4132;
 }
 .social {
     cursor: default;
@@ -136,8 +136,8 @@ p a#resume:hover, .dark a#resume {
     fill: #ff6f32;
 }
 .social li#github svg:hover, .dark li#github svg {
-    border-color: #4fec51;
-    fill: #4fec51;
+    border-color: #3BCE9C;
+    fill: #3BCE9C;
 }
 .social li#linkedin svg:hover, .dark li#linkedin svg {
     border-color: #0077B5;
@@ -156,8 +156,8 @@ p a#resume:hover, .dark a#resume {
     fill: #FF0084;
 }
 .social li#night svg:hover, .dark li#night svg {
-    border-color: #EEC900;
-    fill: #EEC900;
+    border-color: #ffd966;
+    fill: #ffd966;
 }
 canvas {
     position: fixed;
