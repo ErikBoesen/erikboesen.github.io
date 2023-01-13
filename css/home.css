@@ -79,22 +79,6 @@ p a#google:hover, .dark a#google {
         border-bottom-color: #eb4132;
     }
 }
-p a#powerschool:hover, .dark a#powerschool {
-    color: #00b6ef;
-    border-bottom-color: #00b6ef;
-}
-p a#vexillology:hover, .dark a#vexillology {
-    color: #EEC900;
-    border-bottom-color: #EEC900;
-}
-p a#minimalism:hover, .dark a#minimalism {
-    color: #B22222;
-    border-bottom-color: #B22222;
-}
-p a#open_source:hover, .dark a#open_source {
-    color: #3BCE9C;
-    border-bottom-color: #3BCE9C;
-}
 p a#yalemenus:hover, .dark a#yalemenus {
     color: #ffd966;
     border-bottom-color: #ffd966;
