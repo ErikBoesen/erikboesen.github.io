@@ -92,16 +92,16 @@ p a#mebots:hover, .dark a#mebots {
     border-bottom-color: #00aff0;
 }
 p a#comethru:hover, .dark a#comethru {
-    color: #ff6f32;
-    border-bottom-color: #ff6f32;
+    color: #eb4132;
+    border-bottom-color: #eb4132;
 }
 p a#projects:hover, .dark a#projects {
     color: #3BCE9C;
     border-bottom-color: #3BCE9C;
 }
 p a#resume:hover, .dark a#resume {
-    color: #eb4132;
-    border-bottom-color: #eb4132;
+    color: #ff6f32;
+    border-bottom-color: #ff6f32;
 }
 .social {
     cursor: default;
