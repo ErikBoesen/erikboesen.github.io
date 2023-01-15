@@ -168,11 +168,9 @@ canvas {
         max-width: 25vw;
         margin-right: 10px;
     }
-    .row {
+    h2 {
         display: inline-block;
         vertical-align: top;
-    }
-    h2 {
         font-size: 12.2vw;
         max-width: 150px;
     }
