@@ -49,34 +49,34 @@ a {
     border-bottom-color: #ddd;
 }
 p a#google:hover, .dark a#google {
-    color: #4086f4;
-    border-bottom-color: #4086f4;
+    color: #077bc1;
+    border-bottom-color: #077bc1;
     animation: google 20s infinite linear;
 }
 @keyframes google {
     14% {
-        color: #4086f4;
-        border-bottom-color: #4086f4;
+        color: #077bc1;
+        border-bottom-color: #077bc1;
     }
     28% {
-        color: #eb4132;
-        border-bottom-color: #eb4132;
+        color: #ED5749;
+        border-bottom-color: #ED5749;
     }
     42% {
-        color: #fbbd00;
-        border-bottom-color: #fbbd00;
+        color: #ffd966;
+        border-bottom-color: #ffd966;
     }
     56% {
-        color: #4086f4;
-        border-bottom-color: #4086f4;
+        color: #077bc1;
+        border-bottom-color: #077bc1;
     }
     70% {
-        color: #31aa52;
-        border-bottom-color: #31aa52;
+        color: #3BCE9C;
+        border-bottom-color: #3BCE9C;
     }
     84% {
-        color: #eb4132;
-        border-bottom-color: #eb4132;
+        color: #ED5749;
+        border-bottom-color: #ED5749;
     }
 }
 p a#yalemenus:hover, .dark a#yalemenus {
@@ -92,8 +92,8 @@ p a#mebots:hover, .dark a#mebots {
     border-bottom-color: #00aff0;
 }
 p a#comethru:hover, .dark a#comethru {
-    color: #eb4132;
-    border-bottom-color: #eb4132;
+    color: #ED5749;
+    border-bottom-color: #ED5749;
 }
 p a#projects:hover, .dark a#projects {
     color: #3BCE9C;
