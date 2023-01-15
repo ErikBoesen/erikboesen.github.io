@@ -23,12 +23,6 @@ h2 {
     user-select: none;
     display: inline-block;
 }
-#flag {
-    display: none;
-    height: 40px;
-    margin-top: 8px;
-    margin-bottom: -2px;
-}
 p {
     color: #444;
     max-width: 6in;
@@ -181,11 +175,6 @@ canvas {
     h2 {
         font-size: 12.2vw;
         max-width: 150px;
-    }
-    #flag {
-        margin-top: 6px;
-        margin-left: 1px;
-        height: 128px;
     }
     .social svg {
         height: 60px;
