@@ -1,12 +1,5 @@
 const E_NAME = document.getElementById('name');
 
-////////////////////
-// Email obfuscation
-//
-const ADDR = 'me',
-      DOMAIN = 'erikboesen.com';
-document.getElementById('email').href = 'mailto' + ':' + ADDR + '@' + DOMAIN;
-
 /////////////////////////
 // Name element splitting
 //
