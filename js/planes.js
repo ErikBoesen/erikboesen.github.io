@@ -1,8 +1,9 @@
 const canvas = document.getElementsByTagName('canvas')[0];
 const ctx = canvas.getContext('2d');
+const CANVAS_RESOLUTION = 4;
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.innerWidth * CANVAS_RESOLUTION;
+canvas.height = window.innerHeight * CANVAS_RESOLUTION;
 
 let instructions = document.getElementById('instructions');
 
@@ -83,8 +84,8 @@ function draw() {
                               Math.pow(currentPlane.y - mousePosition.y, 2)) * 0.05;
         ctx.setLineDash([lineDashLength, lineDashLength / 2]);
         ctx.beginPath();
-        ctx.moveTo(currentPlane.x, currentPlane.y);
-        ctx.lineTo(mousePosition.x, mousePosition.y);
+        ctx.moveTo(currentPlane.x * CANVAS_RESOLUTION, currentPlane.y * CANVAS_RESOLUTION);
+        ctx.lineTo(mousePosition.x * CANVAS_RESOLUTION, mousePosition.y * CANVAS_RESOLUTION);
         ctx.stroke();
     }
     if (currentPlane) {
@@ -92,7 +93,7 @@ function draw() {
     }
     for (plane of shownPlanes) {
         ctx.save();
-        ctx.translate(plane.x, plane.y);
+        ctx.translate(plane.x * CANVAS_RESOLUTION, plane.y * CANVAS_RESOLUTION);
         let xOffset, yOffset;
         if (plane == currentPlane) {
             xOffset = plane.x - mousePosition.x;
@@ -108,8 +109,8 @@ function draw() {
         angle += (planeLeft ? -Math.PI : Math.PI) / 6;
         ctx.rotate(angle);
         ctx.drawImage(planeLeft ? planeImageLeft : planeImageRight,
-                      -PLANE_DRAW_WIDTH / 2, -PLANE_DRAW_HEIGHT / 2,
-                      PLANE_DRAW_WIDTH, PLANE_DRAW_HEIGHT);
+                      -PLANE_DRAW_WIDTH / 2 * CANVAS_RESOLUTION, -PLANE_DRAW_HEIGHT / 2 * CANVAS_RESOLUTION,
+                      PLANE_DRAW_WIDTH * CANVAS_RESOLUTION, PLANE_DRAW_HEIGHT * CANVAS_RESOLUTION);
         ctx.restore();
     }
 }
