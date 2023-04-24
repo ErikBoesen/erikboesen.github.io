@@ -5,10 +5,11 @@ const CANVAS_RESOLUTION = 4;
 canvas.width = window.innerWidth * CANVAS_RESOLUTION;
 canvas.height = window.innerHeight * CANVAS_RESOLUTION;
 
+ctx.strokeStyle = '#000000';
+ctx.lineWidth = 1 * CANVAS_RESOLUTION;
+
 let instructions = document.getElementById('instructions');
 
-ctx.strokeStyle = 'white';
-ctx.lineWidth = 3;
 let currentPlane = null;
 let startPosition = null;
 let planes = [];
@@ -76,13 +77,11 @@ function move() {
 }
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.strokeStyle = '#000000';
-    ctx.lineWidth = 1;
     shownPlanes = planes.slice();
     if (mouseDown && currentPlane != null) {
         let lineDashLength = Math.sqrt(Math.pow(currentPlane.x - mousePosition.x, 2) +
                               Math.pow(currentPlane.y - mousePosition.y, 2)) * 0.05;
-        ctx.setLineDash([lineDashLength, lineDashLength / 2]);
+        ctx.setLineDash([lineDashLength * CANVAS_RESOLUTION, lineDashLength / 2 * CANVAS_RESOLUTION]);
         ctx.beginPath();
         ctx.moveTo(currentPlane.x * CANVAS_RESOLUTION, currentPlane.y * CANVAS_RESOLUTION);
         ctx.lineTo(mousePosition.x * CANVAS_RESOLUTION, mousePosition.y * CANVAS_RESOLUTION);
