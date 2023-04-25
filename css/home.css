@@ -159,6 +159,8 @@ canvas {
     left: 0;
     background: transparent;
     z-index: -5;
+    width: 100vw;
+    height: 100vh;
 }
 
 @media (max-width: 670px) {
