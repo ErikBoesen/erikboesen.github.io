@@ -31,7 +31,7 @@ planeImageRight.src = 'images/plane_right.png';
 const PLANE_SPEED = 0.06;
 const G = 0.05;
 
-onmousedown = function(e) {
+addEventListener('mousedown', function(e) {
     console.log('Mouse down!');
     if (instructions) {
         instructions.parentNode.removeChild(instructions);
@@ -42,16 +42,18 @@ onmousedown = function(e) {
         x: mousePosition.x,
         y: mousePosition.y,
     };
-
-}
-onmouseup = function(e) {
+});
+addEventListener('mouseup', function(e) {
     console.log('Mouse up!');
+    if (currentPlane === null) {
+        return;
+    }
     mouseDown = false;
     currentPlane.xSpeed = PLANE_SPEED * (currentPlane.x - mousePosition.x);
     currentPlane.ySpeed = PLANE_SPEED * (currentPlane.y - mousePosition.y);
     planes.push(currentPlane);
     currentPlane = null;
-}
+});
 onmousemove = function(e) {
     mousePosition = {
         x: e.clientX - canvas.offsetLeft,
@@ -59,7 +61,7 @@ onmousemove = function(e) {
     };
     if (mouseDown) {
     }
-}
+};
 
 function move() {
     planes = planes.filter(function(plane) {

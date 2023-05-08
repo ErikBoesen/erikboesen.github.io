@@ -28,18 +28,19 @@ for (let letter of name) {
 // Piano
 //
 let audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+let volume = 0.7;
 
 function playNote(frequency, callback) {
     let oscillator = new OscillatorNode(audioCtx);
     let gain = new GainNode(audioCtx);
-    oscillator.type = 'sine';
+    oscillator.type = 'triangle';
     oscillator.frequency.value = frequency;
     oscillator.connect(gain).connect(audioCtx.destination);
-    gain.gain.setValueAtTime(1, audioCtx.currentTime);
+    gain.gain.setValueAtTime(volume, audioCtx.currentTime);
     oscillator.start();
     let duration = 500;
     let stopTime = audioCtx.currentTime + (duration / 1000);
-    gain.gain.setValueAtTime(1, stopTime - 0.25);
+    gain.gain.setValueAtTime(volume, stopTime - 0.25);
     gain.gain.linearRampToValueAtTime(0, stopTime);
 
     setTimeout(function() {
