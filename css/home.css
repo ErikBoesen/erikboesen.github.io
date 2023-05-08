@@ -1,6 +1,6 @@
 body {
     overflow-x: hidden;
-    font-size: 26px;
+    font-size: 24px;
     transition: 0.2s;
 }
 body.dark {
@@ -15,7 +15,7 @@ body.dark {
     cursor: pointer;
 }
 h2 {
-    font-size: 51px;
+    font-size: 45px;
     line-height: 1;
     margin-left: -4px;
     margin-top: 1px;
