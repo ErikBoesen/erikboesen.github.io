@@ -27,15 +27,20 @@ for (let letter of name) {
 ////////
 // Piano
 //
-var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+let audioCtx = new(window.AudioContext || window.webkitAudioContext)();
 
-function playNote(frequency, duration, callback) {
-    var oscillator = audioCtx.createOscillator();
-
+function playNote(frequency, callback) {
+    let oscillator = new OscillatorNode(audioCtx);
+    let gain = new GainNode(audioCtx);
     oscillator.type = 'sine';
     oscillator.frequency.value = frequency;
-    oscillator.connect(audioCtx.destination);
+    oscillator.connect(gain).connect(audioCtx.destination);
+    gain.gain.setValueAtTime(1, audioCtx.currentTime);
     oscillator.start();
+    let duration = 500;
+    let stopTime = audioCtx.currentTime + (duration / 1000);
+    gain.gain.setValueAtTime(1, stopTime - 0.25);
+    gain.gain.linearRampToValueAtTime(0, stopTime);
 
     setTimeout(function() {
         oscillator.stop();
@@ -78,7 +83,7 @@ function playKey(target) {
     if (target.className == CLASS) {
         let index = parseInt(target.id.slice(PREFIX.length));
         target.style.color = color();
-        playNote(notes[index], 200, function() {
+        playNote(notes[index], function() {
             target.style.removeProperty('color');
         });
     }
