@@ -23,13 +23,15 @@ p {
 }
 .project .year {
     display: inline;
+    display: none;
     position: relative;
     vertical-align: top;
     top: 9px;
     background: #333;
     color: white;
-    padding: 0 3px;
+    padding: 3px 8px;
     margin-left: 3px;
+    border-radius: 50px;
 }
 .screenshots {
 }

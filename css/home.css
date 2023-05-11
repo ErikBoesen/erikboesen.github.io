@@ -6,7 +6,7 @@ body {
 }
 body.dark {
     color: white;
-    background: #12182b;
+    background: #02182b;
 }
 #portrait {
     max-height: 300px;
