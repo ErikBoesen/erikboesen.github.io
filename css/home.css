@@ -2,6 +2,7 @@ body {
     overflow-x: hidden;
     font-size: 24px;
     transition: 0.2s;
+    user-select: none;
 }
 body.dark {
     color: white;
@@ -19,7 +20,6 @@ h2 {
     line-height: 1;
     margin-left: -3px;
     vertical-align: top;
-    user-select: none;
     display: inline-block;
 }
 p {
