@@ -27,10 +27,13 @@ for (let letter of name) {
 ////////
 // Piano
 //
-let audioCtx = new(window.AudioContext || window.webkitAudioContext)();
-let volume = 0.7;
+let audioCtx = null;
+let volume = 0.6;
 
 function playNote(frequency, callback) {
+    if (audioCtx === null) {
+        audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+    }
     let oscillator = new OscillatorNode(audioCtx);
     let gain = new GainNode(audioCtx);
     oscillator.type = 'triangle';
