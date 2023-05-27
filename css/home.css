@@ -154,7 +154,7 @@ p a#resume:hover, .dark a#resume {
     border-color: #ffd966;
     fill: #ffd966;
 }
-canvas {
+canvas#planes {
     position: fixed;
     top: 0;
     left: 0;
@@ -162,6 +162,14 @@ canvas {
     z-index: -5;
     width: 100vw;
     height: 100vh;
+}
+canvas#tree {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5;
 }
 
 @media (max-width: 620px) {
