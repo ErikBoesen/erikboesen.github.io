@@ -30,6 +30,7 @@ planeImageRight.src = 'images/plane_right.png';
 
 const PLANE_SPEED = 0.06;
 const G = 0.05;
+let spamPlanes = false;
 
 addEventListener('mousedown', function(e) {
     console.log('Mouse down!');
@@ -62,6 +63,11 @@ onmousemove = function(e) {
     if (mouseDown) {
     }
 };
+onkeydown = function(e) {
+    if (e.keyCode == 32) {
+        spamPlanes = !spamPlanes;
+    }
+}
 
 function move() {
     planes = planes.filter(function(plane) {
@@ -75,6 +81,18 @@ function move() {
         plane.x += plane.xSpeed;
         plane.y += plane.ySpeed;
         plane.ySpeed += G;
+    }
+    if (spamPlanes && Math.random() < 0.3) {
+        console.log('Adding plane');
+        planes.push({
+            //x: Math.floor(Math.random() * canvas.width),
+            //y: Math.floor(1.1 * canvas.height),
+            x: Math.random() * canvas.width,
+            y: 1.1 * canvas.height / CANVAS_RESOLUTION,
+            xSpeed: (Math.random() * 2 - 1),
+            ySpeed: (Math.random() - 1) * 15,
+        });
+        console.log(planes[planes.length - 1]);
     }
 }
 function draw() {

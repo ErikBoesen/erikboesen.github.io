@@ -12,6 +12,10 @@ p {
     line-height: 1.25;
     margin: 10px 0;
 }
+.column {
+    width: 400px;
+    display: inline-block;
+}
 .project {
     max-width: 8in;
     padding: 20px 0 30px;
