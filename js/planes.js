@@ -30,6 +30,7 @@ planeImageRight.src = 'images/plane_right.png';
 
 const PLANE_SPEED = 0.06;
 const G = 0.05;
+const WIND_SPEED_MULTIPLIER = 0.001
 let spamPlanes = false;
 
 addEventListener('mousedown', function(e) {
@@ -79,8 +80,8 @@ function move() {
     });
     for (plane of planes) {
         plane.x += plane.xSpeed;
-        plane.x -= options.windSpeed.value / 20;
         plane.y += plane.ySpeed;
+        plane.xSpeed -= options.windSpeed.value * WIND_SPEED_MULTIPLIER;
         plane.ySpeed += G;
     }
     if (spamPlanes && Math.random() < 0.3) {
