@@ -12,7 +12,7 @@ body.dark {
 }
 #portrait {
     max-height: 300px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 50px;
     cursor: pointer;
@@ -158,6 +158,10 @@ p a#resume:hover, .dark a#resume {
 #controls {
     height: 0;
     overflow: hidden;
+}
+#controls.shown {
+    height: 400px;
+    transition: 0.8s height;
 }
 label {
     font-size: 14px;

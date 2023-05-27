@@ -44,6 +44,9 @@ addEventListener('mousedown', function(e) {
         x: mousePosition.x,
         y: mousePosition.y,
     };
+
+    // For tree:
+    CONTROLS.classList.add('shown');
 });
 addEventListener('mouseup', function(e) {
     console.log('Mouse up!');
