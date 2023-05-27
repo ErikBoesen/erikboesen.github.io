@@ -137,9 +137,13 @@ function startTree() {
     treeCtx.stroke();
 }
 
+function setOption(name, value) {
+    options[name].value = value;
+    options[name].readout.textContent = value;
+};
+
 oninput = function(e) {
-    options[e.target.id].value = e.target.value;
-    options[e.target.id].readout.textContent = e.target.value;
+    setOption(e.target.id, e.target.value);
     if (e.target.id === 'wind') {
         if (audio.paused) {
             audio.play();
@@ -162,7 +166,7 @@ setInterval(function() {
 
 RANDOMIZE.onclick = function() {
     for (let option in options) {
-        options[option].value = Math.floor(Math.random() * (options[option].max - options[option].min + 1)) + options[option].min;
+        setOption(option, Math.floor(Math.random() * (options[option].max - options[option].min + 1)) + options[option].min);
         console.log(options[option].value);
     }
 }

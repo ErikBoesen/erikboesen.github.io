@@ -160,7 +160,7 @@ p a#resume:hover, .dark a#resume {
     overflow: hidden;
 }
 #control-panel.shown {
-    height: 300px;
+    height: 320px;
     transition: 0.8s height;
 }
 label {
@@ -173,6 +173,16 @@ label {
 input[type='range'] {
     filter: brightness(7) saturate(0.8) hue-rotate(40deg);
     margin: 0 6px;
+}
+button {
+    border: solid 2px #18304d;
+    background: #18304d;
+    padding: 8px 10px;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    border-radius: 40px;
+    cursor: pointer;
 }
 
 canvas#planes {
