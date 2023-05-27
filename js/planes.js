@@ -30,7 +30,7 @@ planeImageRight.src = 'images/plane_right.png';
 
 const PLANE_SPEED = 0.06;
 const G = 0.05;
-const WIND_SPEED_MULTIPLIER = 0.001
+const WIND_SPEED_MULTIPLIER = 0.005;
 let spamPlanes = false;
 
 addEventListener('mousedown', function(e) {
