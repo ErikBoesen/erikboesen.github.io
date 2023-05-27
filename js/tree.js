@@ -5,6 +5,7 @@ treeCanvas.width  = window.innerWidth * RESOLUTION;
 var treeCtx = treeCanvas.getContext('2d');
 
 const CONTROLS = document.getElementById('controls');
+const RIGHT_OFFSET = 154.5 * RESOLUTION;
 var wind;
 
 var options = {
@@ -16,13 +17,13 @@ var options = {
     },
     branchLengthMultiplier: {
         title: 'Branch scale',
-        default: 75,
+        default: 45,
         min: 0,
         max: 100,
     },
     middleLengthMultiplier: {
         title: 'Middle scale',
-        default: 65,
+        default: 75,
         min: 0,
         max: 100,
     },
@@ -46,10 +47,16 @@ var options = {
     },
     stemLength: {
         title: 'Stem length',
-        default: -150,
+        default: 0,
         min: 0,
         max: 200,
     },
+    stoutness: {
+        title: 'Stoutness',
+        default: 2,
+        min: 0,
+        max: 15,
+    }
 };
 
 // Make options list
@@ -86,8 +93,12 @@ function radians(degrees) {
 }
 function drawBranch(iteration, length, startX, startY, angle) {
     treeCtx.moveTo(startX, startY);
-    var endX = startX + Math.cos(angle) * length;
-    var endY = startY + Math.sin(angle) * length;
+    let ownLength = length;
+    if (options.iterations.value - iteration < options.stoutness.value) {
+        ownLength /= 2;
+    }
+    var endX = startX + Math.cos(angle) * ownLength;
+    var endY = startY + Math.sin(angle) * ownLength;
     treeCtx.lineTo(endX, endY);
     if (iteration > 0) {
         drawBranch(iteration - 1,
@@ -113,7 +124,7 @@ function startTree() {
     treeCtx.moveTo(treeCanvas.width / 2, treeCanvas.height);
     treeCtx.lineTo(treeCanvas.width / 2, treeCanvas.height - parseInt(options.stemLength.value));
 
-    drawBranch(options.iterations.value, RESOLUTION * 100, treeCanvas.width / 2, parseInt(options.stemLength.value), Math.PI / 2);
+    drawBranch(options.iterations.value, RESOLUTION * 100, treeCanvas.width - RIGHT_OFFSET, parseInt(options.stemLength.value), Math.PI / 2);
     treeCtx.stroke();
 }
 
