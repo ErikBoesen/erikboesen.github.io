@@ -219,7 +219,7 @@ canvas#tree {
         height: 60px;
         width: 60px;
     }
-    canvas {
+    canvas, #control-panel {
         display: none;
     }
 }
