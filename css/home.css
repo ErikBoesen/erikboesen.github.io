@@ -154,6 +154,23 @@ p a#resume:hover, .dark a#resume {
     border-color: #ffd966;
     fill: #ffd966;
 }
+
+#controls {
+    height: 0;
+    overflow: hidden;
+}
+label {
+    font-size: 14px;
+    vertical-align: middle;
+    margin-top: -10px;
+    color: white;
+    display: inline-block;
+}
+input[type='range'] {
+    filter: brightness(10) saturate(0.8) hue-rotate(30deg);
+    margin: 0 4px;
+}
+
 canvas#planes {
     position: fixed;
     top: 0;

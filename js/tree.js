@@ -101,7 +101,7 @@ function drawBranch(iteration, length, startX, startY, angle) {
     treeCtx.moveTo(startX, startY);
     let ownLength = length;
     if (options.iterations.value - iteration < options.stoutness.value) {
-        ownLength /= 2;
+        ownLength /= stoutnessMultiplier.value;
     }
     var endX = startX + Math.cos(angle) * ownLength;
     var endY = startY + Math.sin(angle) * ownLength;
