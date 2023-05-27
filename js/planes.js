@@ -79,6 +79,7 @@ function move() {
     });
     for (plane of planes) {
         plane.x += plane.xSpeed;
+        plane.x -= options.windSpeed.value / 20;
         plane.y += plane.ySpeed;
         plane.ySpeed += G;
     }
