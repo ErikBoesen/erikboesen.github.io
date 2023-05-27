@@ -20,20 +20,20 @@ var options = {
     branchLengthMultiplier: {
         title: 'Branch scale',
         default: 45,
-        min: 0,
+        min: 10,
         max: 100,
     },
     middleLengthMultiplier: {
         title: 'Middle scale',
         default: 75,
-        min: 0,
+        min: 10,
         max: 100,
     },
     iterations: {
         title: 'Iterations',
         default: 8,
-        min: 3,
-        max: 12,
+        min: 6,
+        max: 10,
     },
     spread: {
         title: 'Spread',
@@ -65,7 +65,7 @@ var options = {
         min: 0.9,
         max: 5,
         step: 0.1,
-    }
+    },
 };
 
 // Make options list
@@ -130,8 +130,8 @@ function startTree() {
     treeCtx.clearRect(0, 0, treeCanvas.width, treeCanvas.height);
 
     // Draw extra line at the bottom so that leaves don't touch the ground too quickly
-    treeCtx.moveTo(treeCanvas.width / 2, treeCanvas.height);
-    treeCtx.lineTo(treeCanvas.width / 2, treeCanvas.height - parseInt(options.stemLength.value));
+    treeCtx.moveTo(treeCanvas.width - RIGHT_OFFSET, 0);
+    treeCtx.lineTo(treeCanvas.width - RIGHT_OFFSET, parseInt(options.stemLength.value));
 
     drawBranch(options.iterations.value, RESOLUTION * 100, treeCanvas.width - RIGHT_OFFSET, parseInt(options.stemLength.value), Math.PI / 2);
     treeCtx.stroke();
@@ -160,9 +160,9 @@ setInterval(function() {
     startTree();
 }, 50);
 
-var playButton = document.getElementById('play_button');
-playButton.onclick = function() {
-
+RANDOMIZE.onclick = function() {
+    for (let option in options) {
+        options[option].value = Math.floor(Math.random() * (options[option].max - options[option].min + 1)) + options[option].min;
+        console.log(options[option].value);
+    }
 }
-
-console.log('hi');
