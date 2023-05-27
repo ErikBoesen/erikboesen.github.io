@@ -60,8 +60,9 @@ var options = {
     stoutnessMultiplier: {
         title: 'Stoutness factor',
         default: 2,
-        min: 0.0,
-        max: 5.0,
+        min: 0.9,
+        max: 5,
+        step: 0.1,
     }
 };
 
@@ -101,7 +102,7 @@ function drawBranch(iteration, length, startX, startY, angle) {
     treeCtx.moveTo(startX, startY);
     let ownLength = length;
     if (options.iterations.value - iteration < options.stoutness.value) {
-        ownLength /= stoutnessMultiplier.value;
+        ownLength /= options.stoutnessMultiplier.value;
     }
     var endX = startX + Math.cos(angle) * ownLength;
     var endY = startY + Math.sin(angle) * ownLength;
