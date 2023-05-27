@@ -1,9 +1,9 @@
-const canvas = document.getElementsByTagName('canvas')[0];
-const ctx = canvas.getContext('2d');
+const planesCanvas = document.getElementById('planes');
+const ctx = planesCanvas.getContext('2d');
 const CANVAS_RESOLUTION = 4;
 
-canvas.width = window.innerWidth * CANVAS_RESOLUTION;
-canvas.height = window.innerHeight * CANVAS_RESOLUTION;
+planesCanvas.width = window.innerWidth * CANVAS_RESOLUTION;
+planesCanvas.height = window.innerHeight * CANVAS_RESOLUTION;
 
 ctx.strokeStyle = '#000000';
 ctx.lineWidth = 1 * CANVAS_RESOLUTION;
@@ -57,8 +57,8 @@ addEventListener('mouseup', function(e) {
 });
 onmousemove = function(e) {
     mousePosition = {
-        x: e.clientX - canvas.offsetLeft,
-        y: e.clientY - canvas.offsetTop
+        x: e.clientX - planesCanvas.offsetLeft,
+        y: e.clientY - planesCanvas.offsetTop
     };
     if (mouseDown) {
     }
@@ -73,8 +73,8 @@ function move() {
     planes = planes.filter(function(plane) {
         return (
             plane.x > 0 - PLANE_DRAW_WIDTH &&
-            plane.x < canvas.width + PLANE_DRAW_WIDTH &&
-            plane.y < canvas.height + PLANE_DRAW_HEIGHT
+            plane.x < planesCanvas.width + PLANE_DRAW_WIDTH &&
+            plane.y < planesCanvas.height + PLANE_DRAW_HEIGHT
         );
     });
     for (plane of planes) {
@@ -85,10 +85,10 @@ function move() {
     if (spamPlanes && Math.random() < 0.3) {
         console.log('Adding plane');
         planes.push({
-            //x: Math.floor(Math.random() * canvas.width),
-            //y: Math.floor(1.1 * canvas.height),
-            x: Math.random() * canvas.width,
-            y: 1.1 * canvas.height / CANVAS_RESOLUTION,
+            //x: Math.floor(Math.random() * planesCanvas.width),
+            //y: Math.floor(1.1 * planesCanvas.height),
+            x: Math.random() * planesCanvas.width,
+            y: 1.1 * planesCanvas.height / CANVAS_RESOLUTION,
             xSpeed: (Math.random() * 2 - 1),
             ySpeed: (Math.random() - 1) * 15,
         });
@@ -96,7 +96,7 @@ function move() {
     }
 }
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, planesCanvas.width, planesCanvas.height);
     shownPlanes = planes.slice();
     if (mouseDown && currentPlane != null) {
         let lineDashLength = Math.sqrt(Math.pow(currentPlane.x - mousePosition.x, 2) +
