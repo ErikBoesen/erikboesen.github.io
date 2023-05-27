@@ -155,12 +155,12 @@ p a#resume:hover, .dark a#resume {
     fill: #ffd966;
 }
 
-#controls {
+#control-panel {
     height: 0;
     overflow: hidden;
 }
-#controls.shown {
-    height: 400px;
+#control-panel.shown {
+    height: 300px;
     transition: 0.8s height;
 }
 label {
@@ -171,8 +171,8 @@ label {
     display: inline-block;
 }
 input[type='range'] {
-    filter: brightness(10) saturate(0.8) hue-rotate(30deg);
-    margin: 0 4px;
+    filter: brightness(7) saturate(0.8) hue-rotate(40deg);
+    margin: 0 6px;
 }
 
 canvas#planes {

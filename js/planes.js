@@ -46,7 +46,7 @@ addEventListener('mousedown', function(e) {
     };
 
     // For tree:
-    CONTROLS.classList.add('shown');
+    CONTROL_PANEL.classList.add('shown');
 });
 addEventListener('mouseup', function(e) {
     console.log('Mouse up!');

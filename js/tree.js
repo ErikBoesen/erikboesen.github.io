@@ -4,7 +4,9 @@ treeCanvas.height = window.innerHeight * RESOLUTION;
 treeCanvas.width  = window.innerWidth * RESOLUTION;
 var treeCtx = treeCanvas.getContext('2d');
 
+const CONTROL_PANEL = document.getElementById('control-panel');
 const CONTROLS = document.getElementById('controls');
+const RANDOMIZE = document.getElementById('randomize');
 const RIGHT_OFFSET = 154.5 * RESOLUTION;
 var wind;
 
