@@ -138,6 +138,13 @@ function startTree() {
 oninput = function(e) {
     options[e.target.id].value = e.target.value;
     options[e.target.id].readout.textContent = e.target.value;
+    if (e.target.id === 'wind') {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            //audio.pause();
+        }
+    }
 };
 
 var audio = document.getElementById('wind_sound');
@@ -154,13 +161,6 @@ setInterval(function() {
 var playButton = document.getElementById('play_button');
 playButton.onclick = function() {
 
-    if (audio.paused) {
-        audio.play();
-        playButton.textContent = '||';
-    } else {
-        audio.pause();
-        playButton.textContent = '▶';
-    }
 }
 
 console.log('hi');
