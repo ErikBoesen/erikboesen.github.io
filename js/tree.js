@@ -16,36 +16,46 @@ var options = {
         default: 5,
         min: 0,
         max: 100,
+        randomize: false,
     },
     branchLengthMultiplier: {
         title: 'Branch scale',
         default: 45,
-        min: 10,
+        min: 0,
         max: 100,
+        randomizeMin: 40,
+        randomizeMax: 80,
     },
     middleLengthMultiplier: {
         title: 'Middle scale',
         default: 75,
         min: 10,
         max: 100,
+        randomizeMin: 40,
+        randomizeMax: 100,
     },
     iterations: {
         title: 'Iterations',
         default: 8,
         min: 6,
         max: 10,
+        randomize: false,
     },
     spread: {
         title: 'Spread',
         default: 30,
         min: 0,
         max: 120,
+        randomizeMin: -45,
+        randomizeMax: 45,
     },
     tilt: {
         title: 'Tilt',
         default: 0,
         min: -90,
         max: 90,
+        randomizeMin: -10,
+        randomizeMax: 10,
     },
     stemLength: {
         title: 'Stem length',
@@ -166,7 +176,16 @@ setInterval(function() {
 
 RANDOMIZE.onclick = function() {
     for (let option in options) {
-        setOption(option, Math.floor(Math.random() * (options[option].max - options[option].min + 1)) + options[option].min);
+        // Intentional; no value should be interpreted as true by default
+        if (options[option].randomize === false) {
+            continue;
+        }
+
+        console.log(options[option].randomizeMin);
+        let min = options[option].randomizeMin || options[option].min;
+        let max = options[option].randomizeMax || options[option].max;
+        setOption(option, Math.floor(Math.random() * (max - min + 1)) + min);
+        document.getElementById(option).value = options[option].value;
         console.log(options[option].value);
     }
 }
