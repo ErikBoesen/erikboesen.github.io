@@ -49,13 +49,19 @@ var options = {
         title: 'Stem length',
         default: 0,
         min: 0,
-        max: 200,
+        max: 100,
     },
     stoutness: {
         title: 'Stoutness',
         default: 2,
         min: 0,
         max: 15,
+    },
+    stoutnessMultiplier: {
+        title: 'Stoutness factor',
+        default: 2,
+        min: 0.0,
+        max: 5.0,
     }
 };
 
