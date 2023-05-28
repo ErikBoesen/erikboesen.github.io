@@ -194,9 +194,6 @@ canvas#planes {
     width: 100vw;
     height: 100vh;
 }
-canvas#planes:active {
-    cursor: crosshair;
-}
 canvas#tree {
     position: fixed;
     top: 0;

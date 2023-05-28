@@ -46,7 +46,7 @@ var options = {
         default: 30,
         min: 0,
         max: 120,
-        randomizeMin: -45,
+        randomizeMin: 5,
         randomizeMax: 45,
     },
     tilt: {

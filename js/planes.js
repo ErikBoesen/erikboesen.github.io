@@ -44,6 +44,7 @@ addEventListener('mousedown', function(e) {
         x: mousePosition.x,
         y: mousePosition.y,
     };
+    document.body.style.cursor = 'crosshair';
 
     // For tree:
     CONTROL_PANEL.classList.add('shown');
@@ -58,6 +59,7 @@ addEventListener('mouseup', function(e) {
     currentPlane.ySpeed = PLANE_SPEED * (currentPlane.y - mousePosition.y);
     planes.push(currentPlane);
     currentPlane = null;
+    document.body.style.cursor = 'default';
 });
 onmousemove = function(e) {
     mousePosition = {
