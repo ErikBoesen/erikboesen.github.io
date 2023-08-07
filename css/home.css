@@ -140,8 +140,8 @@ p a#resume:hover, .dark a#resume {
     fill: #0077B5;
 }
 .social li#twitter svg:hover, .dark li#twitter svg {
-    border-color: #55acee;
-    fill: #55acee;
+    border-color: #fff;
+    fill: #fff;
 }
 .social li#instagram svg:hover, .dark li#instagram svg {
     border-color: #9b6954;
