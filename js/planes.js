@@ -14,6 +14,18 @@ let currentPlane = null;
 let startPosition = null;
 let planes = [];
 
+let clouds = [
+    {
+        x: planesCanvas.width * .5,
+        y: 300,
+        components: [
+            {xo: -190, yo: 20, r: 130},
+            {xo: 0, yo: 0, r: 200},
+            {xo: 160, yo: 10, r: 100},
+        ],
+    },
+];
+
 let mouseDown = false;
 let xOld, yOld, x, y;
 let mousePosition = null;
@@ -138,6 +150,15 @@ function draw() {
                       -PLANE_DRAW_WIDTH / 2 * CANVAS_RESOLUTION, -PLANE_DRAW_HEIGHT / 2 * CANVAS_RESOLUTION,
                       PLANE_DRAW_WIDTH * CANVAS_RESOLUTION, PLANE_DRAW_HEIGHT * CANVAS_RESOLUTION);
         ctx.restore();
+    }
+
+    for (cloud of clouds) {
+        for (component of cloud.components) {
+            ctx.beginPath();
+            ctx.arc(cloud.x + component.xo, cloud.y + component.yo, component.r, 0, 2 * Math.PI);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+        }
     }
 }
 setInterval(function() {
