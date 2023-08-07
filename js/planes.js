@@ -17,7 +17,7 @@ let planes = [];
 function generateCloud(x) {
     let cloud = {
         x: x,
-        y: Math.random() * 200 + 200,
+        y: Math.random() * 200 + 300,
         components: [],
     };
     mainComponentR = Math.random() * 150 + 150;
@@ -96,6 +96,12 @@ onkeydown = function(e) {
 }
 
 function move() {
+    for (cloud of clouds) {
+        console.log(options.windSpeed.value);
+        cloud.x -= options.windSpeed.value * CLOUD_WIND_SPEED_MULTIPLIER;
+        console.log(cloud.x);
+    }
+
     planes = planes.filter(function(plane) {
         return (
             plane.x > 0 - PLANE_DRAW_WIDTH &&
@@ -121,15 +127,19 @@ function move() {
         });
         console.log(planes[planes.length - 1]);
     }
-
-    for (cloud of clouds) {
-        console.log(options.windSpeed.value);
-        cloud.x -= options.windSpeed.value * CLOUD_WIND_SPEED_MULTIPLIER;
-        console.log(cloud.x);
-    }
 }
 function draw() {
     ctx.clearRect(0, 0, planesCanvas.width, planesCanvas.height);
+
+    for (cloud of clouds) {
+        for (component of cloud.components) {
+            ctx.beginPath();
+            ctx.arc(cloud.x + component.xo, cloud.y + component.yo, component.r, 0, 2 * Math.PI);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+        }
+    }
+
     shownPlanes = planes.slice();
     if (mouseDown && currentPlane != null) {
         let lineDashLength = Math.sqrt(Math.pow(currentPlane.x - mousePosition.x, 2) +
@@ -166,14 +176,6 @@ function draw() {
         ctx.restore();
     }
 
-    for (cloud of clouds) {
-        for (component of cloud.components) {
-            ctx.beginPath();
-            ctx.arc(cloud.x + component.xo, cloud.y + component.yo, component.r, 0, 2 * Math.PI);
-            ctx.fillStyle = 'white';
-            ctx.fill();
-        }
-    }
 }
 setInterval(function() {
     move();
