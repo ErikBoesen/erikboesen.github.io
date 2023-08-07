@@ -14,17 +14,23 @@ let currentPlane = null;
 let startPosition = null;
 let planes = [];
 
-let clouds = [
-    {
-        x: planesCanvas.width * .5,
-        y: 300,
+function generateCloud(x) {
+    return {
+        x: x,
+        y: Math.random() * 200 + 200,
         components: [
             {xo: -190, yo: 20, r: 130},
             {xo: 0, yo: 0, r: 200},
             {xo: 160, yo: 10, r: 100},
         ],
-    },
-];
+    };
+}
+let clouds = [];
+let cloudX = planesCanvas.width/8;
+for (let i = 0; i < 10; i++) {
+    clouds.push(generateCloud(cloudX));
+    cloudX += Math.random() * (planesCanvas.width / 6) + (planesCanvas.width / 3);
+}
 
 let mouseDown = false;
 let xOld, yOld, x, y;
