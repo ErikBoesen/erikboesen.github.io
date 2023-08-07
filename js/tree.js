@@ -123,15 +123,15 @@ function drawBranch(iteration, length, startX, startY, angle) {
         drawBranch(iteration - 1,
                    length * options.branchLengthMultiplier.value / 100,
                    endX, endY,
-                   angle + radians(parseFloat(options.spread.value) + parseFloat(options.tilt.value) + wind));
+                   angle + radians(parseFloat(options.spread.value) + parseFloat(options.tilt.value) - wind));
         drawBranch(iteration - 1,
                    length * options.middleLengthMultiplier.value / 100,
                    endX, endY,
-                   angle + radians(parseFloat(options.tilt.value) + wind));
+                   angle + radians(parseFloat(options.tilt.value) - wind));
         drawBranch(iteration - 1,
                    length * options.branchLengthMultiplier.value / 100,
                    endX, endY,
-                   angle + radians(-parseFloat(options.spread.value) + parseFloat(options.tilt.value) + wind));
+                   angle + radians(-parseFloat(options.spread.value) + parseFloat(options.tilt.value) - wind));
     }
 }
 
