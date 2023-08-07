@@ -140,10 +140,10 @@ function startTree() {
     treeCtx.clearRect(0, 0, treeCanvas.width, treeCanvas.height);
 
     // Draw extra line at the bottom so that leaves don't touch the ground too quickly
-    treeCtx.moveTo(treeCanvas.width - RIGHT_OFFSET, 0);
-    treeCtx.lineTo(treeCanvas.width - RIGHT_OFFSET, parseInt(options.stemLength.value));
+    treeCtx.moveTo(treeCanvas.width - RIGHT_OFFSET, treeCanvas.height);
+    treeCtx.lineTo(treeCanvas.width - RIGHT_OFFSET, treeCanvas.height - parseInt(options.stemLength.value));
 
-    drawBranch(options.iterations.value, RESOLUTION * 100, treeCanvas.width - RIGHT_OFFSET, parseInt(options.stemLength.value), Math.PI / 2);
+    drawBranch(options.iterations.value, RESOLUTION * 100, treeCanvas.width - RIGHT_OFFSET, treeCanvas.height - parseInt(options.stemLength.value), 3 * Math.PI / 2);
     treeCtx.stroke();
 }
 
