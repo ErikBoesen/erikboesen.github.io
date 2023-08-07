@@ -15,21 +15,22 @@ let startPosition = null;
 let planes = [];
 
 function generateCloud(x) {
-    return {
+    let cloud = {
         x: x,
         y: Math.random() * 200 + 200,
-        components: [
-            {xo: -190, yo: 20, r: 130},
-            {xo: 0, yo: 0, r: 200},
-            {xo: 160, yo: 10, r: 100},
-        ],
+        components: [],
     };
+    mainComponentR = Math.random() * 150 + 150;
+    cloud.components.push({xo: 0, yo: 0, r: 200});
+    cloud.components.push({xo: (Math.random() * -mainComponentR / 2) - mainComponentR / 2, yo: Math.random() * 60 - 30, r: (Math.random() * mainComponentR / 2) + mainComponentR / 3});
+    cloud.components.push({xo: (Math.random() * mainComponentR / 2) + mainComponentR / 2, yo: Math.random() * 60 - 30, r: (Math.random() * mainComponentR / 2) + mainComponentR / 3});
+    return cloud;
 }
 let clouds = [];
 let cloudX = planesCanvas.width/8;
 for (let i = 0; i < 10; i++) {
     clouds.push(generateCloud(cloudX));
-    cloudX += Math.random() * (planesCanvas.width / 6) + (planesCanvas.width / 3);
+    cloudX += Math.random() * (planesCanvas.width / 2) + (planesCanvas.width / 8);
 }
 
 let mouseDown = false;
