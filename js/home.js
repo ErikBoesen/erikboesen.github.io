@@ -110,11 +110,3 @@ E_NIGHT.onclick = function() {
     dark_mode = !dark_mode;
     document.body.classList.toggle('dark');
 }
-
-/////////////////////////
-// Link to Alice Mao
-//
-const E_PORTRAIT = document.getElementById('portrait');
-E_PORTRAIT.onclick = function() {
-    window.open('https://alice-mao.com', '_blank');
-}
