@@ -175,6 +175,13 @@ label {
     color: white;
     display: inline-block;
 }
+label:first-child {
+    width: 100px;
+}
+label:nth-child(2) {
+    width: 20px;
+    text-align: right;
+}
 input[type='range'] {
     filter: brightness(7) saturate(0.8) hue-rotate(40deg);
     margin: 0 6px;

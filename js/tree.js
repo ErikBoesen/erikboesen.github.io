@@ -88,6 +88,11 @@ for (option in options) {
     options[option].value = options[option].default;
     control.appendChild(label);
 
+    readout = document.createElement('label');
+    readout.textContent = options[option].default;
+    options[option].readout = readout;
+    control.appendChild(readout);
+
     slider = document.createElement('input');
     slider.type = 'range';
     slider.min = options[option].min;
@@ -97,11 +102,6 @@ for (option in options) {
     slider.step = options[option].step || 1;
     options[option].slider = slider;
     control.appendChild(slider);
-
-    readout = document.createElement('label');
-    readout.textContent = options[option].default;
-    options[option].readout = readout;
-    control.appendChild(readout);
 
     CONTROLS.appendChild(control);
 }

@@ -97,9 +97,7 @@ onkeydown = function(e) {
 
 function move() {
     for (cloud of clouds) {
-        console.log(options.windSpeed.value);
         cloud.x -= options.windSpeed.value * CLOUD_WIND_SPEED_MULTIPLIER;
-        console.log(cloud.x);
     }
 
     planes = planes.filter(function(plane) {
@@ -125,7 +123,6 @@ function move() {
             xSpeed: (Math.random() * 2 - 1),
             ySpeed: (Math.random() - 1) * 15,
         });
-        console.log(planes[planes.length - 1]);
     }
 }
 function draw() {
