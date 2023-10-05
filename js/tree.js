@@ -1,7 +1,14 @@
 var treeCanvas = document.getElementById('tree');
 const RESOLUTION = 2;
-treeCanvas.height = window.innerHeight * RESOLUTION;
-treeCanvas.width  = window.innerWidth * RESOLUTION;
+
+function setTreeCanvasDimensions() {
+    treeCanvas.width = window.innerWidth * RESOLUTION;
+    treeCanvas.height = window.innerHeight * RESOLUTION;
+}
+setTreeCanvasDimensions();
+
+addEventListener('resize', setTreeCanvasDimensions);
+
 var treeCtx = treeCanvas.getContext('2d');
 
 const CONTROL_PANEL = document.getElementById('control-panel');
@@ -106,11 +113,11 @@ for (option in options) {
     CONTROLS.appendChild(control);
 }
 
-treeCtx.strokeStyle = 'white';
 function radians(degrees) {
     return degrees * Math.PI / 180;
 }
 function drawBranch(iteration, length, startX, startY, angle) {
+    treeCtx.lineWidth = iteration;
     treeCtx.moveTo(startX, startY);
     let ownLength = length;
     if (options.iterations.value - iteration < options.stoutness.value) {
@@ -136,6 +143,8 @@ function drawBranch(iteration, length, startX, startY, angle) {
 }
 
 function startTree() {
+    treeCtx.strokeStyle = 'white';
+
     treeCtx.beginPath();
     treeCtx.clearRect(0, 0, treeCanvas.width, treeCanvas.height);
 
@@ -181,11 +190,17 @@ RANDOMIZE.onclick = function() {
             continue;
         }
 
-        console.log(options[option].randomizeMin);
         let min = options[option].randomizeMin || options[option].min;
         let max = options[option].randomizeMax || options[option].max;
         setOption(option, Math.floor(Math.random() * (max - min + 1)) + min);
         document.getElementById(option).value = options[option].value;
-        console.log(options[option].value);
     }
 }
+
+/*
+document.onmousemove = function(e) {
+    const x = e.clientX,
+          y = e.clientY;
+    planesCanvas.style.transform = 'scale(1.1) translate(' + x / 100 + 'px, ' + y / 100 + 'px)';
+};
+*/

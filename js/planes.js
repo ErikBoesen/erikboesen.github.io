@@ -2,8 +2,23 @@ const planesCanvas = document.getElementById('planes');
 const ctx = planesCanvas.getContext('2d');
 const CANVAS_RESOLUTION = 4;
 
-planesCanvas.width = window.innerWidth * CANVAS_RESOLUTION;
-planesCanvas.height = window.innerHeight * CANVAS_RESOLUTION;
+const PLANE_WIDTH = 512,
+      PLANE_HEIGHT = 342,
+      PLANE_SIZE_MULTIPLIER = 0.1;
+let PLANE_DRAW_WIDTH, PLANE_DRAW_HEIGHT;
+
+function setPlaneCanvasDimensions() {
+    planesCanvas.width = window.innerWidth * CANVAS_RESOLUTION;
+    planesCanvas.height = window.innerHeight * CANVAS_RESOLUTION;
+    PLANE_DRAW_WIDTH = parseInt(PLANE_WIDTH * PLANE_SIZE_MULTIPLIER);
+    PLANE_DRAW_HEIGHT = parseInt(PLANE_HEIGHT * PLANE_SIZE_MULTIPLIER);
+
+    console.log('Setting dimensions: ', planesCanvas.width, planesCanvas.height);
+}
+setPlaneCanvasDimensions();
+
+addEventListener('resize', setPlaneCanvasDimensions);
+
 
 ctx.strokeStyle = '#000000';
 ctx.lineWidth = 1 * CANVAS_RESOLUTION;
@@ -37,11 +52,6 @@ let mouseDown = false;
 let xOld, yOld, x, y;
 let mousePosition = null;
 
-const PLANE_WIDTH = 512,
-      PLANE_HEIGHT = 342,
-      PLANE_SIZE_MULTIPLIER = 0.1,
-      PLANE_DRAW_WIDTH = parseInt(PLANE_WIDTH * PLANE_SIZE_MULTIPLIER),
-      PLANE_DRAW_HEIGHT = parseInt(PLANE_HEIGHT * PLANE_SIZE_MULTIPLIER);
 let planeImageLeft = new Image(PLANE_WIDTH, PLANE_HEIGHT);
 planeImageLeft.src = 'images/plane_left.png';
 let planeImageRight = new Image(PLANE_WIDTH, PLANE_HEIGHT);
