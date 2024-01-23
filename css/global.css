@@ -29,12 +29,13 @@ a {
 }
 h2, h3, h4 {
     font-family: 'LEMONMILK', 'Lato', sans-serif;
+    font-weight: 100;
 }
 h2 a {
     text-decoration: none;
 }
 @media (max-width: 580px) {
     body {
-        padding: 15px;
+        padding: 25px;
     }
 }

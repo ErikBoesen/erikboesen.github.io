@@ -21,10 +21,11 @@
         <div class="row">
             <h2><a href="/">Erik Boesen</a></h2>
             <h3 id="name">Projects</h3>
-            <img src="" id="flag">
         </div>
     </header>
     <main>
+    </main>
+    <div class="projects">
         <div class="project">
             <h4><a href="https://yalemenus.com">Yale Menus</a></h4>
             <p class="year">2021</p>
@@ -48,7 +49,7 @@
             <h4><a href="https://yalies.io">Yalies</a></h4>
             <p class="year">2020</p>
             <p>Yalies is a redesigned version of Yale's official <a href="https://students.yale.edu/facebook">Face Book</a>, which provides contact information for Yale students. It displays data from the Face Book, <a href="https://directory.yale.edu">Yale Directory</a>, and various department directories, but through a more modern, better designed, and more secure interface. Unlike official Yale sources, Yalies is accessible only to undergraduates, and censors private details (street addresses, room numbers, and phone numbers) that I believe Yale should not divulge.</p>
-            <p>Yalies also provides an <a href="/apidocs">API</a> for student developers. The API powers numerous student projects and university services, including <a href="https://coursetable.com">CourseTable</a>, <a href="https://rdb.yale.edu">Yale Research Database (RDB)</a>, <a href="https://yaledailynews.com/blog/2020/12/03/40-2-percent-of-returning-student-athletes-take-leaves-of-absence-this-fall">Yale Daily News</a>, <a href="https://yalies.me">Yalies.me</a>, <a href="https://mailyale.com">MailYale</a>, <a href="https://comethru.io">Comethru</a>, <a href="https://ypost.app">YPost</a>, <a href="https://github.com/ErikBoesen/yale">yale CLI</a>, <a href="https://ship.wtf">Ship</a>, student projects in S&amp;DS 315 and CPSC 490, and more.</p>
+            <p>Yalies also provides an <a href="https://yalies.io/apidocs">API</a> for student developers. The API powers numerous student projects and university services, including <a href="https://coursetable.com">CourseTable</a>, <a href="https://rdb.yale.edu">Yale Research Database (RDB)</a>, <a href="https://yaledailynews.com/blog/2020/12/03/40-2-percent-of-returning-student-athletes-take-leaves-of-absence-this-fall">Yale Daily News</a>, <a href="https://yalies.me">Yalies.me</a>, <a href="https://mailyale.com">MailYale</a>, <a href="https://comethru.io">Comethru</a>, <a href="https://ypost.app">YPost</a>, <a href="https://github.com/ErikBoesen/yale">yale CLI</a>, <a href="https://ship.wtf">Ship</a>, student projects in S&amp;DS 315 and CPSC 490, and more.</p>
             <p>I donated Yalies to the <a href="http://yalecompsociety.org">Yale Computer Society</a>, where I now lead a development team of 12 students to maintain the service.</p>
             <p><strong>Tools:</strong> Python, Flask, BeautifulSoup</p>
             <p><strong>Press:</strong> <a href="https://yaledailynews.com/blog/2020/10/08/yale-undergraduate-introduces-new-student-database-website-prompting-privacy-concerns">Yale Daily News</a></p>
@@ -57,13 +58,6 @@
                     <img src="https://raw.githubusercontent.com/Yalies/api/master/screenshot.png">
                 </a>
             </div>
-        </div>
-        <div class="project">
-            <h4><a href="https://mailyale.com">MailYale</a></h4>
-            <p class="year">2020</p>
-            <p>MailYale helps easily generate email lists for the Yale community based on various characteristics such as year, major, residence, home state/country, and more, to help make sending emails a breeze!</p>
-            <p>Scraper system later repurposed to build <a href="https://yalies.io">Yalies</a>.</p>
-            <p><strong>Tools:</strong> Python, Flask, BeautifulSoup</p>
         </div>
         <div class="project">
             <h4><a href="https://comethru.io">Comethru</a></h4>
@@ -76,6 +70,30 @@
                 </a>
                 <a href="https://comethru.io/images/screenshots/pixel.png" class="screenshot" target="_blank">
                     <img src="https://comethru.io/images/screenshots/pixel.png">
+                </a>
+            </div>
+        </div>
+        <div class="project">
+            <h4><a href="https://yaleapis.com">YaleAPIs</a></h4>
+            <p class="year">2022</p>
+            <p>YaleAPIs indexes the many powerful Yale-related APIs available officially and unofficially, helping student developers access the information they need.</p>
+        </div>
+        <div class="project">
+            <h4><a href="https://mailyale.com">MailYale</a></h4>
+            <p class="year">2020</p>
+            <p>MailYale helps easily generate email lists for the Yale community based on various characteristics such as year, major, residence, home state/country, and more, to help make sending emails a breeze!</p>
+            <p>Scraper system later repurposed to build <a href="https://yalies.io">Yalies</a>.</p>
+            <p><strong>Tools:</strong> Python, Flask, BeautifulSoup</p>
+        </div>
+        <div class="project">
+            <h4><a href="https://yaleorgs.com">YaleOrgs</a></h4>
+            <p class="year">2022</p>
+            <p>YaleOrgs is a clean and powerful API platform for accessing information about the various student organizations and clubs at Yale in flexible JSON format. Created in 4 hours for YHack 2022.</p>
+            <p>As of September 2022, YaleOrgs has been deprecated and merged into <a href="https://yalies.io">Yalies</a>.</p>
+            <p><strong>Tools:</strong> Python, Flask, Postgres</p>
+            <div class="screenshots">
+                <a href="https://github.com/ErikBoesen/YaleOrgs" class="screenshot" target="_blank">
+                    <img src="https://raw.githubusercontent.com/ErikBoesen/YaleOrgs/main/screenshot.png">
                 </a>
             </div>
         </div>
@@ -127,7 +145,7 @@
             <p class="year">2018</p>
             <p>During my senior year on my <a href="https://1418.team">FIRST Robotics team</a>, I joined our robot drive team in the position of Drive Coach, with responsibility to keep track of the field and our objectives during each match to help the drivers plan their next move.</p>
             <p> I found it unnecessarily challenging to keep track of time during matches. Having recently purchased a Pebble watch, I decided to build a watch app to keep track of game timing and send the user configurable vibration alerts when certain driver actions need to be taken. Because Pebble as a company shut down in 2016, I sideloaded open source software from <a href="https://rebble.io">Rebble</a> in order to bring new life to a $20 watch.</p>
-            <p><strong>Tools:</strong> C</p>
+            <p><strong>Tools:</strong> C, FreeRTOS</p>
             <div class="screenshots">
                 <a href="https://raw.githubusercontent.com/frc1418/wristcoach/master/screenshot.png" class="screenshot" target="_blank">
                     <img src="https://raw.githubusercontent.com/frc1418/wristcoach/master/screenshot.png">
@@ -218,17 +236,18 @@
         <ul>
             <li>The <a href="https://github.com/ErikBoesen/yale"><code>yale</code></a> CLI tool, a helpful utility for Yale students who love the terminal</li>
             <li>Various API wrapper libraries for using Yale APIs in Python: <a href="https://github.com/ErikBoesen/yalecourses">yalecourses</a>, <a href="https://github.com/ErikBoesen/yaledining">yaledining</a>, <a href="https://github.com/Yalies/yaledirectory">yaledirectory</a>, <a href="https://github.com/ErikBoesen/yaleorgdirectory">yaleorgdirectory</a>, <a href="https://github.com/ErikBoesen/yalebuildings">yalebuildings</a>, <a href="https://github.com/ErikBoesen/yalelaundry">yalelaundry</a>, <a href="https://github.com/ErikBoesen/yaleenergydata">yaleenergydata</a>, and more</li>
-            <li><a href="https://twitter.com/puremoji">Puremoji</a>, a Twitter bot that posts wholesome emoji art (<a href="https://github.com/ErikBoesen/puremoji">GitHub</a>)</li>
+            <li>Various Twitter bots: <a href="https://twitter.com/DogParkBot">Dog Park Bot</a> (<a href="https://github.com/ErikBoesen/DogPark">GitHub</a>), <a href="https://twitter.com/puremoji">Puremoji</a>, (<a href="https://github.com/ErikBoesen/puremoji">GitHub</a>), <a href="https://twitter.com/YaleTendersDay">Yale Chicken Tenders Bot</a> (<a href="https://github.com/ErikBoesen/ChickenTendersBot">GitHub</a>)</li>
             <li><a href="https://chrome.google.com/webstore/detail/custom-admit-profile/hmgancfbilllipjkjimmmjigeaeogikf">Custom Admit Profile</a>, a Chrome extension to take advantage of the lacking server-side validation on Yale's Admitted Students website to allow submission of arbitrary answers for student profiles (<a href="https://github.com/ErikBoesen/customprofile">GitHub</a>)</li>
             <li><a href="https://github.com/ErikBoesen/onext">Onext</a>, an intelligent link shortener for browser extensions, inspired by onelink.to.</li>
             <li><a href="https://github.com/ErikBoesen/schoolopy">schoolopy</a>, a widely-used Python API wrapper library for the Schoology API</li>
             <li><a href="https://github.com/ErikBoesen/sc"><code>sc</code></a>, a CLI tool for using Schoology in the terminal</li>
             <li>FIRST Robotics robot code: <a href="https://github.com/frc1418/2019-robot">2019</a>, <a href="https://github.com/frc1418/2018-robot">2018</a>, <a href="https://github.com/frc1418/2017-robot">2017</a>.</li>
-            <li>Various JS Canvas experiments made during free time in my IB Computer Science class: <a href="https://erikboesen.com/arbo">arbo</a> (<a href="https://github.com/ErikBoesen/arbo">GitHub</a>), <a href="https://erikboesen.com/hop">hop</a> (<a href="https://github.com/ErikBoesen/hop">GitHub</a>), <a href="https://erikboesen.com/stars">stars</a> (<a href="https://github.com/ErikBoesen/stars">GitHub</a>), <a href="https://github.com/ErikBoesen/lines">lines</a> (<a href="https://github.com/ErikBoesen/lines">GitHub</a>)</li>
+            <li>Various JS Canvas experiments made during free time in my IB Computer Science class: <a href="https://erikboesen.com/arbo">arbo</a> (<a href="https://github.com/ErikBoesen/arbo">GitHub</a>), <a href="https://erikboesen.com/hop">hop</a> (<a href="https://github.com/ErikBoesen/hop">GitHub</a>), <a href="https://erikboesen.com/stars">stars</a> (<a href="https://github.com/ErikBoesen/stars">GitHub</a>), <a href="https://github.com/ErikBoesen/lines">lines</a> (<a href="https://github.com/ErikBoesen/lines">GitHub</a>), <a href="https://erikboesen.com/planes">planes</a> (<a href="https://github.com/ErikBoesen/planes">GitHub</a>)</li>
             <li><a href="https://github.com/ErikBoesen/td"><code>td</code></a>, a command line client for Todoist</li>
             <li><a href="https://github.com/ErikBoesen/mandelbrot">mandelbrot</a>, a program for graphing the Mandelbrot fractal</li>
             <li><a href="https://github.com/ErikBoesen/wif"><code>wif</code></a>, a CLI tool for managing WiFi connections on MacOS</li>
             <li><a href="https://erikboesen.com/euler">euler</a>, a calculator for executing Euler's Method. (<a href="https://github.com/ErikBoesen/euler">GitHub</a>)</li>
+            <li><a href="https://erikboesen.com/inventle">Inventle</a>, a Wordle-like game for guessing when things were invented (<a href="https://github.com/ErikBoesen/inventle">GitHub</a>)</li>
             <li><a href="https://github.com/ErikBoesen/cpparser">cpparser</a>, a program for downloading, scraping, and summarizing the Excel spreadsheets that hold <a href="https://www.uscyberpatriot.org">CyberPatriot</a> score results</li>
             <li><a href="https://github.com/ErikBoesen/cpdash">cpdash</a>, a beautiful dashboard of <a href="https://www.uscyberpatriot.org">CyberPatriot</a> team scores</li>
             <li><a href="https://erikboesen.com/cpsoundboard">cpsoundboard</a>, a soundboard of <a href="https://www.uscyberpatriot.org">CyberPatriot</a> sound effects for pranking teammates used by over 1,000 competitors per season</li>
@@ -245,8 +264,10 @@
             <li>API wrappers for <a href="https://thebluealliance.com">The Blue Alliance</a>: <a href="https://github.com/frc1418/tbapy">tbapy</a>, <a href="https://github.com/frc1418/tbago">tbago</a>, and <a href="https://github.com/frc1418/tbarb">tbarb</a>.</li>
             <li><a href="https://github.com/ErikBoesen/shirt">shirt</a>, a simple Flask/Mongo app for link shortening, and an <a href="https://github.com/ErikBoesen/shrt">accompanying CLI tool</a></li>
             <li>Various websites built for clients: <a href="https://english-now.com">English Now!</a>, <a href="https://welcomingfallschurch.org">Welcoming Falls Church</a>, etc.</li>
+        </ul>
     </main>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQ4C8Y4052"></script>
+    <script src="js/projects.js"></script>
     <script>
         if (window.location.protocol == 'https:') {
             window.dataLayer = window.dataLayer || [];

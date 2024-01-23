@@ -1,36 +1,32 @@
 body {
     overflow-x: hidden;
-    font-size: 26px;
+    font-size: 24px;
     transition: 0.2s;
+    user-select: none;
+    background: #49d;
+    color: #18304d;
 }
 body.dark {
     color: white;
-    background: #222;
-}
-#portrait {
-    max-height: 300px;
-    position: absolute;
-    bottom: 0;
-    right: 50px;
-    cursor: pointer;
+    background: #02182b;
 }
 h2 {
-    font-size: 60px;
+    font-size: 45px;
     line-height: 1;
-    margin-left: -4px;
-    margin-top: 1px;
+    margin-left: -3px;
     vertical-align: top;
-    user-select: none;
     display: inline-block;
+    max-width: 185px;
 }
-#flag {
-    display: none;
-    height: 48px;
-    margin-top: 9px;
-    margin-bottom: -2px;
+#portrait {
+    max-height: 60px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: bottom;
 }
 p {
-    color: #444;
+    color: #fff;
     max-width: 6in;
     line-height: 1.5;
     margin: 6px 0 10px;
@@ -42,66 +38,66 @@ p {
 a {
     color: inherit;
     text-decoration: none;
-    border-bottom: solid 1px #333;
+    border-bottom: solid 1px #fff;
     transition: 0.2s;
 }
 .dark a {
     border-bottom-color: #ddd;
 }
 p a#google:hover, .dark a#google {
-    color: #4086f4;
-    border-bottom-color: #4086f4;
+    color: #024ba1;
+    border-bottom-color: #024ba1;
     animation: google 20s infinite linear;
 }
 @keyframes google {
     14% {
-        color: #4086f4;
-        border-bottom-color: #4086f4;
+        color: #024ba1;
+        border-bottom-color: #024ba1;
     }
     28% {
-        color: #eb4132;
-        border-bottom-color: #eb4132;
+        color: #FA7558;
+        border-bottom-color: #FA7558;
     }
     42% {
-        color: #fbbd00;
-        border-bottom-color: #fbbd00;
+        color: #ffd966;
+        border-bottom-color: #ffd966;
     }
     56% {
-        color: #4086f4;
-        border-bottom-color: #4086f4;
+        color: #024ba1;
+        border-bottom-color: #024ba1;
     }
     70% {
-        color: #31aa52;
-        border-bottom-color: #31aa52;
+        color: #3BCE9C;
+        border-bottom-color: #3BCE9C;
     }
     84% {
-        color: #eb4132;
-        border-bottom-color: #eb4132;
+        color: #FA7558;
+        border-bottom-color: #FA7558;
     }
 }
-p a#powerschool:hover, .dark a#powerschool {
-    color: #00b6ef;
-    border-bottom-color: #00b6ef;
+p a#yalemenus:hover, .dark a#yalemenus {
+    color: #ffd966;
+    border-bottom-color: #ffd966;
 }
-p a#vexillology:hover, .dark a#vexillology {
-    color: #EEC900;
-    border-bottom-color: #EEC900;
+p a#yalies:hover, .dark a#yalies {
+    color: #024ba1;
+    border-bottom-color: #024ba1;
 }
-p a#minimalism:hover, .dark a#minimalism {
-    color: #B22222;
-    border-bottom-color: #B22222;
+p a#mebots:hover, .dark a#mebots {
+    color: #21cdfe;
+    border-bottom-color: #21cdfe;
 }
-p a#open_source:hover, .dark a#open_source {
+p a#comethru:hover, .dark a#comethru {
+    color: #FA7558;
+    border-bottom-color: #FA7558;
+}
+p a#projects:hover, .dark a#projects {
     color: #3BCE9C;
     border-bottom-color: #3BCE9C;
 }
-p a#projects:hover, .dark a#projects {
-    color: #ec8402;
-    border-bottom-color: #ec8402;
-}
 p a#resume:hover, .dark a#resume {
-    color: #077bc1;
-    border-bottom-color: #077bc1;
+    color: #ff6f32;
+    border-bottom-color: #ff6f32;
 }
 .social {
     cursor: default;
@@ -118,11 +114,11 @@ p a#resume:hover, .dark a#resume {
     border: none;
 }
 .social svg {
-    fill: #333;
+    fill: #18304d;
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    border: solid 1px #333;
+    border: solid 1px #18304d;
     padding: 4px;
     cursor: pointer;
     transition: .3s;
@@ -136,14 +132,18 @@ p a#resume:hover, .dark a#resume {
     fill: #ff6f32;
 }
 .social li#github svg:hover, .dark li#github svg {
-    border-color: #4fec51;
-    fill: #4fec51;
+    border-color: #3BCE9C;
+    fill: #3BCE9C;
 }
 .social li#linkedin svg:hover, .dark li#linkedin svg {
     border-color: #0077B5;
     fill: #0077B5;
 }
-.social li#twitter svg:hover, .dark li#twitter svg {
+.social li#twitter svg:hover {
+    border-color: #fff;
+    fill: #fff;
+}
+.dark li#twitter svg {
     border-color: #55acee;
     fill: #55acee;
 }
@@ -156,46 +156,97 @@ p a#resume:hover, .dark a#resume {
     fill: #FF0084;
 }
 .social li#night svg:hover, .dark li#night svg {
-    border-color: #EEC900;
-    fill: #EEC900;
+    border-color: #ffd966;
+    fill: #ffd966;
 }
-canvas {
+
+#control-panel {
+    height: 0;
+    overflow: hidden;
+}
+#control-panel.shown {
+    height: 320px;
+    transition: 0.8s height;
+}
+label {
+    font-size: 14px;
+    vertical-align: middle;
+    margin-top: -10px;
+    color: white;
+    display: inline-block;
+}
+label:first-child {
+    width: 100px;
+}
+label:nth-child(2) {
+    width: 20px;
+    text-align: right;
+}
+input[type='range'] {
+    filter: brightness(7) saturate(0.8) hue-rotate(40deg);
+    margin: 0 6px;
+}
+button {
+    border: solid 2px #18304d;
+    background: #18304d;
+    padding: 8px 10px;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+canvas#planes {
     position: fixed;
     top: 0;
     left: 0;
     background: transparent;
     z-index: -5;
+    width: 100vw;
+    height: 100vh;
+}
+canvas#tree {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5;
 }
 
-@media (max-width: 510px) {
+@media (max-width: 620px) {
     #portrait {
         position: static;
         max-height: auto;
-        max-width: 24vw;
+        max-width: 23vw;
+        margin-bottom: 4px;
     }
     h2 {
-        font-size: 15vw;
-    }
-    #flag {
-        margin-top: 6px;
-        margin-left: 1px;
-        height: 128px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 12.2vw;
+        max-width: 51vw;
     }
     .social svg {
         height: 60px;
         width: 60px;
     }
-    canvas {
+    canvas, #control-panel {
         display: none;
     }
 }
-@media (max-width: 410px) {
+@media (max-width: 580px) {
     #portrait {
-        max-width: 30vw;
+        max-width: 24.5vw;
+        margin-bottom: 3px;
     }
     h2 {
-        font-size: 22vw;
+        font-size: 12vw;
+        max-width: 50vw;
     }
+}
+@media (max-width: 460px) {
     .social {
         max-width: 250px;
     }

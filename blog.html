@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Erik Boesen / Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="Description" content="Some blog posts.">
+    <meta name="author" content="Erik Boesen">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content="Erik Boesen">
+    <meta property="og:description" content="Some blog posts.">
+    <meta property="og:image" content="https://erikboesen.com/images/portrait.jpg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <h2><a href="/">Erik Boesen</a></h2>
+            <h3 id="name">Blog</h3>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h4>Establishing CAS authentication through a mobile app</h4>
+            <p>Using CAS authentication is a challenging part of creating a university-based mobile application. This article aims to describe in detail how to perform CAS authentication in a mobile app, which is not well documented anywhere else or officially supported by CAS.</p>
+            <p>This guide is written with the Yale University instance of CAS in mind (accessible at <code><a href="https://secure.its.yale.edu/cas">https://secure.its.yale.edu/cas</a></code>), but should be generalizable to other universities and CAS instances.</p>
+            <p>If you have trouble, or notice an issue with this guide, please <a id="email">let me know</a>!</p>
+            <h5>Authenticating in the browser</h5>
+            <p>Conventionally, a website-based CAS authentication process requires you to redirect from your website to the CAS instance's login page (for example <code><a href="https://secure.its.yale.edu/cas/login">https://secure.its.yale.edu/cas/login</a></code>). You must include a <code>service</code> URL parameter being set to a page on your own website. As an example, if you were hosting a website at <code>https://myapp.com</code>, you would send your user to <code>https://secure.its.yale.edu/cas/login?service=https://myapp.com/login</code>. After the user logs in in the CAS page, they will be redirected to the specified <code>service</code> page, with an additional parameter <code>ticket</code> added to the URL. Your server can pick up this ticket value and send it to the CAS API to obtain XML-formatted information about the NetID of the person who's just logged in.
+            <p>Full documentation of using the CAS API in a web context can be found <a href="https://developers.yale.edu/cas-central-authentication-service">here</a>. Most languages and stacks have an existing library for executing this process, for example <a href="https://djangocas.dev">Django</a>, <a href="https://pypi.org/project/Flask-CAS/">Flask</a>, <a href="https://www.npmjs.com/package/express-cas-authentication">Express</a>, etc. You probably don't need to implement the whole flow yourself.</p>
+            <h5>What makes mobile authentication different?</h5>
+            <p>As you may have noticed, authenticating with CAS in a web browser revolves around redirecting back to a web app you're hosting, which doesn't make much sense if you're building a mobile app—it's not really possible to encode "go back to my app's previous view" into a URL parameter in this context. So, a more complex solution is necessary.</p>
+        <p>The solution for this use case involves three main steps. First, the mobile app must display an embedded WebView
+
+            How to create webview
+            Detect page changing
+            Send data to server
+            Get token
+            (Mention possible edit to flask_cas)
+        </article>
+    </main>
+    <script src="js/global.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQ4C8Y4052"></script>
+    <script>
+        if (window.location.protocol == 'https:') {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-TQ4C8Y4052');
+        }
+    </script>
+</body>
+</html>

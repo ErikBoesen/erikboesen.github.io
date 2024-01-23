@@ -1,12 +1,5 @@
 const E_NAME = document.getElementById('name');
 
-////////////////////
-// Email obfuscation
-//
-const ADDR = 'me',
-      DOMAIN = 'erikboesen.com';
-document.getElementById('email').href = 'mailto' + ':' + ADDR + '@' + DOMAIN;
-
 /////////////////////////
 // Name element splitting
 //
@@ -34,15 +27,24 @@ for (let letter of name) {
 ////////
 // Piano
 //
-var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+let audioCtx = null;
+let volume = 0.6;
 
-function playNote(frequency, duration, callback) {
-    var oscillator = audioCtx.createOscillator();
-
-    oscillator.type = 'sine';
+function playNote(frequency, callback) {
+    if (audioCtx === null) {
+        audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+    }
+    let oscillator = new OscillatorNode(audioCtx);
+    let gain = new GainNode(audioCtx);
+    oscillator.type = 'triangle';
     oscillator.frequency.value = frequency;
-    oscillator.connect(audioCtx.destination);
+    oscillator.connect(gain).connect(audioCtx.destination);
+    gain.gain.setValueAtTime(volume, audioCtx.currentTime);
     oscillator.start();
+    let duration = 500;
+    let stopTime = audioCtx.currentTime + (duration / 1000);
+    gain.gain.setValueAtTime(volume, stopTime - 0.25);
+    gain.gain.linearRampToValueAtTime(0, stopTime);
 
     setTimeout(function() {
         oscillator.stop();
@@ -85,7 +87,7 @@ function playKey(target) {
     if (target.className == CLASS) {
         let index = parseInt(target.id.slice(PREFIX.length));
         target.style.color = color();
-        playNote(notes[index], 200, function() {
+        playNote(notes[index], function() {
             target.style.removeProperty('color');
         });
     }
@@ -99,102 +101,6 @@ onmouseup = function() {
     mouseDown = false;
 }
 
-//////////////
-// Vexillology
-//
-const E_FLAG = document.getElementById('flag'),
-      E_VEXILLOLOGY = document.getElementById('vexillology');
-
-E_VEXILLOLOGY.onclick = function(e) {
-    e.preventDefault();
-    E_FLAG.style.display = 'inline-block';
-    flaggify();
-};
-
-const F_LIGHT = 1;
-const FLAGS = [
-    {
-        name: 'Austria',
-        image: 'austria',
-        colors: [
-            '#C8102E',
-        ],
-    },
-    {
-        name: 'Canada',
-        image: 'canada',
-        colors: [
-            '#EF3340',
-        ],
-    },
-    {
-        name: 'Chile',
-        image: 'chile',
-        colors: [
-            '#0033A0',
-            '#DA291C',
-        ],
-    },
-    {
-        name: 'Colorado',
-        image: 'colorado',
-        colors: [
-            '#002868',
-            '#bf0a30',
-            'gold',
-        ],
-    },
-    {
-        name: 'Washington D.C.',
-        image: 'dc',
-        colors: [
-            '#e81b39',
-        ],
-    },
-    {
-        name: 'Denmark',
-        image: 'denmark',
-        colors: [
-            '#c60c30',
-        ],
-    },
-    {
-        name: 'New Mexico',
-        image: 'new_mexico',
-        colors: [
-            '#ffd700',
-        ],
-    },
-    {
-        name: 'United Nations',
-        image: 'un',
-        colors: [
-            '#418fde',
-        ],
-    },
-];
-
-function shuffle(arr) {
-    for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-}
-shuffle(FLAGS);
-
-let flag_index = -1;
-function flaggify() {
-    flag_index = (flag_index + 1) % FLAGS.length;
-    const flag = FLAGS[flag_index];
-    E_FLAG.src = 'images/flags/' + flag.image + '.svg';
-    E_FLAG.title = flag.name;
-    E_FLAG.alt = flag.name + ' flag';
-    for (letter_index = 0; letter_index < E_NAME.childNodes.length; letter_index++) {
-        let color = flag.colors[0];
-        E_NAME.childNodes[letter_index].style.color = color;
-    }
-}
-
 /////////////////////////
 // Dark Mode
 //
@@ -203,12 +109,4 @@ let dark_mode = false;
 E_NIGHT.onclick = function() {
     dark_mode = !dark_mode;
     document.body.classList.toggle('dark');
-}
-
-/////////////////////////
-// Link to Alice Mao
-//
-const E_PORTRAIT = document.getElementById('portrait');
-E_PORTRAIT.onclick = function() {
-    window.open('https://alice-mao.com', '_blank');
 }
