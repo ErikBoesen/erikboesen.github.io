@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Erik Boesen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#4499dd">
     <meta name="Description" content="CS student at Yale, intern at Google, builder of things.">
     <meta name="author" content="Erik Boesen">
     <meta property="twitter:card" content="summary_large_image">
@@ -18,12 +18,12 @@
 
 <body>
     <main>
+        <h2 id="name">Erik Kieran Boesen</h2>
         <img src="images/drawing.png" id="portrait">
-        <div class="row">
-            <h2 id="name">Erik Boesen</h2>
-            <img src="" id="flag">
-        </div>
-        <p>Hello! I'm Erik. I'm a computer science student at Yale and a SWE intern at <a id="google" href="https://about.google">Google</a>. I'm obsessed with building software that makes people's lives better, such as <a id="open_source" href="projects">these projects</a>. I'm also interested in <a id="minimalism" href="https://mnmlist.com">minimalism</a>, <a id="vexillology" href="https://www.youtube.com/watch?v=pnv5iKB2hl4">vexillology</a>, and urban planning. Check out <a id="resume" href="resume.pdf">my resume</a>, or click below to get in touch!</p>
+        <p>Hello! I'm Erik. I love building software to bring people unexpected joy. Some of my projects include <a id="yalemenus" href="https://yalemenus.com">Yale Menus</a>, <a id="yalies" href="https://yalies.io">Yalies</a>, <a id="mebots" href="https://mebots.io">MeBots</a>, <a id="comethru" href="https://yaledailynews.com/blog/2020/01/22/new-events-app-comethru-launches">Comethru</a>, and <a id="projects" href="projects">more</a>.</p>
+        <p>At the moment, I'm launching a startup while studying at Yale. I previously interned at <a id="google" href="https://about.google">Google</a> and worked at PowerSchool.</p>
+        <p>I also care a lot about linguistics, equitable urban planning, and minimalism.</p>
+        <p>Click below to get in touch, or see <a id="resume" href="resume.pdf">my resume</a>!</p>
         <ul class="social">
             <li id="mail">
                 <a href id="email">
@@ -89,9 +89,19 @@
                 </a>
             </li>
         </ul>
+        <div id="control-panel">
+            <div id="controls"></div>
+            <button id="randomize">Randomize</button>
+        </div>
     </main>
-    <canvas></canvas>
+    <canvas id="tree"></canvas>
+    <canvas id="planes"></canvas>
+    <audio id="wind_sound" loop>
+        <source src="wind.mp3" type="audio/mpeg">
+    </audio>
+    <script src="js/global.js"></script>
     <script src="js/home.js"></script>
+    <script src="js/tree.js"></script>
     <script src="js/planes.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQ4C8Y4052"></script>
     <script>
