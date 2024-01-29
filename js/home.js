@@ -76,11 +76,11 @@ const notes = [
     1760,
 ];
 
-function colorRange() {
-    return Math.random() * 255;
+function colorRange(min, max) {
+    return min + (Math.random() * (max - min));
 }
 function color() {
-    return 'rgb(' + colorRange() + ',' + colorRange() + ',' + colorRange() + ')';
+    return 'hsl(' + colorRange(0, 255) + ',' + colorRange(60, 80) + '%,' + colorRange(60, 70) + '%)';
 }
 
 function playKey(target) {
