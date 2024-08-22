@@ -7,6 +7,11 @@ h4 {
 }
 h4 a {
     text-decoration: none;
+    border-bottom: solid 2px #aaa;
+    transition: 0.2s;
+}
+h4 a:hover {
+    border-bottom: solid 2px #333;
 }
 p {
     line-height: 1.25;
