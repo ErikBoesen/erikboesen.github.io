@@ -93,28 +93,31 @@ for (let i = 0; i < 5; i++) {
     });
 }
 
-function createSlider(option) {
+function createSlider(options, option, tree = null) {
     control = document.createElement('div');
     control.className = 'control';
 
     label = document.createElement('label');
-    label.textContent = option.title;
-    option.value = option.default;
+    label.textContent = options[option].title;
+    options[option].value = options[option].default;
     control.appendChild(label);
 
     readout = document.createElement('label');
-    readout.textContent = option.default;
-    option.readout = readout;
+    readout.textContent = options[option].default;
+    options[option].readout = readout;
     control.appendChild(readout);
 
     slider = document.createElement('input');
     slider.type = 'range';
-    slider.min = option.min;
-    slider.max = option.max;
-    slider.value = option.default;
+    slider.min = options[option].min;
+    slider.max = options[option].max;
+    slider.value = options[option].default;
     slider.id = option;
-    slider.step = option.step || 1;
-    option.slider = slider;
+    slider.step = options[option].step || 1;
+    if (tree) {
+        slider.tree = tree;
+    }
+    options[option].slider = slider;
     control.appendChild(slider);
 
     CONTROLS.appendChild(control);
@@ -122,7 +125,7 @@ function createSlider(option) {
 
 // Create sliders for global options
 for (let option in globalOptions) {
-    createSlider(globalOptions[option]);
+    createSlider(globalOptions, option);
 }
 
 // Create sliders for each tree's options
@@ -132,7 +135,7 @@ treeOptions.forEach((treeOption, index) => {
     CONTROLS.appendChild(treeHeader);
 
     for (let option in treeOption) {
-        createSlider(treeOption[option]);
+        createSlider(treeOption, option);
     }
 });
 
@@ -208,7 +211,7 @@ function drawBranch(iteration, length, startX, startY, angle, options) {
 }
 
 // Adjusted RANDOMIZE event to handle multiple trees
-RANDOMIZE.onclick = function() {
+function randomize() {
     treeOptions.forEach(options => {
         for (let option in options) {
             if (options[option].randomize === false) continue;
@@ -219,6 +222,19 @@ RANDOMIZE.onclick = function() {
         }
     });
 }
+randomize();
+RANDOMIZE.onclick = randomize;
+
+oninput = function(e) {
+    setOption(e.target.id, e.target.value, e.target.tree);
+    if (e.target.id === 'wind') {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            //audio.pause();
+        }
+    }
+};
 
 // Adjusted setOption function to accept options parameter
 function setOption(name, value, options) {
