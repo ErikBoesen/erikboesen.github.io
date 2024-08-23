@@ -73,9 +73,10 @@ for (let i = 0; i < 5; i++) {
         },
         stemLength: {
             title: 'Stem length',
-            default: 0,
-            min: 0,
+            default: -50,
+            min: -50,
             max: 100,
+            randomizeMax: 10,
         },
         stoutness: {
             title: 'Stoutness',
@@ -93,7 +94,7 @@ for (let i = 0; i < 5; i++) {
     });
 }
 
-function createSlider(options, option, tree = null) {
+function createSlider(options, option, treeIndex = null) {
     control = document.createElement('div');
     control.className = 'control';
 
@@ -114,8 +115,8 @@ function createSlider(options, option, tree = null) {
     slider.value = options[option].default;
     slider.id = option;
     slider.step = options[option].step || 1;
-    if (tree) {
-        slider.tree = tree;
+    if (treeIndex !== null) {
+        slider.setAttribute('tree-index', treeIndex);
     }
     options[option].slider = slider;
     control.appendChild(slider);
@@ -135,33 +136,9 @@ treeOptions.forEach((treeOption, index) => {
     CONTROLS.appendChild(treeHeader);
 
     for (let option in treeOption) {
-        createSlider(treeOption, option);
+        createSlider(treeOption, option, index);
     }
 });
-
-// Add event listeners to all sliders
-document.querySelectorAll('input[type="range"]').forEach(slider => {
-    slider.addEventListener('input', function() {
-        let optionName = this.id;
-        let value = parseFloat(this.value);
-
-        // Check if it's a global option
-        if (globalOptions[optionName]) {
-            setOption(optionName, value, globalOptions);
-        } else {
-            // It's a tree-specific option, find which tree it belongs to
-            treeOptions.forEach(treeOption => {
-                if (treeOption[optionName]) {
-                    setOption(optionName, value, treeOption);
-                }
-            });
-        }
-
-        startTrees(); // Redraw trees with new options
-    });
-});
-
-
 
 // Function to draw multiple trees
 function startTrees() {
@@ -226,18 +203,22 @@ randomize();
 RANDOMIZE.onclick = randomize;
 
 oninput = function(e) {
-    setOption(e.target.id, e.target.value, e.target.tree);
+    let options = globalOptions;
+    const treeIndex = e.target.getAttribute('tree-index');
+    if (treeIndex) options = treeOptions[parseInt(treeIndex)];
+    setOption(e.target.id, e.target.value, options);
     if (e.target.id === 'wind') {
         if (audio.paused) {
             audio.play();
         } else {
-            //audio.pause();
+            //audio.pause();/
         }
     }
 };
 
 // Adjusted setOption function to accept options parameter
 function setOption(name, value, options) {
+    console.log(name, value, options);
     console.log('Setting option');
     options[name].value = value;
     options[name].readout.textContent = value;

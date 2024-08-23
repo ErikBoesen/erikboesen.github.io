@@ -161,11 +161,7 @@ p a#resume:hover, .dark a#resume {
 }
 
 #control-panel {
-    height: 0;
-    overflow: hidden;
-}
-#control-panel.shown {
-    height: 320px;
+    height: 800px;
     transition: 0.8s height;
 }
 label {
