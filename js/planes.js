@@ -107,7 +107,7 @@ onkeydown = function(e) {
 
 function move() {
     for (cloud of clouds) {
-        cloud.x -= options.windSpeed.value * CLOUD_WIND_SPEED_MULTIPLIER;
+        cloud.x -= globalOptions.windSpeed.value * CLOUD_WIND_SPEED_MULTIPLIER;
     }
 
     planes = planes.filter(function(plane) {
@@ -120,7 +120,7 @@ function move() {
     for (plane of planes) {
         plane.x += plane.xSpeed;
         plane.y += plane.ySpeed;
-        plane.xSpeed -= options.windSpeed.value * PLANE_WIND_SPEED_MULTIPLIER;
+        plane.xSpeed -= globalOptions.windSpeed.value * PLANE_WIND_SPEED_MULTIPLIER;
         plane.ySpeed += G;
     }
     if (spamPlanes && Math.random() < 0.3) {

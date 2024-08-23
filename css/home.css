@@ -232,7 +232,7 @@ canvas#tree {
         height: 60px;
         width: 60px;
     }
-    canvas, #control-panel {
+    canvas#planes, #control-panel {
         display: none;
     }
 }
