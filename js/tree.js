@@ -15,6 +15,7 @@ const CONTROL_PANEL = document.getElementById('control-panel');
 const CONTROLS = document.getElementById('controls');
 const RANDOMIZE = document.getElementById('randomize');
 const RIGHT_OFFSET = 130 * RESOLUTION;
+const NUM_TREES = 5;
 var wind;
 
 // Global options shared by all trees
@@ -30,7 +31,7 @@ var globalOptions = {
 
 // Individual tree options
 var treeOptions = [];
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < NUM_TREES; i++) {
     treeOptions.push({
         branchLengthMultiplier: {
             title: 'Branch scale',
@@ -38,7 +39,7 @@ for (let i = 0; i < 5; i++) {
             min: 0,
             max: 100,
             randomizeMin: 40,
-            randomizeMax: 80,
+            randomizeMax: 70,
         },
         middleLengthMultiplier: {
             title: 'Middle scale',
@@ -46,7 +47,7 @@ for (let i = 0; i < 5; i++) {
             min: 10,
             max: 100,
             randomizeMin: 40,
-            randomizeMax: 100,
+            randomizeMax: 80,
         },
         iterations: {
             title: 'Iterations',
@@ -60,16 +61,16 @@ for (let i = 0; i < 5; i++) {
             default: 30,
             min: 0,
             max: 120,
-            randomizeMin: 5,
-            randomizeMax: 45,
+            randomizeMin: 15,
+            randomizeMax: 50,
         },
         tilt: {
             title: 'Tilt',
             default: 0,
             min: -90,
             max: 90,
-            randomizeMin: -10,
-            randomizeMax: 10,
+            randomizeMin: -3,
+            randomizeMax: 3,
         },
         stemLength: {
             title: 'Stem length',
@@ -121,7 +122,7 @@ function createSlider(options, option, treeIndex = null) {
     options[option].slider = slider;
     control.appendChild(slider);
 
-    CONTROLS.appendChild(control);
+    return control;
 }
 
 // Create sliders for global options
@@ -129,16 +130,39 @@ for (let option in globalOptions) {
     createSlider(globalOptions, option);
 }
 
+let treeOptionContainers = [];
+let buttonRow = document.createElement('div');
+buttonRow.className = 'button-row'
+treeOptions.forEach((_, index) => {
+    let button = document.createElement('button');
+    button.textContent = index + 1;
+    button.onclick = () => {
+        for (let treeOptionContainer of treeOptionContainers) {
+            treeOptionContainer.style.display = 'none';
+        }
+        treeOptionContainers[NUM_TREES - index - 1].style.display = 'block';
+    };
+    buttonRow.appendChild(button);
+});
+CONTROLS.appendChild(buttonRow);
+
 // Create sliders for each tree's options
 treeOptions.forEach((treeOption, index) => {
+    let treeOptionContainer = document.createElement('div');
     let treeHeader = document.createElement('h3');
-    treeHeader.textContent = `Tree ${index + 1}`;
-    CONTROLS.appendChild(treeHeader);
+    treeHeader.textContent = `Tree ${NUM_TREES - index}`;
+    treeOptionContainer.appendChild(treeHeader);
 
     for (let option in treeOption) {
-        createSlider(treeOption, option, index);
+        treeOptionContainer.appendChild(
+            createSlider(treeOption, option, index)
+        );
     }
+    treeOptionContainer.style.display = 'none';
+    treeOptionContainers.push(treeOptionContainer);
+    CONTROLS.appendChild(treeOptionContainer);
 });
+treeOptionContainers[NUM_TREES - 1].style.display = 'block';
 
 // Function to draw multiple trees
 function startTrees() {
