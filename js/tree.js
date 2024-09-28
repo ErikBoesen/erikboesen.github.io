@@ -127,21 +127,32 @@ function createSlider(options, option, treeIndex = null) {
 
 // Create sliders for global options
 for (let option in globalOptions) {
-    createSlider(globalOptions, option);
+    CONTROLS.appendChild(
+        createSlider(globalOptions, option)
+    );
 }
 
 let treeOptionContainers = [];
+let treeHeader = document.createElement('h3');
+treeHeader.textContent = 'Tree';
+CONTROLS.appendChild(treeHeader);
 let buttonRow = document.createElement('div');
 buttonRow.className = 'button-row'
+let treeButtons = [];
 treeOptions.forEach((_, index) => {
     let button = document.createElement('button');
     button.textContent = index + 1;
     button.onclick = () => {
         for (let treeOptionContainer of treeOptionContainers) {
-            treeOptionContainer.style.display = 'none';
+            treeOptionContainer.classList.remove('active')
         }
-        treeOptionContainers[NUM_TREES - index - 1].style.display = 'block';
+        for (let treeButton of treeButtons) {
+            treeButton.classList.remove('active');
+        }
+        treeOptionContainers[NUM_TREES - index - 1].classList.add('active');
+        treeButtons[index].classList.add('active');
     };
+    treeButtons.push(button);
     buttonRow.appendChild(button);
 });
 CONTROLS.appendChild(buttonRow);
@@ -149,20 +160,18 @@ CONTROLS.appendChild(buttonRow);
 // Create sliders for each tree's options
 treeOptions.forEach((treeOption, index) => {
     let treeOptionContainer = document.createElement('div');
-    let treeHeader = document.createElement('h3');
-    treeHeader.textContent = `Tree ${NUM_TREES - index}`;
-    treeOptionContainer.appendChild(treeHeader);
+    treeOptionContainer.classList.add('tree-option-container');
 
     for (let option in treeOption) {
         treeOptionContainer.appendChild(
             createSlider(treeOption, option, index)
         );
     }
-    treeOptionContainer.style.display = 'none';
     treeOptionContainers.push(treeOptionContainer);
     CONTROLS.appendChild(treeOptionContainer);
 });
-treeOptionContainers[NUM_TREES - 1].style.display = 'block';
+treeOptionContainers[NUM_TREES - 1].classList.add('active');
+treeButtons[0].classList.add('active');
 
 // Function to draw multiple trees
 function startTrees() {

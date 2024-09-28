@@ -164,6 +164,28 @@ p a#resume:hover, .dark a#resume {
     height: 800px;
     transition: 0.8s height;
 }
+#control-panel h3 {
+    display: inline-block;
+}
+.button-row {
+    display: inline-block;
+    vertical-align: top;
+    margin: 1px 4px 4px;
+}
+.button-row button {
+    margin-right: 4px;
+    padding: 8px 13px;
+    border: none;
+}
+.button-row button.active {
+    background: #69daff;
+}
+.tree-option-container {
+    display: none;
+}
+.tree-option-container.active {
+    display: block;
+}
 label {
     font-size: 14px;
     vertical-align: middle;
