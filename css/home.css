@@ -160,10 +160,6 @@ p a#resume:hover, .dark a#resume {
     fill: #ffd966;
 }
 
-#control-panel {
-    height: 800px;
-    transition: 0.8s height;
-}
 #control-panel h3 {
     display: inline-block;
 }
@@ -267,5 +263,10 @@ canvas#tree {
 @media (max-width: 460px) {
     .social {
         max-width: 250px;
+    }
+}
+@media (max-width: 850px) {
+    #control-panel {
+        display: none;
     }
 }
