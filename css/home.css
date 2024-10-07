@@ -266,7 +266,7 @@ canvas#tree {
     }
 }
 @media (max-width: 850px) {
-    #control-panel {
+    #control-panel, canvas#tree {
         display: none;
     }
 }
