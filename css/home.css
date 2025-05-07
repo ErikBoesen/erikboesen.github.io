@@ -17,6 +17,10 @@ h2 {
     vertical-align: top;
     display: inline-block;
     max-width: 185px;
+
+}
+.dark h2 {
+    text-shadow: 0 0 5px rgba(2, 24, 43, 0.7);
 }
 #portrait {
     max-height: 60px;
@@ -74,6 +78,10 @@ p a#google:hover, .dark a#google {
         color: #FA7558;
         border-bottom-color: #FA7558;
     }
+}
+p a#ripplify:hover, .dark a#ripplify {
+    color: #1DB954;
+    border-bottom-color: #1DB954;
 }
 p a#yalemenus:hover, .dark a#yalemenus {
     color: #ffd966;
@@ -160,8 +168,15 @@ p a#resume:hover, .dark a#resume {
     fill: #ffd966;
 }
 
+#control-panel {
+    margin-top: 10px;
+}
 #control-panel h3 {
     display: inline-block;
+    margin-top: 3px;
+}
+.control {
+    margin-top: 3px;
 }
 .button-row {
     display: inline-block;
@@ -183,7 +198,7 @@ p a#resume:hover, .dark a#resume {
     display: block;
 }
 label {
-    font-size: 14px;
+    font-size: 18px;
     vertical-align: middle;
     margin-top: -10px;
     color: white;
