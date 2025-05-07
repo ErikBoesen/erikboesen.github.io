@@ -23,7 +23,7 @@ var globalOptions = {
     windSpeed: {
         title: 'Wind',
         default: 5,
-        min: 0,
+        min: -100,
         max: 100,
         randomize: false,
     }
