@@ -170,10 +170,39 @@ p a#resume:hover, .dark a#resume {
 }
 
 #control-panel {
-    margin-top: 10px;
+    position: fixed;
+    right: -300px; /* Start off-screen */
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(24, 48, 77, 0.9);
+    width: 300px;
+    padding: 20px;
+    transition: right 0.3s ease;
+    border-radius: 10px 0 0 10px;
+    z-index: 100;
 }
+
+#control-panel.open {
+    right: 0;
+}
+
+#tree-options-tab {
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: right center;
+    background: rgba(24, 48, 77, 0.9);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px 10px 0 0;
+    white-space: nowrap;
+}
+
 .control {
     margin-top: 3px;
+    color: white;
 }
 .button-row {
     display: inline-block;
@@ -286,7 +315,10 @@ canvas#tree {
     }
 }
 @media (max-width: 850px) {
-    #control-panel, canvas#tree {
+    #control-panel {
+        display: none;
+    }
+    canvas#tree {
         display: none;
     }
 }

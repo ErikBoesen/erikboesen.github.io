@@ -202,9 +202,10 @@ function drawBranch(iteration, length, startX, startY, angle, options) {
     if (options.iterations.value - iteration < (10 - options.growthStage.value)) {
         ownLength /= options.smolness.value;
     }
-    var endX = startX + Math.cos(angle) * ownLength;
-    var endY = startY + Math.sin(angle) * ownLength;
+    let endX = startX + Math.cos(angle) * ownLength;
+    let endY = startY + Math.sin(angle) * ownLength;
     treeCtx.lineTo(endX, endY);
+    let wind = (2+Math.sin(time / 20 * 2*Math.PI)) * globalOptions.windSpeed.value / 20;
 
     drawBranch(iteration - 1,
                length * options.branchLengthMultiplier.value / 100,
@@ -263,9 +264,34 @@ var time = 0;
 startTrees();
 setInterval(function() {
     time++;
-    wind = (2+Math.sin(time / 20 * 2*Math.PI)) * globalOptions.windSpeed.value / 20;
     //console.log(globalOptions.windSpeed.value, globalOptions.windSpeed.max);
     audio.volume = globalOptions.windSpeed.value / globalOptions.windSpeed.max;
     startTrees();
 }, 50);
+
+// Add tab for tree options
+const treeOptionsTab = document.createElement('div');
+treeOptionsTab.id = 'tree-options-tab';
+treeOptionsTab.textContent = 'Tree Options';
+CONTROL_PANEL.appendChild(treeOptionsTab);
+
+// Handle tab click to toggle panel
+treeOptionsTab.addEventListener('click', () => {
+    CONTROL_PANEL.classList.toggle('open');
+});
+
+// Remove the automatic showing of control panel on mouse down
+addEventListener('mousedown', function(e) {
+    console.log('Mouse down!');
+    if (instructions) {
+        instructions.parentNode.removeChild(instructions);
+        instructions = null;
+    }
+    mouseDown = true;
+    currentPlane = {
+        x: mousePosition.x,
+        y: mousePosition.y,
+    };
+    document.body.style.cursor = 'cell';
+});
 
