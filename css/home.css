@@ -172,11 +172,11 @@ p a#resume:hover, .dark a#resume {
 #control-panel {
     position: fixed;
     right: -400px;
-    top: 30px;
-    background: rgba(24, 48, 77, 0.9);
+    bottom: 30px;
+    background: rgba(24, 48, 77, 0.8);
     padding: 20px;
     transition: right 0.3s ease;
-    border-bottom-left-radius: 10px 0 0 10px;
+    border-top-left-radius: 10px;
     z-index: 100;
     width: 400px;
 }
@@ -187,10 +187,10 @@ p a#resume:hover, .dark a#resume {
 
 #control-panel-tab {
     position: absolute;
-    top: 0;
-    left: -42px;
-    transform-origin: left top;
-    transform: rotate(-90deg) translateX(-100%);
+    bottom: 0;
+    left: 0;
+    transform-origin: left bottom;
+    transform: rotate(-90deg);
     background: rgba(24, 48, 77, 0.9);
     color: white;
     padding: 10px 20px;

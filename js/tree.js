@@ -15,7 +15,7 @@ const CONTROL_PANEL_TAB = document.getElementById('control-panel-tab');
 const CONTROL_PANEL = document.getElementById('control-panel');
 const CONTROLS = document.getElementById('controls');
 const RANDOMIZE = document.getElementById('randomize');
-const RIGHT_OFFSET = 130 * RESOLUTION;
+const SIDE_OFFSET = 130 * RESOLUTION;
 const NUM_TREES = 8;
 var wind;
 
@@ -148,7 +148,7 @@ treeOptions.forEach((_, index) => {
         for (let treeButton of treeButtons) {
             treeButton.classList.remove('active');
         }
-        treeOptionContainers[NUM_TREES - index - 1].classList.add('active');
+        treeOptionContainers[index].classList.add('active');
         treeButtons[index].classList.add('active');
     };
     treeButtons.push(button);
@@ -169,7 +169,7 @@ treeOptions.forEach((treeOption, index) => {
     treeOptionContainers.push(treeOptionContainer);
     CONTROLS.appendChild(treeOptionContainer);
 });
-treeOptionContainers[NUM_TREES - 1].classList.add('active');
+treeOptionContainers[0].classList.add('active');
 treeButtons[0].classList.add('active');
 
 // Function to draw multiple trees
@@ -179,7 +179,7 @@ function startTrees() {
 
     treeOptions.forEach((options, index) => {
         treeCtx.beginPath();
-        let xOffset = treeCanvas.width - RIGHT_OFFSET - index * 200; // Calculate x offset for each tree
+        let xOffset = SIDE_OFFSET + index * 200;
         treeCtx.moveTo(xOffset, treeCanvas.height);
         treeCtx.lineTo(xOffset, treeCanvas.height - parseInt(options.stemLength.value));
 
