@@ -1,6 +1,6 @@
 body {
     overflow-x: hidden;
-    font-size: 18px;
+    font-size: 20px;
     transition: 0.2s;
     user-select: none;
     background: #49d;
@@ -171,27 +171,26 @@ p a#resume:hover, .dark a#resume {
 
 #control-panel {
     position: fixed;
-    right: -300px; /* Start off-screen */
-    top: 50%;
-    transform: translateY(-50%);
+    right: -400px;
+    top: 30px;
     background: rgba(24, 48, 77, 0.9);
-    width: 300px;
     padding: 20px;
     transition: right 0.3s ease;
-    border-radius: 10px 0 0 10px;
+    border-bottom-left-radius: 10px 0 0 10px;
     z-index: 100;
+    width: 400px;
 }
 
 #control-panel.open {
     right: 0;
 }
 
-#tree-options-tab {
+#control-panel-tab {
     position: absolute;
-    left: -40px;
-    top: 50%;
-    transform: translateY(-50%) rotate(-90deg);
-    transform-origin: right center;
+    top: 0;
+    left: -42px;
+    transform-origin: left top;
+    transform: rotate(-90deg) translateX(-100%);
     background: rgba(24, 48, 77, 0.9);
     color: white;
     padding: 10px 20px;
