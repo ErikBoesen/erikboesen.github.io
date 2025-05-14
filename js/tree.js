@@ -15,7 +15,7 @@ const CONTROL_PANEL = document.getElementById('control-panel');
 const CONTROLS = document.getElementById('controls');
 const RANDOMIZE = document.getElementById('randomize');
 const RIGHT_OFFSET = 130 * RESOLUTION;
-const NUM_TREES = 5;
+const NUM_TREES = 8;
 var wind;
 
 // Global options shared by all trees
@@ -79,9 +79,9 @@ for (let i = 0; i < NUM_TREES; i++) {
             max: 100,
             randomizeMax: 10,
         },
-        stoutness: {
-            title: 'Stoutness',
-            default: 2,
+        growthStage: {
+            title: 'Growth stage',
+            default: 10,
             min: 0,
             max: 15,
         },
@@ -198,7 +198,7 @@ function drawBranch(iteration, length, startX, startY, angle, options) {
     treeCtx.lineWidth = iteration;
     treeCtx.moveTo(startX, startY);
     let ownLength = length;
-    if (options.iterations.value - iteration < options.stoutness.value) {
+    if (options.iterations.value - iteration < (10 - options.growthStage.value)) {
         ownLength /= options.stoutnessMultiplier.value;
     }
     var endX = startX + Math.cos(angle) * ownLength;
