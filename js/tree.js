@@ -11,6 +11,7 @@ addEventListener('resize', setTreeCanvasDimensions);
 
 var treeCtx = treeCanvas.getContext('2d');
 
+const CONTROL_PANEL_TAB = document.getElementById('control-panel-tab');
 const CONTROL_PANEL = document.getElementById('control-panel');
 const CONTROLS = document.getElementById('controls');
 const RANDOMIZE = document.getElementById('randomize');
@@ -182,7 +183,7 @@ function startTrees() {
         treeCtx.moveTo(xOffset, treeCanvas.height);
         treeCtx.lineTo(xOffset, treeCanvas.height - parseInt(options.stemLength.value));
 
-        drawBranch(options.iterations.value, RESOLUTION * 100, xOffset, treeCanvas.height - parseInt(options.stemLength.value), 3 * Math.PI / 2, options);
+        drawBranch(options.iterations.value, RESOLUTION * 100, xOffset, treeCanvas.height - parseInt(options.stemLength.value), 3 * Math.PI / 2, options, index);
         treeCtx.stroke();
     });
 }
@@ -192,7 +193,7 @@ function radians(degrees) {
 }
 
 // Adjusted drawBranch function to accept options parameter
-function drawBranch(iteration, length, startX, startY, angle, options) {
+function drawBranch(iteration, length, startX, startY, angle, options, treeIndex) {
     if (iteration <= 0) {
         return;
     }
@@ -210,15 +211,15 @@ function drawBranch(iteration, length, startX, startY, angle, options) {
     drawBranch(iteration - 1,
                length * options.branchLengthMultiplier.value / 100,
                endX, endY,
-               angle + radians(parseFloat(options.spread.value) + parseFloat(options.tilt.value) - wind), options);
+               angle + radians(parseFloat(options.spread.value) + parseFloat(options.tilt.value) - wind), options, treeIndex);
     drawBranch(iteration - 1,
                length * options.middleLengthMultiplier.value / 100,
                endX, endY,
-               angle + radians(parseFloat(options.tilt.value) - wind), options);
+               angle + radians(parseFloat(options.tilt.value) - wind), options, treeIndex);
     drawBranch(iteration - 1,
                length * options.branchLengthMultiplier.value / 100,
                endX, endY,
-               angle + radians(-parseFloat(options.spread.value) + parseFloat(options.tilt.value) - wind), options);
+               angle + radians(-parseFloat(options.spread.value) + parseFloat(options.tilt.value) - wind), options, treeIndex);
 }
 
 // Adjusted RANDOMIZE event to handle multiple trees
@@ -252,8 +253,6 @@ oninput = function(e) {
 
 // Adjusted setOption function to accept options parameter
 function setOption(name, value, options) {
-    console.log(name, value, options);
-    console.log('Setting option');
     options[name].value = value;
     options[name].readout.textContent = value;
 };
@@ -269,29 +268,7 @@ setInterval(function() {
     startTrees();
 }, 50);
 
-// Add tab for tree options
-const treeOptionsTab = document.createElement('div');
-treeOptionsTab.id = 'tree-options-tab';
-treeOptionsTab.textContent = 'Tree Options';
-CONTROL_PANEL.appendChild(treeOptionsTab);
 
-// Handle tab click to toggle panel
-treeOptionsTab.addEventListener('click', () => {
+CONTROL_PANEL_TAB.addEventListener('click', () => {
     CONTROL_PANEL.classList.toggle('open');
 });
-
-// Remove the automatic showing of control panel on mouse down
-addEventListener('mousedown', function(e) {
-    console.log('Mouse down!');
-    if (instructions) {
-        instructions.parentNode.removeChild(instructions);
-        instructions = null;
-    }
-    mouseDown = true;
-    currentPlane = {
-        x: mousePosition.x,
-        y: mousePosition.y,
-    };
-    document.body.style.cursor = 'cell';
-});
-
