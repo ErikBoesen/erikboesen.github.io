@@ -193,6 +193,9 @@ function radians(degrees) {
 
 // Adjusted drawBranch function to accept options parameter
 function drawBranch(iteration, length, startX, startY, angle, options) {
+    if (iteration <= 0) {
+        return;
+    }
     treeCtx.lineWidth = iteration;
     treeCtx.moveTo(startX, startY);
     let ownLength = length;
@@ -202,20 +205,19 @@ function drawBranch(iteration, length, startX, startY, angle, options) {
     var endX = startX + Math.cos(angle) * ownLength;
     var endY = startY + Math.sin(angle) * ownLength;
     treeCtx.lineTo(endX, endY);
-    if (iteration > 0) {
-        drawBranch(iteration - 1,
-                   length * options.branchLengthMultiplier.value / 100,
-                   endX, endY,
-                   angle + radians(parseFloat(options.spread.value) + parseFloat(options.tilt.value) - wind), options);
-        drawBranch(iteration - 1,
-                   length * options.middleLengthMultiplier.value / 100,
-                   endX, endY,
-                   angle + radians(parseFloat(options.tilt.value) - wind), options);
-        drawBranch(iteration - 1,
-                   length * options.branchLengthMultiplier.value / 100,
-                   endX, endY,
-                   angle + radians(-parseFloat(options.spread.value) + parseFloat(options.tilt.value) - wind), options);
-    }
+
+    drawBranch(iteration - 1,
+               length * options.branchLengthMultiplier.value / 100,
+               endX, endY,
+               angle + radians(parseFloat(options.spread.value) + parseFloat(options.tilt.value) - wind), options);
+    drawBranch(iteration - 1,
+               length * options.middleLengthMultiplier.value / 100,
+               endX, endY,
+               angle + radians(parseFloat(options.tilt.value) - wind), options);
+    drawBranch(iteration - 1,
+               length * options.branchLengthMultiplier.value / 100,
+               endX, endY,
+               angle + radians(-parseFloat(options.spread.value) + parseFloat(options.tilt.value) - wind), options);
 }
 
 // Adjusted RANDOMIZE event to handle multiple trees
