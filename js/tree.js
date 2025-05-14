@@ -133,9 +133,6 @@ for (let option in globalOptions) {
 }
 
 let treeOptionContainers = [];
-let treeHeader = document.createElement('h3');
-treeHeader.textContent = 'Tree';
-CONTROLS.appendChild(treeHeader);
 let buttonRow = document.createElement('div');
 buttonRow.className = 'button-row'
 let treeButtons = [];

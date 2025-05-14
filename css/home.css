@@ -5,6 +5,7 @@ body {
     user-select: none;
     background: #49d;
     color: #18304d;
+    cursor: cell;
 }
 body.dark {
     color: white;
@@ -25,7 +26,6 @@ h2 {
 #portrait {
     max-height: 60px;
     margin-bottom: 2px;
-    cursor: pointer;
     display: inline-block;
     vertical-align: bottom;
 }
@@ -44,6 +44,7 @@ a {
     text-decoration: none;
     border-bottom: solid 1px #fff;
     transition: 0.2s;
+    cursor: crosshair;
 }
 .dark a {
     border-bottom-color: #ddd;
@@ -108,17 +109,17 @@ p a#resume:hover, .dark a#resume {
     border-bottom-color: #ff6f32;
 }
 .social {
-    cursor: default;
     list-style: none;
     margin-top: 20px;
     user-select: none;
 }
 .social li {
+    cursor: default;
     display: inline-block;
     margin: 2px;
 }
 .social a {
-    cursor: default;
+    cursor: cell;
     border: none;
 }
 .social svg {
@@ -171,26 +172,24 @@ p a#resume:hover, .dark a#resume {
 #control-panel {
     margin-top: 10px;
 }
-#control-panel h3 {
-    display: inline-block;
-    margin-top: 9px;
-}
 .control {
     margin-top: 3px;
 }
 .button-row {
     display: inline-block;
     vertical-align: top;
-    margin: 4px;
+    margin: 4px 0;
 }
 .button-row button {
-    margin-left: 2px;
     margin-right: 4px;
     padding: 8px 13px;
     border: none;
 }
 .button-row button.active {
     background: #69daff;
+}
+.button-row button.active:before {
+    content: 'TREE ';
 }
 .tree-option-container {
     display: none;
