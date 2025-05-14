@@ -15,7 +15,7 @@ const CONTROL_PANEL_TAB = document.getElementById('control-panel-tab');
 const CONTROL_PANEL = document.getElementById('control-panel');
 const CONTROLS = document.getElementById('controls');
 const RANDOMIZE = document.getElementById('randomize');
-const SIDE_OFFSET = 100 * RESOLUTION;
+const SIDE_OFFSET = 20 * RESOLUTION;
 const NUM_TREES = 12;
 var wind;
 
@@ -206,7 +206,7 @@ function drawBranch(iteration, length, startX, startY, angle, options, treeIndex
     let endX = startX + Math.cos(angle) * ownLength;
     let endY = startY + Math.sin(angle) * ownLength;
     treeCtx.lineTo(endX, endY);
-    let wind = (2+Math.sin(time / 20 * 2*Math.PI)) * globalOptions.windSpeed.value / 20;
+    let wind = (2+Math.sin(treeIndex + time / 20 * 2*Math.PI)) * globalOptions.windSpeed.value / 20;
 
     drawBranch(iteration - 1,
                length * options.branchLengthMultiplier.value / 100,

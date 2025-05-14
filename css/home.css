@@ -312,12 +312,12 @@ canvas#tree {
     .social {
         max-width: 250px;
     }
-}
-@media (max-width: 850px) {
     #control-panel {
         display: none;
     }
     canvas#tree {
         display: none;
     }
+}
+@media (max-width: 850px) {
 }
