@@ -81,12 +81,13 @@ for (let i = 0; i < NUM_TREES; i++) {
         },
         growthStage: {
             title: 'Growth stage',
-            default: 10,
+            default: 7,
             min: 0,
-            max: 15,
+            max: 10,
+            randomizeMax: 8,
         },
-        stoutnessMultiplier: {
-            title: 'Stoutness factor',
+        smolness: {
+            title: 'Smolness',
             default: 2,
             min: 0.9,
             max: 5,
@@ -196,7 +197,7 @@ function drawBranch(iteration, length, startX, startY, angle, options) {
     treeCtx.moveTo(startX, startY);
     let ownLength = length;
     if (options.iterations.value - iteration < (10 - options.growthStage.value)) {
-        ownLength /= options.stoutnessMultiplier.value;
+        ownLength /= options.smolness.value;
     }
     var endX = startX + Math.cos(angle) * ownLength;
     var endY = startY + Math.sin(angle) * ownLength;
