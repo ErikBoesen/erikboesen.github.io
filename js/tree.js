@@ -15,8 +15,8 @@ const CONTROL_PANEL_TAB = document.getElementById('control-panel-tab');
 const CONTROL_PANEL = document.getElementById('control-panel');
 const CONTROLS = document.getElementById('controls');
 const RANDOMIZE = document.getElementById('randomize');
-const SIDE_OFFSET = 130 * RESOLUTION;
-const NUM_TREES = 8;
+const SIDE_OFFSET = 100 * RESOLUTION;
+const NUM_TREES = 12;
 var wind;
 
 // Global options shared by all trees

@@ -171,14 +171,14 @@ p a#resume:hover, .dark a#resume {
 
 #control-panel {
     position: fixed;
-    right: -400px;
+    right: -360px;
     bottom: 30px;
     background: rgba(24, 48, 77, 0.8);
     padding: 20px;
     transition: right 0.3s ease;
     border-top-left-radius: 10px;
     z-index: 100;
-    width: 400px;
+    width: 360px;
 }
 
 #control-panel.open {
