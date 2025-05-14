@@ -173,7 +173,7 @@ p a#resume:hover, .dark a#resume {
 }
 #control-panel h3 {
     display: inline-block;
-    margin-top: 3px;
+    margin-top: 9px;
 }
 .control {
     margin-top: 3px;
@@ -181,9 +181,10 @@ p a#resume:hover, .dark a#resume {
 .button-row {
     display: inline-block;
     vertical-align: top;
-    margin: 1px 4px 4px;
+    margin: 4px;
 }
 .button-row button {
+    margin-left: 2px;
     margin-right: 4px;
     padding: 8px 13px;
     border: none;
@@ -196,6 +197,9 @@ p a#resume:hover, .dark a#resume {
 }
 .tree-option-container.active {
     display: block;
+}
+#randomize {
+    margin-top: 10px;
 }
 label {
     font-size: 18px;
@@ -218,10 +222,10 @@ input[type='range'] {
 button {
     border: solid 2px #18304d;
     background: #18304d;
-    padding: 8px 10px;
+    padding: 8px 13px;
     color: white;
-    font: inherit;
     border-radius: 40px;
+    font: inherit;
     cursor: pointer;
 }
 
