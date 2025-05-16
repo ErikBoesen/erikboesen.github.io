@@ -79,7 +79,7 @@ for (let i = 0; i < NUM_TREES; i++) {
             default: -50,
             min: -50,
             max: 100,
-            randomizeMax: 10,
+            randomizeMax: -20,
         },
         growthStage: {
             title: 'Growth stage',
@@ -220,8 +220,8 @@ function drawBranch(iteration, length, startX, startY, angle, options, treeIndex
     let endX = startX + Math.cos(angle) * ownLength;
     let endY = startY + Math.sin(angle) * ownLength;
     treeCtx.lineTo(endX, endY);
-    let wind = (2+Math.sin(treeIndex + time / 20 * 2*Math.PI)) * globalOptions.windSpeed.value / 20;
 
+    let wind = (2+Math.sin(treeIndex + time / 20 * 2*Math.PI)) * globalOptions.windSpeed.value / 20;
     drawBranch(iteration - 1,
                length * options.branchLengthMultiplier.value / 100,
                endX, endY,

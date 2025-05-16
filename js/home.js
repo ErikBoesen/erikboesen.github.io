@@ -104,9 +104,9 @@ onmouseup = function() {
 /////////////////////////
 // Dark Mode
 //
-const E_NIGHT = document.getElementById('night');
+const E_ORB = document.getElementById('orb');
 let dark_mode = false;
-E_NIGHT.onclick = function() {
+E_ORB.onclick = function() {
     dark_mode = !dark_mode;
     document.body.classList.toggle('dark');
 }

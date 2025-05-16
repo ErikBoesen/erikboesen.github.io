@@ -32,7 +32,7 @@ let planes = [];
 function generateCloud(x) {
     let cloud = {
         x: x,
-        y: Math.random() * 200 + 300,
+        y: Math.random() * 200 + 550,
         components: [],
     };
     mainComponentR = Math.random() * 150 + 150;
