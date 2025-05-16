@@ -17,7 +17,7 @@ const CONTROLS = document.getElementById('controls');
 const RANDOMIZE = document.getElementById('randomize');
 const SIDE_OFFSET = 20 * RESOLUTION;
 const TREE_SPACING = 100;
-const NUM_TREES = 18;
+const NUM_TREES = 35;
 var wind;
 
 // Global options shared by all trees
@@ -41,7 +41,7 @@ for (let i = 0; i < NUM_TREES; i++) {
             min: 0,
             max: 100,
             randomizeMin: 40,
-            randomizeMax: 70,
+            randomizeMax: 60,
         },
         middleLengthMultiplier: {
             title: 'Middle scale',
@@ -49,11 +49,11 @@ for (let i = 0; i < NUM_TREES; i++) {
             min: 10,
             max: 100,
             randomizeMin: 40,
-            randomizeMax: 80,
+            randomizeMax: 70,
         },
         iterations: {
             title: 'Iterations',
-            default: 8,
+            default: 150,
             min: 6,
             max: 10,
             randomize: false,
@@ -86,7 +86,7 @@ for (let i = 0; i < NUM_TREES; i++) {
             default: 7,
             min: 0,
             max: 10,
-            randomizeMax: 8,
+            randomizeMax: 3,
         },
         smolness: {
             title: 'Smolness',
