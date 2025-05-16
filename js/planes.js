@@ -29,13 +29,28 @@ let currentPlane = null;
 let startPosition = null;
 let planes = [];
 
+const CLOUD_IMAGE_DIMENSIONS = [
+    [2923, 1202], [2986, 1853], [2247, 823], [2858, 1326], [2214, 1291], [1992, 1103], [4336, 2099], [2097, 1115], [1657, 1138], [2420, 1338], [2653, 1267], [3033, 1696], [2181, 638], [2674, 526], [1923, 892], [3358, 2230], [3232, 1232], [2993, 1967], [2065, 1211], [1608, 1065], [1440, 1093], [2936, 1824], [3490, 2759], [1934, 1140], [2072, 1153], [2217, 1814], [3021, 2194], [3300, 2949], [3967, 2443], [3580, 1934], [3007, 703], [3411, 1746], [3852, 1420], [4452, 2495], [3495, 1646], [3732, 1983], [3709, 2015], [2478, 1372], [2781, 1337], [1316, 926], [1533, 796], [1422, 822], [2081, 891], [1556, 994], [1885, 932], [3259, 1916], [2819, 1225], [3091, 1610], [3335, 1960], [2610, 2276],
+];
+
+function randomDigit() {
+    return String(Math.floor(Math.random() * 10));
+}
+
 function generateCloud(x) {
     let cloud = {
         x: x,
         y: Math.random() * 200 + 550,
         components: [],
     };
-    mainComponentR = Math.random() * 150 + 150;
+    let imageIndex = Math.floor(Math.random() * 50);
+    let [width, height] = CLOUD_IMAGE_DIMENSIONS[imageIndex];
+    cloud.width = width / 5;
+    cloud.height = height / 5;
+    let image = new Image(width, height);
+    image.src = 'images/clouds/' + imageIndex + '.png';
+    cloud.image = image;
+    mainComponentR = Math.random() * 150 + 200;
     cloud.components.push({xo: 0, yo: 0, r: 200});
     cloud.components.push({xo: (Math.random() * -mainComponentR / 2) - mainComponentR / 2, yo: Math.random() * 60 - 30, r: (Math.random() * mainComponentR / 2) + mainComponentR / 3});
     cloud.components.push({xo: (Math.random() * mainComponentR / 2) + mainComponentR / 2, yo: Math.random() * 60 - 30, r: (Math.random() * mainComponentR / 2) + mainComponentR / 3});
@@ -140,11 +155,14 @@ function draw() {
 
     for (cloud of clouds) {
         for (component of cloud.components) {
+            /*
             ctx.beginPath();
             ctx.arc(cloud.x + component.xo, cloud.y + component.yo, component.r, 0, 2 * Math.PI);
             ctx.fillStyle = 'white';
             ctx.fill();
+            */
         }
+        ctx.drawImage(cloud.image, cloud.x, cloud.y, cloud.width, cloud.height);
     }
 
     shownPlanes = planes.slice();

@@ -3,7 +3,6 @@ body {
     font-size: 20px;
     transition: 0.2s;
     user-select: none;
-    /*background: linear-gradient(to top right, #49d, #56a3e0);*/
     background: #49d;
     color: #18304d;
     min-height: 100%;
@@ -33,7 +32,7 @@ h2 {
 }
 p {
     color: #fff;
-    max-width: 6in;
+    max-width: 5in;
     line-height: 1.5;
     margin: 6px 0 10px;
     transition: 0.2s;
@@ -172,6 +171,7 @@ p a#resume:hover, .dark a#resume {
     fill: #ffd966;
 }
 #orb {
+    margin-bottom: 10px;
     height: 50px;
     width: 50px;
     background: #fefe00;
