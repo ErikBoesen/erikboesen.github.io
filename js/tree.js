@@ -206,7 +206,12 @@ function drawBranch(iteration, length, startX, startY, angle, options, treeIndex
     if (iteration <= 0) {
         return;
     }
-    treeCtx.lineWidth = iteration;
+    // Also early exit if the lines have gotten really small, to conserve resources
+    if (length < 3) {
+        return;
+    }
+    //treeCtx.lineWidth = iteration;
+    treeCtx.lineWidth = 1;
     treeCtx.moveTo(startX, startY);
     let ownLength = length;
     if (options.iterations.value - iteration < (10 - options.growthStage.value)) {
