@@ -40,8 +40,7 @@ function randomDigit() {
 function generateCloud(x) {
     let cloud = {
         x: x,
-        y: Math.random() * 200 + 550,
-        components: [],
+        y: Math.random() * 200 + 400,
     };
     let imageIndex = Math.floor(Math.random() * 50);
     let [width, height] = CLOUD_IMAGE_DIMENSIONS[imageIndex];
@@ -50,17 +49,13 @@ function generateCloud(x) {
     let image = new Image(width, height);
     image.src = 'images/clouds/' + imageIndex + '.png';
     cloud.image = image;
-    mainComponentR = Math.random() * 150 + 200;
-    cloud.components.push({xo: 0, yo: 0, r: 200});
-    cloud.components.push({xo: (Math.random() * -mainComponentR / 2) - mainComponentR / 2, yo: Math.random() * 60 - 30, r: (Math.random() * mainComponentR / 2) + mainComponentR / 3});
-    cloud.components.push({xo: (Math.random() * mainComponentR / 2) + mainComponentR / 2, yo: Math.random() * 60 - 30, r: (Math.random() * mainComponentR / 2) + mainComponentR / 3});
     return cloud;
 }
 let clouds = [];
 let cloudX = planesCanvas.width/8;
 for (let i = 0; i < 10; i++) {
     clouds.push(generateCloud(cloudX));
-    cloudX += Math.random() * (planesCanvas.width / 2) + (planesCanvas.width / 8);
+    cloudX += Math.random() * (planesCanvas.width / 4) + (planesCanvas.width / 16);
 }
 
 let mouseDown = false;
@@ -154,13 +149,8 @@ function draw() {
     ctx.clearRect(0, 0, planesCanvas.width, planesCanvas.height);
 
     for (cloud of clouds) {
-        for (component of cloud.components) {
-            /*
-            ctx.beginPath();
-            ctx.arc(cloud.x + component.xo, cloud.y + component.yo, component.r, 0, 2 * Math.PI);
-            ctx.fillStyle = 'white';
-            ctx.fill();
-            */
+        if (cloud.x > planesCanvas.width) {
+            continue;
         }
         ctx.drawImage(cloud.image, cloud.x, cloud.y, cloud.width, cloud.height);
     }

@@ -174,14 +174,14 @@ p a#resume:hover, .dark a#resume {
     margin-bottom: 10px;
     height: 50px;
     width: 50px;
-    background: #fefe00;
+    background: #ffff66;
     border-radius: 100%;
     cursor: cell;
-    box-shadow: 0 0 15px rgba(254, 254, 0, 0.7);
-    transition: 1s;
+    box-shadow: 0 0 15px rgba(255,255,102, 0.7);
+    transition: .5s;
 }
 #orb:hover {
-    box-shadow: 0 0 15px rgba(254, 254, 0, 0.7);
+    box-shadow: 0 0 20px rgba(254, 254, 0, 0.9);
 }
 .dark #orb {
     background: transparent;
