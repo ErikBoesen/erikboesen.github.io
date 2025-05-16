@@ -315,9 +315,4 @@ canvas#tree {
     #control-panel {
         display: none;
     }
-    canvas#tree {
-        display: none;
-    }
-}
-@media (max-width: 850px) {
 }
