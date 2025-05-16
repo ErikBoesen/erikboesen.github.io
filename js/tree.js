@@ -95,6 +95,14 @@ for (let i = 0; i < NUM_TREES; i++) {
             max: 5,
             step: 0.1,
         },
+        leftMargin: {
+            title: 'Left margin',
+            default: 100,
+            min: 20,
+            max: 300,
+            randomizeMin: 90,
+            randomizeMax: 100,
+        }
     });
 }
 
@@ -180,7 +188,7 @@ function startTrees() {
 
     treeOptions.forEach((options, index) => {
         treeCtx.beginPath();
-        let xOffset = SIDE_OFFSET + index * TREE_SPACING;
+        let xOffset = SIDE_OFFSET + index * options.leftMargin.value;
         treeCtx.moveTo(xOffset, treeCanvas.height);
         treeCtx.lineTo(xOffset, treeCanvas.height - parseInt(options.stemLength.value));
 
