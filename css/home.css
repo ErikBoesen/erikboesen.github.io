@@ -3,8 +3,9 @@ body {
     font-size: 20px;
     transition: 0.2s;
     user-select: none;
-    background: #49d;
+    background: linear-gradient(to bottom left, #49d, #56a3e0);
     color: #18304d;
+    min-height: 100%;
     cursor: crosshair;
 }
 body.dark {
