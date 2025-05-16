@@ -16,7 +16,8 @@ const CONTROL_PANEL = document.getElementById('control-panel');
 const CONTROLS = document.getElementById('controls');
 const RANDOMIZE = document.getElementById('randomize');
 const SIDE_OFFSET = 20 * RESOLUTION;
-const NUM_TREES = 12;
+const TREE_SPACING = 100;
+const NUM_TREES = 18;
 var wind;
 
 // Global options shared by all trees
@@ -179,7 +180,7 @@ function startTrees() {
 
     treeOptions.forEach((options, index) => {
         treeCtx.beginPath();
-        let xOffset = SIDE_OFFSET + index * 200;
+        let xOffset = SIDE_OFFSET + index * TREE_SPACING;
         treeCtx.moveTo(xOffset, treeCanvas.height);
         treeCtx.lineTo(xOffset, treeCanvas.height - parseInt(options.stemLength.value));
 
