@@ -3,7 +3,8 @@ body {
     font-size: 20px;
     transition: 0.2s;
     user-select: none;
-    background: linear-gradient(to bottom left, #49d, #56a3e0);
+    /*background: linear-gradient(to top right, #49d, #56a3e0);*/
+    background: #49d;
     color: #18304d;
     min-height: 100%;
     cursor: crosshair;
@@ -165,9 +166,41 @@ p a#resume:hover, .dark a#resume {
     border-color: #FF0084;
     fill: #FF0084;
 }
+
 .social li#night svg:hover, .dark li#night svg {
     border-color: #ffd966;
     fill: #ffd966;
+}
+#orb {
+    height: 50px;
+    width: 50px;
+    background: #fefe00;
+    border-radius: 100%;
+    cursor: cell;
+    box-shadow: 0 0 15px rgba(254, 254, 0, 0.7);
+    transition: 1s;
+}
+#orb:hover {
+    box-shadow: 0 0 15px rgba(254, 254, 0, 0.7);
+}
+.dark #orb {
+    background: transparent;
+    transform: rotate(720deg);
+    box-shadow: 0 0 0px rgba(254, 254, 0, 0);
+}
+#orb svg {
+    opacity: 0;
+    height: 50px;
+    width: 50px;
+    fill: white;
+    margin: 0;
+    cursor: crosshair;
+    transition: 1s;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, .7));
+}
+.dark #orb svg {
+    opacity: 1;
+    cursor: cell;
 }
 
 #control-panel {

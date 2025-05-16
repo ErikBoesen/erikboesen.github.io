@@ -280,7 +280,7 @@ setInterval(function() {
     //console.log(globalOptions.windSpeed.value, globalOptions.windSpeed.max);
     audio.volume = globalOptions.windSpeed.value / globalOptions.windSpeed.max;
     startTrees();
-}, 50);
+}, 70);
 
 
 CONTROL_PANEL_TAB.addEventListener('click', () => {
